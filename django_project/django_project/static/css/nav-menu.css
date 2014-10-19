@@ -199,6 +199,10 @@ li paper-item {
 .dr-icon-file:before {
     content: "\e601";
 }
+
+.dr-icon-pencil:before {
+    content: "\e609";
+}
  
 .dr-icon-home:before {
     content: "\e600";
