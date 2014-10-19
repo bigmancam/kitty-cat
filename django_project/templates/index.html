@@ -63,13 +63,14 @@
 <script>
     window.addEventListener('polymer-ready', function(e) {
         var ajax = document.querySelector('core-ajax');
-        var html1 = document.getElementById("contact");
-        var html2 = document.getElementById("content_pane")
-        html1.addEventListener('click', function(e) {
-            ajax.addEventListener('core-response', function(e) {
+
+
+        ajax.addEventListener('core-response', function(e) {
+            var html1 = document.getElementById("contact");
+            var html2 = document.getElementById("content_pane")
+            html1.addEventListener('click', function(e) {
                 html2.innerHTML = this.response;
             });
-
 
         });
 
