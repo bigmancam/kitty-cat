@@ -17,44 +17,44 @@
 	<div class="main">
 		<p></p>
 		<div class="side">
-		<nav id="dr-menu" class="dr-menu">
-   			<div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Menu</a></div>
-   			<ul style="color:#D1E751; font-size: 22pt;">
- 			<li>
-			    <paper-item>
-				<a class="dr-icon dr-icon-home" href="#">Home</a>
-			    </paper-item>
-			</li>
-            <li>
-			    <paper-item>
-				    <a class="dr-icon dr-icon-briefcase" href="#">Portfolio</a></li>
-                </paper-item>
+		    <nav id="dr-menu" class="dr-menu">
+   			    <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Menu</a></div>
+   			    <ul style="color:#D1E751; font-size: 22pt;">
+ 			    <li>
+			        <paper-item>
+				    <a class="dr-icon dr-icon-home" href="#">Home</a>
+			        </paper-item>
+			    </li>
+                <li>
+			        <paper-item>
+				        <a class="dr-icon dr-icon-briefcase" href="#">Portfolio</a></li>
+                    </paper-item>
 
-            <li>
-                <paper-item>
-                    <a class="dr-icon dr-icon-file" href="#">Resume</a></li>
-			    </paper-item>
-            </li>
-            <li>
-                <paper-item>
-                    <a class="dr-icon dr-icon-github" href="http://www.github.com/CFisk"></a></li>
-                </paper-item>
-            </li>
-            <li>
-                <paper-item>
-                    <a class="dr-icon dr-icon-pencil" href="#">Contact Me</a></li>
-			    </paper-item>
-            </li>
-			</ul>
-        </nav>
+                <li>
+                    <paper-item>
+                        <a class="dr-icon dr-icon-file" href="#">Resume</a></li>
+			        </paper-item>
+                </li>
+                <li>
+                    <paper-item>
+                        <a class="dr-icon dr-icon-github" href="http://www.github.com/CFisk"></a></li>
+                    </paper-item>
+                </li>
+                <li>
+                    <paper-item>
+                        <a class="dr-icon dr-icon-pencil" href="#">Contact Me</a></li>
+    			    </paper-item>
+                </li>
+    			</ul>
+            </nav>
 		</div>
-    <polymer-element name="test-view" attributes="url">
     <div id="content_pane">
         <core-ajax
             auto
             url="static/html/comment_page.html"
             handleAs="text"
             response="{{response}}"
+        </core-ajax>
     </div>
     </polymer-element>
 	</div>
