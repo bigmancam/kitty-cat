@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/nav-menu.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
 <link rel="import" href="{% static 'components/bower_components/paper-item/paper-item.html' %}">
-<link rel="import" href="core-ajax.html">
+<link rel="import" href="{% static 'components/bower_components/core-ajax/core-ajax.html' %}">
 {% endblock %}
 {% block body %}
 <div class="container">	
@@ -42,7 +42,7 @@
             </li>
             <li>
                 <paper-item>
-                    <a class="dr-icon dr-icon-pencil" href="#" onclick="loadMe()">Contact Me</a></li>
+                    <a class="dr-icon dr-icon-pencil" href="#">Contact Me</a></li>
 			    </paper-item>
             </li>
 			</ul>
