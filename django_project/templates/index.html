@@ -62,13 +62,18 @@
 {% block extra_js %}
 <script src="{% static 'js/menu.js' %}"></script>
 <script>
-    document.addEventListener('polymer-ready', function() {
-        var ajax = document.querySelector("core-ajax");
-        ajax.addEventListener("core-response", function(e) {
-            var html = document.getElementById("content_pane");
-            console.log(this.response);
-        })
-    })
+    var html = document.getElementById('contact');
+    html.addEventListener('click', function() {
+        document.addEventListener('polymer-ready', function() {
+            var ajax = document.querySelector("core-ajax");
+            ajax.addEventListener("core-response",
+            function(e) {
+                    console.log(this.response);
+                };
+            }
+            );
+        });
+    });
 </script>
 <script src="{% static 'components/bower_components/platform/platform.js' %}"></script>
 {% endblock %}
