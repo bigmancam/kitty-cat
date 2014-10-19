@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% block title %}{{title}}{% endblock %}
+{% endblock %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/nav-menu.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+<link rel="import" href="{% static 'components/bower_components/paper-item/paper-item.html' %}">
+{% endblock %}
+{% block body %}
+<div class="container">	
+	<header class="clearfix">
+		<h1>Cameron Fisk<span>Home Page</span></h1>	
+	</header>
+	<div class="main">
+		<p></p>
+		<div class="side">
+		<nav id="dr-menu" class="dr-menu">
+   			<div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Menu</a></div>
+   			<ul style="color:#D1E751; font-size: 22pt;">
+ 			<li>
+			    <paper-item>
+				<a class="dr-icon dr-icon-home" href="#">Home</a>
+			    </paper-item>
+			</li>
+		        <li>
+			    <paper-item>
+				<a class="dr-icon dr-icon-briefcase" href="#">Portfolio</a></li>
+		            </paper-item>
+
+                        <li>
+                            <paper-item>
+                                <a class="dr-icon dr-icon-file" href="#">Resume</a></li>
+			</li>
+
+                        <li>
+                            <paper-item>
+                                <a class="dr-icon dr-icon-github" href="#"></a></li>
+                            </paper-item>
+
+			</ul>
+		    </nav>
+		</div>
+	</div>
+</div><!-- /container -->
+{% endblock %}
+{% block extra_js %}
+<script src="{% static 'js/menu.js' %}"></script>
+<script src="{% static 'components/bower_components/platform/platform.js' %}"></script>
+{% endblock %}
