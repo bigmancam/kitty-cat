@@ -18,6 +18,6 @@ function loadMe()
             document.getElementById("content_pane").innerHTML= r.responseText;
         }
     }
-    r.open("GET","../templates/comment_page.html", true);
+    r.open("GET","static/html/comment_page.html", true);
     r.send();
 }
