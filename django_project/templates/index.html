@@ -65,7 +65,7 @@
         var ajax = document.querySelector('core-ajax');
 
         ajax.addEventListener('core-response', function(e) {
-            html2.getElementById("content_pane");
+            html2 = document.getElementById("content_pane");
             html2.innerHTML = this.response;
         });
 
