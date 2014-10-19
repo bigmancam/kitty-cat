@@ -51,10 +51,7 @@
             </nav>
 		</div>
     <div id="content_pane">
-        <core-ajax
-            url="{% static '/html/comment_page.html' %}"
-            handleAs="text">
-        </core-ajax>
+
     </div>
 	</div>
 </div><!-- /container -->
@@ -64,7 +61,7 @@
 <script>
     var html = document.getElementById('contact');
     html.addEventListener('click', function() {
-         console.log(event.response);
+         $("content_pane").load("{% static '/html/comment_page.html' %}");
     });
 </script>
 <script src="{% static 'components/bower_components/platform/platform.js' %}"></script>
