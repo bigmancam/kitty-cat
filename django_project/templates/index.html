@@ -53,20 +53,22 @@
             auto
             url="static/html/comment_page.html"
             handleAs="text"
-            response="{{response}}"
         </core-ajax>
     </div>
-    </polymer-element>
 	</div>
 </div><!-- /container -->
 {% endblock %}
 {% block extra_js %}
 <script src="{% static 'js/menu.js' %}"></script>
 <script>
-    Polymer({
-        responseChange: function() {
+    window.addEventListener('polymer-ready', function(e) {
+        var ajax = document.querySelector('core-ajax');
+
+        ajax.addEventListener('core-response', function(e) {
             console.log(this.response);
-        }
+        });
+
+        ajax.go();
     });
 </script>
 <script src="{% static 'components/bower_components/platform/platform.js' %}"></script>
