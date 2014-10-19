@@ -58,7 +58,7 @@
 {% block extra_js %}
 <script src="{% static 'js/menu.js' %}"></script>
 <script>
-    $('#contact').onclick(function() {
+    $('#contact').click(function() {
         $('#content_pane').load('{% static "html/comment_page.html" %}');
     })
 </script>
