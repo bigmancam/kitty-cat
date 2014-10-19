@@ -61,22 +61,10 @@
 {% block extra_js %}
 <script src="{% static 'js/menu.js' %}"></script>
 <script>
-    window.addEventListener('polymer-ready', function(e) {
-        var ajax = document.querySelector('core-ajax');
-
-
-        ajax.addEventListener('core-response', function(e2) {
-            var html1 = document.getElementById("contact");
-            var html2 = document.getElementById("content_pane")
-            html1.addEventListener('click', function(e3) {
-                html2.innerHTML = e2.response;
-                console.log(e.response);
-            });
-
-        });
-
-        ajax.go();
-    });
+    $('#contact').onclick(function() {
+        $('#content_pane').load('{% static "html/comment_page.html" %}');
+    })
 </script>
 <script src="{% static 'components/bower_components/platform/platform.js' %}"></script>
+<script src="{% static 'js/jquery-2.1.1.js' %}"></script>
 {% endblock %}
