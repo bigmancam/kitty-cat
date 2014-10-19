@@ -18,6 +18,6 @@ function loadMe()
             document.getElementById("content_pane").innerHTML= r.responseText;
         }
     }
-    r.open("GET","/home/django/django_project/templates/comment_page.html", true);
+    r.open("GET","../templates/comment_page.html", true);
     r.send();
 }
