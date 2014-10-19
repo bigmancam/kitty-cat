@@ -65,8 +65,10 @@
         var ajax = document.querySelector('core-ajax');
 
         ajax.addEventListener('core-response', function(e) {
-            html2 = document.getElementById("content_pane");
-            html2.addEventListener('click', function(e) {
+            html1 = document.getElementById("contact");
+            html2 = document.getElementById("content_pane")
+            console.log("Test")
+            html1.addEventListener('click', function(e) {
                 console.log("Test")
             });
             html2.innerHTML = this.response;
