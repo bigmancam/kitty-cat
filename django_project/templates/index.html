@@ -63,11 +63,13 @@
 {% block extra_js %}
 <script src="{% static 'js/menu.js' %}"></script>
 <script>
-    Polymer({
-        ajaxResponse: function(event, response){
-            console.log(response);
-        }
-    });
+    document.addEventListener('polymer-ready', function() {
+        var ajax = document.querySelector("core-ajax");
+        ajax.addEventListener("core-response", function(e) {
+            var html = document.getElementById("content_pane");
+            html.innerHTML = e.response;
+        })
+    })
 </script>
 <script src="{% static 'components/bower_components/platform/platform.js' %}"></script>
 {% endblock %}
