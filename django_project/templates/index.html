@@ -65,11 +65,11 @@
         var ajax = document.querySelector('core-ajax');
 
 
-        ajax.addEventListener('core-response', function(e) {
+        ajax.addEventListener('core-response', function(e2) {
             var html1 = document.getElementById("contact");
             var html2 = document.getElementById("content_pane")
-            html1.addEventListener('click', function(e) {
-                html2.innerHTML = this.response;
+            html1.addEventListener('click', function(e3) {
+                html2.innerHTML = e2.response;
             });
 
         });
