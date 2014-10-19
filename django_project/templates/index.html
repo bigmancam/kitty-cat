@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
+    <script src="{% static 'js/jquery-2.1.1.js' %}"></script>
 {% block title %}{{title}}{% endblock %}
 {% endblock %}
 {% block style %}
@@ -49,11 +50,7 @@
             </nav>
 		</div>
     <div id="content_pane">
-        <core-ajax
-            auto
-            url="static/html/comment_page.html"
-            handleAs="text">
-        </core-ajax>
+
     </div>
 	</div>
 </div><!-- /container -->
@@ -66,5 +63,4 @@
     })
 </script>
 <script src="{% static 'components/bower_components/platform/platform.js' %}"></script>
-<script src="{% static 'js/jquery-2.1.1.js' %}"></script>
 {% endblock %}
