@@ -58,9 +58,12 @@
 {% block extra_js %}
 <script src="{% static 'js/menu.js' %}"></script>
 <script>
-    $('#contact').click(function() {
-        $('#content_pane').load('{% static "html/comment_page.html" %}');
-    })
+    $(document).ready(function(){
+        $('#contact').click(function() {
+            $('#content_pane').load('{% static "html/comment_page.html" %}');
+    });
+    });
+
 </script>
 <script src="{% static 'components/bower_components/platform/platform.js' %}"></script>
 {% endblock %}
