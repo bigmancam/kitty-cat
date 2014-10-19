@@ -18,9 +18,6 @@
 	</header>
 	<div class="main">
 		<p></p>
-            <div id="content_pane">
-
-            </div>
 		<div class="side">
 		    <nav id="dr-menu" class="dr-menu">
    			    <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Menu</a></div>
@@ -54,13 +51,20 @@
     			</ul>
             </nav>
 		</div>
+        <div id="content_pane">
+
+        </div>
 	</div>
 </div><!-- /container -->
 {% endblock %}
 {% block extra_js %}
 <script src="{% static 'js/menu.js' %}"></script>
 <script>
-$("#content_pane").load("{% static 'html/comment_page.html' %}");
+$(document).ready(function() {
+    $("#contact").click(function () {
+        $("#content_pane").load("{% static 'html/comment_page.html' %}");
+    })
+})
 </script>
 <script src="{% static 'components/bower_components/platform/platform.js' %}"></script>
 {% endblock %}
