@@ -65,9 +65,10 @@
         var ajax = document.querySelector('core-ajax');
 
         ajax.addEventListener('core-response', function(e) {
-            var html = document.getElementById("contact");
-            html.addEventListener('click'), function(e){
-                html.innerHTML = this.response;
+            var html1 = document.getElementById("contact");
+            var html2 = document.getElementById("content_pane")
+            html1.addEventListener('click'), function(e){
+                html2.innerHTML = this.response;
             }
         });
 
