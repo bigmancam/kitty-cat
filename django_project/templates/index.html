@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/nav-menu.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
 <link rel="import" href="{% static 'components/bower_components/paper-item/paper-item.html' %}">
+<link rel="import" href="core-ajax.html">
 {% endblock %}
 {% block body %}
 <div class="container">	
@@ -47,14 +48,26 @@
 			</ul>
         </nav>
 		</div>
+    <polymer-element name="test-view" attributes="url">
     <div id="content_pane">
-
+        <core-ajax
+            auto
+            url="static/html/comment_page.html"
+            handleAs="text"
+            response="{{response}}"
     </div>
+    </polymer-element>
 	</div>
 </div><!-- /container -->
 {% endblock %}
 {% block extra_js %}
 <script src="{% static 'js/menu.js' %}"></script>
-<script src="{% static 'js/ajax_call.js' %}"></script>
+<script>
+    Polymer({
+        responseChange: function() {
+            console.log(this.response);
+        }
+    });
+</script>
 <script src="{% static 'components/bower_components/platform/platform.js' %}"></script>
 {% endblock %}
