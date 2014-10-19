@@ -2,8 +2,8 @@
 {% load static %}
 {% block head %}
     <script src="{% static 'js/jquery-2.1.1.js' %}"></script>
-{% block title %}{{title}}{% endblock %}
 {% endblock %}
+{% block title %}{{title}}{% endblock %}
 {% block style %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/nav-menu.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
@@ -53,8 +53,7 @@
     <div id="content_pane">
         <core-ajax
             url="{% static '/html/comment_page.html' %}"
-            handleAs="text"
-            on-core-response="ajaxResponse">
+            handleAs="text">
         </core-ajax>
     </div>
 	</div>
