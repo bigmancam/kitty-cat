@@ -51,7 +51,11 @@
             </nav>
 		</div>
     <div id="content_pane">
-
+        <core-ajax
+            url="{% static '/html/comment_page.html' %}"
+            handleAs="text"
+            on-core-response="{{ajaxResponse}}">
+        </core-ajax>
     </div>
 	</div>
 </div><!-- /container -->
@@ -59,12 +63,11 @@
 {% block extra_js %}
 <script src="{% static 'js/menu.js' %}"></script>
 <script>
-    $(document).ready(function(){
-        $('#contact').click(function() {
-            $('#content_pane').load('{% static "html/comment_page.html" %}');
+    Polymer({
+        ajaxResponse: function(event, response){
+            console.log(response);
+        }
     });
-    });
-
 </script>
 <script src="{% static 'components/bower_components/platform/platform.js' %}"></script>
 {% endblock %}
