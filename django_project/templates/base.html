@@ -1,9 +1,7 @@
 {% load static %}
 <html>
     <head>
-	{% block head %}
-        <title>{% block title %}{% endblock %}</title>
-    {% endblock %}
+	{% block head %} {% endblock %}<title>{% block title %}{% endblock %}</title>
     </head>
 {% block style %}{% endblock %}
 <body>
