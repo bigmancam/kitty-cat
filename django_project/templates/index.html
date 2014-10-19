@@ -42,7 +42,7 @@
                 </li>
                 <li>
                     <paper-item>
-                        <a class="dr-icon dr-icon-pencil" href="#">Contact Me</a></li>
+                        <a class="dr-icon dr-icon-pencil" href="#" id="contact">Contact Me</a></li>
     			    </paper-item>
                 </li>
     			</ul>
@@ -65,7 +65,10 @@
         var ajax = document.querySelector('core-ajax');
 
         ajax.addEventListener('core-response', function(e) {
-            console.log(this.response);
+            var html = document.getElementById("contact");
+            html.addEventListener('click'), function(e){
+                html.innerHTML = this.response;
+            }
         });
 
         ajax.go();
