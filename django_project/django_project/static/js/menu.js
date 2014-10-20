@@ -36,6 +36,7 @@ var YTMenu = (function() {
   // initial setup
   setup();
   document.getElementById('content_pane').removeAttribute('hidden');
+  document.getElementById('dr-menu').removeAttribute('hidden');
 });
 
 var meta;
