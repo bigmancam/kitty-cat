@@ -136,3 +136,7 @@ div#form_floater {
 	left: 50%;
 	margin: 0 auto;
 }
+
+#bottom_links a {
+    padding: 2px;
+}
