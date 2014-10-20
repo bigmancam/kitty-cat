@@ -51,7 +51,7 @@ li paper-item {
 }
 
 .dr-menu.dr-menu-open > div .dr-icon {
-	color: #492833;
+	color: #000000;
 	left: 100%;
 	-webkit-transform: translateX(-100%);
 	-moz-transform: translateX(-100%);
