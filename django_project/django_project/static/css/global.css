@@ -25,14 +25,13 @@ body, html { font-size: 100%; padding: 0; margin: 0; font-family: 'Roboto', sans
 }
 
 body {
-	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #000;
 	background: #FFFFFF;
 	font-weight: 300;
 }
 
 a {
-	color: #f0f0f0;
+	color: #26ADE4;
 	text-decoration: none;
 }
 
