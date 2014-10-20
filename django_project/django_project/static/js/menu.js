@@ -35,18 +35,12 @@ var YTMenu = (function() {
     document.addEventListener('polymer-ready', function() {
   // initial setup
   setup();
-  document.getElementById('content_pane').removeAttribute('hidden');
   document.querySelector('div.paper-shadow-top-z-1').removeAttribute('hidden');
 });
 
 var meta;
-var meta2;
 var transition;
-var transition2;
 var state = {
-  opened: false
-}
-var state2 ={
   opened: false
 }
 
@@ -58,17 +52,8 @@ function getMeta() {
       return meta;
     }
 
-function getMeta2() {
-      if (!meta2) {
-        meta2 = document.createElement('core-meta');
-        meta2.type = 'transition';
-      }
-      return meta2;
-    }
-
 function setup() {
-      var target = document.getElementById('content_pane');
-      var target2 = document.querySelector('nav div.paper-shadow-top-z-1')
+      var target = document.querySelector('nav div.paper-shadow-top-z-1')
 
       if (transition) {
         transition.teardown(target);
@@ -81,25 +66,11 @@ function setup() {
       var value = "core-transition-center";
       transition = getMeta().byId(value);
       transition.setup(target);
-      transition2 = getMeta2().byId(value);
-      transition2.setup(target2);
-      var target2 = document.querySelector('nav div.paper-shadow-top-z-1')
-      state2.opened = !state.opened;
       transition2.go(target2, state2);
     }
 
-function toggle() {
-      var target = document.getElementById('content_pane');
+function toggle2() {
+      var target = document.querySelector('nav div.paper-shadow-top-z-1')
       state.opened = !state.opened;
       transition.go(target, state);
-    }
-function toggle2() {
-      var target2 = document.querySelector('nav div.paper-shadow-top-z-1')
-      state2.opened = !state.opened;
-      transition2.go(target2, state2);
-    }
-function toggleOff() {
-    var target = document.getElementById('content_pane');
-    state.opened = false;
-    transition.go(target, state);
     }
