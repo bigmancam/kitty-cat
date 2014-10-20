@@ -115,9 +115,7 @@ function toggle() {
       transition.go(target, state);
     }
 function toggleOff() {
-      var target = document.getElementById('content_pane');
-      state.opened = state.opened;
-      transition.go(target, state);
+        transition.go(target, "opened: false");
     }
 </script>
 {% endblock %}
