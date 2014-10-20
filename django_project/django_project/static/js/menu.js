@@ -8,6 +8,9 @@ var YTMenu = (function() {
                 open = false;
  
             trigger.addEventListener( 'click', function( event ) {
+                if(el.id=="dr-trigger" || el.id=="label") {
+                    return;
+                }
                 if( !open ) {
                     el.className += ' dr-menu-open';
                     open = true;
@@ -15,6 +18,9 @@ var YTMenu = (function() {
             }, false );
  
             icon.addEventListener( 'click', function( event ) {
+                if(el.id=="dr-trigger" || el.id=="label") {
+                    return;
+                }
                 if( open ) {
                     event.stopPropagation();
                     open = false;
