@@ -59,14 +59,12 @@ function setup() {
         transition.teardown(target);
       }
 
-      if (transition2) {
-        transition2.teardown(target);
-      }
 
       var value = "core-transition-center";
       transition = getMeta().byId(value);
       transition.setup(target);
-      transition2.go(target2, state2);
+      state.opened = !state.opened;
+      transition.go(target2, state2);
     }
 
 function toggle2() {
