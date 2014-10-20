@@ -67,7 +67,7 @@ function getMeta2() {
 
 function setup() {
       var target = document.getElementById('content_pane');
-      var target2 = document.getElementById('menu');
+      var target2 = document.get('menu');
 
       if (transition) {
         transition.teardown(target);
