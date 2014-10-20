@@ -44,6 +44,10 @@ a:hover {
 	padding: 0 1.875em 3.125em 1.875em;
 }
 
+div#info_floater {
+    font-size: 14pt;
+}
+
 .main {
 	max-width: 69em;
 	min-height: 600px;
