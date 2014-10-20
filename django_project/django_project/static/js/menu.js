@@ -67,6 +67,7 @@ function setup() {
       var value = "core-transition-center";
       transition = getMeta().byId(value);
       transition.setup(target);
+      transition = getMeta().byId(value);
       transition.setup(target2);
     }
 
