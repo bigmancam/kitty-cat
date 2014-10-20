@@ -35,7 +35,7 @@ var YTMenu = (function() {
 document.addEventListener('polymer-ready', function() {
   // initial setup
   setup();
-  $('#content_page').removeAttribute('hidden');
+  document.getElementById('#content_pane').removeAttribute('hidden');
 });
 
 var meta;
@@ -53,7 +53,7 @@ function getMeta() {
     }
 
 function setup() {
-      var target = $('#content_page')
+      var target = document.getElementById('#content_pane')
 
       if (transition) {
         transition.teardown(target);
@@ -66,7 +66,7 @@ function setup() {
     }
 
 function toggle2() {
-      var target = $('#content_page')
+      var target = document.getElementById('#content_pane')
       state.opened = !state.opened;
       transition.go(target, state);
     }
