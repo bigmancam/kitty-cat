@@ -8,6 +8,7 @@
 {% block style %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/nav-menu.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic' rel='stylesheet' type='text/css'>
 <link rel="import" href="{% static 'components/bower_components/paper-item/paper-item.html' %}">
 <link rel="import" href="{% static 'components/bower_components/core-ajax/core-ajax.html' %}">
 <link rel="import" href="{% static 'components/bower_components/paper-input/paper-input.html' %}">
@@ -66,7 +67,7 @@
         <div id="content_pane" hidden>
             <div id="info_floater">
                 <paper-shadow z="2"></paper-shadow>
-                <p>My Email Address: <span>fisk.cameron@gmail.com</span></p>
+                <p>My Email Address: <a href="mailto:fisk.cameron@gmail.com">fisk.cameron@gmail.com</a></p>
             </div>
             <div id="form_floater">
                 <p>Or Submit a comment below:</p>
