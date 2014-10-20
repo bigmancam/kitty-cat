@@ -39,58 +39,60 @@
 	</header>
 	<div class="main">
 		<p></p>
-        <div class="dr-menu">
-            <div class="dr-trigger" id="dr-trigger"><span class="dr-icon dr-icon-menu" id="label" style="z-index:9999;" onclick="toggle2();"></span><a class="dr-label" id="menu_button">Menu</a></div>
-		</div>
-        <div class="side" id="side">
-            <paper-shadow z="1"></paper-shadow>
-            <div id="menu">
-		    <nav id="dr-menu" class="dr-menu">
-   			    <ul style="color:#BF9C7C; font-size: 22pt;">
- 			    <li>
-			        <paper-item>
-				    <a class="dr-icon dr-icon-home" href="#" id="home">Home</a>
-			        </paper-item>
-			    </li>
-                <li>
-			        <paper-item>
-				        <a class="dr-icon dr-icon-briefcase" href="#">Portfolio</a></li>
-                    </paper-item>
+        <div class="content_wrapper" id="content">
+            <div class="dr-menu">
+                <div class="dr-trigger" id="dr-trigger"><span class="dr-icon dr-icon-menu" id="label" style="z-index:9999;" onclick="toggle2();"></span><a class="dr-label" id="menu_button">Menu</a></div>
+		    </div>
+            <div class="side" id="side">
+                <paper-shadow z="1"></paper-shadow>
+                <div id="menu">
+                <nav id="dr-menu" class="dr-menu">
+                    <ul style="color:#BF9C7C; font-size: 22pt;">
+                    <li>
+                        <paper-item>
+                        <a class="dr-icon dr-icon-home" href="#" id="home">Home</a>
+                        </paper-item>
+                    </li>
+                    <li>
+                        <paper-item>
+                            <a class="dr-icon dr-icon-briefcase" href="#">Portfolio</a></li>
+                        </paper-item>
 
-                <li>
-                    <paper-item>
-                        <a class="dr-icon dr-icon-file" href="#">Resume</a></li>
-			        </paper-item>
-                </li>
-                <li>
-                    <paper-item>
-                        <a class="dr-icon dr-icon-pencil" href="#" id="contact" onclick="toggle2();">Contact Me</a></li>
-    			    </paper-item>
-                </li>
-                <li style="margin-left: 20px;" id="bottom_links">
-                    <a href="http://www.github.com/CFisk"><paper-fab src="{% static 'GitHub-Mark-32px.png' %}"></paper-fab></a>
-                    <a href="http://www.twitter.com/CameronFisk3"><paper-fab src="https://g.twimg.com/Twitter_logo_blue.png"></paper-fab></a>
-                </li>
+                    <li>
+                        <paper-item>
+                            <a class="dr-icon dr-icon-file" href="#">Resume</a></li>
+                        </paper-item>
+                    </li>
+                    <li>
+                        <paper-item>
+                            <a class="dr-icon dr-icon-pencil" href="#" id="contact" onclick="toggle2();">Contact Me</a></li>
+                        </paper-item>
+                    </li>
+                    <li style="margin-left: 20px;" id="bottom_links">
+                        <a href="http://www.github.com/CFisk"><paper-fab src="{% static 'GitHub-Mark-32px.png' %}"></paper-fab></a>
+                        <a href="http://www.twitter.com/CameronFisk3"><paper-fab src="https://g.twimg.com/Twitter_logo_blue.png"></paper-fab></a>
+                    </li>
 
-    			</ul>
-            </nav>
-        </div>
-		</div>
-        <div id="content_pane" hidden>
+                    </ul>
+                </nav>
+            </div>
+            </div>
+            <div id="content_pane" hidden>
             <div id="info_floater">
                 <paper-shadow z="2"></paper-shadow>
                 <p>My Email Address: <a href="mailto:fisk.cameron@gmail.com">fisk.cameron@gmail.com</a></p>
             </div>
-            <div id="form_floater">
-                <p>Or Submit a comment below:</p>
-                <paper-shadow z="2"></paper-shadow>
-            <section>
-                <paper-input label="Name:"></paper-input>
-                <br>
-                <paper-input label="Comment:"></paper-input>
-                <br>
-                <paper-button raised class="colored">Submit</paper-button>
-                </section>
+                <div id="form_floater">
+                    <p>Or Submit a comment below:</p>
+                    <paper-shadow z="2"></paper-shadow>
+                <section>
+                    <paper-input label="Name:"></paper-input>
+                    <br>
+                    <paper-input label="Comment:"></paper-input>
+                    <br>
+                    <paper-button raised class="colored">Submit</paper-button>
+                    </section>
+                </div>
             </div>
         </div>
 	</div>
