@@ -71,12 +71,8 @@ div#form_floater {
 }
 
 .side {
-    float: left;
-	margin-left: 10px;
     height: 100%;
-	width: 30%;
-	padding-right: 20px;
-	min-width: 320px;
+	width: 100%;
 }
 
 #content_pane {
@@ -89,6 +85,7 @@ div#form_floater {
 .content_wrapper {
     height: 100%
     box-shadow: 1px 0 #492833;
+    width: 33%;
 }
 
 .main p {
