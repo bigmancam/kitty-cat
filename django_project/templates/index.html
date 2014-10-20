@@ -35,7 +35,7 @@
    			    <ul style="color:#D1E751; font-size: 22pt;">
  			    <li>
 			        <paper-item>
-				    <a class="dr-icon dr-icon-home" href="#" id="home" onclick="toggle();">Home</a>
+				    <a class="dr-icon dr-icon-home" href="#" id="home" onclick="toggleOff();">Home</a>
 			        </paper-item>
 			    </li>
                 <li>
@@ -112,6 +112,11 @@ function setup() {
 function toggle() {
       var target = document.getElementById('content_pane');
       state.opened = !state.opened;
+      transition.go(target, state);
+    }
+function toggleOff() {
+      var target = document.getElementById('content_pane');
+      state.opened = state.opened;
       transition.go(target, state);
     }
 </script>
