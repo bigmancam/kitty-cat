@@ -25,7 +25,7 @@
    			    <ul style="color:#D1E751; font-size: 22pt;">
  			    <li>
 			        <paper-item>
-				    <a class="dr-icon dr-icon-home" href="#">Home</a>
+				    <a class="dr-icon dr-icon-home" href="#" id="home">Home</a>
 			        </paper-item>
 			    </li>
                 <li>
@@ -64,6 +64,9 @@
 $(document).ready(function() {
     $("#contact").click(function () {
         $("#content_pane").load("{% static 'html/comment_page.html' %}");
+    })
+    $("#home").click(function () {
+        $("#content_pane").load("{% static 'html/index.html' %}");
     })
 })
 </script>
