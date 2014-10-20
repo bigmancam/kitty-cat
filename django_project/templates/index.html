@@ -103,5 +103,6 @@
 {% block extra_js %}
 <script src="{% static 'js/menu.js' %}"></script>
 <script>
+    document.getElementById('menu').removeAttribute('hidden');
 </script>
 {% endblock %}
