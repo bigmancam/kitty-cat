@@ -34,7 +34,7 @@ var YTMenu = (function() {
 
 document.addEventListener('polymer-ready', function() {
   // initial setup
-  console.log($('div.paper-shadow-top-z-1')[0]);
+
   setup();
   $('div.paper-shadow-top-z-1').removeAttribute('hidden');
 });
@@ -64,8 +64,6 @@ function setup() {
       var value = "core-transition-center";
       transition = getMeta().byId(value);
       transition.setup(target);
-      state.opened = !state.opened;
-      transition.go(target2, state2);
     }
 
 function toggle2() {
