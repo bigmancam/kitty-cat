@@ -20,9 +20,7 @@ var YTMenu = (function() {
                     el.className += ' dr-menu-open';
                     open = true;
                 }
-            }, false );
- 
-            icon.addEventListener( 'click', function( event ) {
+
                 if((el.id=="dr-trigger" || el.id=="label") && open) {
                     trigger.className = trigger.className.replace(/\bdr-menu-open\b/,'');
                     icon.className = icon.className.replace(/\bdr-menu-open\b/,'');
@@ -38,6 +36,7 @@ var YTMenu = (function() {
                     return false;
                 }
             }, false );
+
  
         } );
  
