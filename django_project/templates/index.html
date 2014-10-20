@@ -16,6 +16,8 @@
 <link rel="import" href="{% static 'components/bower_components/paper-button/paper-button.html' %}">
 <link rel="import" href="{% static 'components/bower_components/paper-shadow/paper-shadow.html' %}">
 <link rel="import" href="{% static 'components/bower_components/paper-fab/paper-fab.html' %}">
+    <link rel="import" href="{% static 'components/bower_components/core-icons/core-icons.html' %}">
+<link rel="import" href="{% static 'components/bower_components/paper-menu-button/paper-menu-button.html' %}">
 <link rel="import" href="{% static 'components/bower_components/core-transition/core-transition-css.html' %}">
 <style>
     paper-button.colored {
@@ -84,6 +86,10 @@
             </div>
         </div>
 	</div>
+    <paper-menu-button icon="menu">
+        <a href="/">Theme One</a>
+        <a href="/page2">Theme Two</a>
+    </paper-button>
 </div><!-- /container -->
 {% endblock %}
 {% block extra_js %}
