@@ -2,10 +2,11 @@
 {% load static %}
 {% block head %}
     <script src="{% static 'js/jquery-2.1.1.js' %}"></script>
-    <script src="{% static 'components/bower_components/platform/platform.js' %}"></script>
+    <script src="{% static 'components/bower_components/webcomponentsjs/webcomponents.min.js' %}"></script>
 {% endblock %}
 {% block title %}{{title}}{% endblock %}
 {% block style %}
+
 <link rel="stylesheet" type="text/css" href="{% static 'css/nav-menu.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic' rel='stylesheet' type='text/css'>
@@ -16,6 +17,8 @@
 <link rel="import" href="{% static 'components/bower_components/paper-button/paper-button.html' %}">
 <link rel="import" href="{% static 'components/bower_components/paper-shadow/paper-shadow.html' %}">
 <link rel="import" href="{% static 'components/bower_components/paper-fab/paper-fab.html' %}">
+    <link rel="import" href="{% static 'components/bower_components/core-icons/core-icons.html' %}">
+<link rel="import" href="{% static 'components/bower_components/paper-dropdown-menu/paper-dropdown-menu.html' %}">
 <link rel="import" href="{% static 'components/bower_components/core-transition/core-transition-css.html' %}">
 <style>
     paper-button.colored {
@@ -23,24 +26,27 @@
         margin-top: 10px;
         float: right;
     }
-
+    paper-dropdown-menu {
+        float: right;
+    }
 </style>
 {% endblock %}
 {% block body %}
 <div class="container">	
 	<header class="clearfix">
+        <paper-shadow z="1"></paper-shadow>
 		<h1>Cameron Fisk<span>Home Page</span></h1>	
 	</header>
 	<div class="main">
-        <paper-shadow z="2"></paper-shadow>
 		<p></p>
 		<div class="side">
+            <div id="menu">
 		    <nav id="dr-menu" class="dr-menu">
    			    <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Menu</a></div>
    			    <ul style="color:#BF9C7C; font-size: 22pt;">
  			    <li>
 			        <paper-item>
-				    <a class="dr-icon dr-icon-home" href="#" id="home" onclick="toggleOff();">Home</a>
+				    <a class="dr-icon dr-icon-home" href="#" id="home">Home</a>
 			        </paper-item>
 			    </li>
                 <li>
@@ -55,7 +61,7 @@
                 </li>
                 <li>
                     <paper-item>
-                        <a class="dr-icon dr-icon-pencil" href="#" id="contact" onclick="toggle();">Contact Me</a></li>
+                        <a class="dr-icon dr-icon-pencil" href="#" id="contact" onclick="toggle2();">Contact Me</a></li>
     			    </paper-item>
                 </li>
                 <li style="margin-left: 20px;" id="bottom_links">
@@ -65,6 +71,7 @@
 
     			</ul>
             </nav>
+        </div>
 		</div>
         <div id="content_pane" hidden>
             <div id="info_floater">
@@ -84,6 +91,13 @@
             </div>
         </div>
 	</div>
+    <div>
+
+    <paper-dropdown-menu valign="bottom" valueattr="label" label="Theme">
+        <paper-item><a href="/">Theme One</a></paper-item>
+        <paper-item><a href="/page2">Theme Two</a></paper-item>
+    </paper-dropdown-menu>
+   </div>
 </div><!-- /container -->
 {% endblock %}
 {% block extra_js %}

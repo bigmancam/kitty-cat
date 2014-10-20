@@ -70,3 +70,9 @@ function toggle2() {
       state.opened = !state.opened;
       transition.go(target, state);
     }
+
+function toggleOff() {
+      var target = document.getElementById('content_pane')
+      state.opened = !state.opened;
+      transition.go(target, false);
+    }
