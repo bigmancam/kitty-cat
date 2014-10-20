@@ -49,6 +49,7 @@ div#info_floater {
     float: left;
     margin: 10px;
     padding: 15px;
+    width: 98%;
 }
 
 div#form_floater {
@@ -56,11 +57,10 @@ div#form_floater {
     float: left;
     margin: 10px;
     padding: 15px;
-    width: 75.7%;
+    width: 98%;
 }
 
 .main {
-	max-width: 69em;
 	min-height: 600px;
 	padding: 2em 0 0 0;
 }
@@ -77,11 +77,11 @@ div#form_floater {
 
 #content_pane {
     margin-left: 20px;
+    width: 67%;
 }
 
 .main p {
 	font-size: 2em;
-	padding: 0 1em;
 	margin: 0;
 	line-height: 1.5;
 	width: 70%;
