@@ -36,7 +36,7 @@ var YTMenu = (function() {
  
 })();
 
-document.addEventListener('polymer-ready', function() {
+/*document.addEventListener('polymer-ready', function() {
   // initial setup
   setup();
   document.getElementById('content_pane').removeAttribute('hidden');
