@@ -38,14 +38,7 @@ li paper-item {
 	z-index: 100;
 }
 
-.dr-trigger > div  {
-	cursor: pointer;
-	position: absolute;
-	width: 100%;
-	z-index: 100;
-}
-
-div .dr-icon {
+.dr-menu > div .dr-icon {
 	top: 0;
 	left: 0;
 	position: absolute;
@@ -57,8 +50,8 @@ div .dr-icon {
 	transition: all 0.2s ease;
 }
 
-.dr-icon.dr-menu-open > div .dr-icon {
-	color: #000000;
+.dr-menu.dr-menu-open > div .dr-icon {
+	color: #492833;
 	left: 100%;
 	-webkit-transform: translateX(-100%);
 	-moz-transform: translateX(-100%);
@@ -66,7 +59,7 @@ div .dr-icon {
 	transform: translateX(-100%);
 }
 
-div .dr-icon:after {
+.dr-menu > div .dr-icon:after {
 	position: absolute;
 	font-size: 50%;
 	line-height: 3.25;
@@ -74,11 +67,11 @@ div .dr-icon:after {
 	opacity: 0;
 }
 
-.dr-icon.dr-menu-open > div .dr-icon:after {
+.dr-menu.dr-menu-open > div .dr-icon:after {
 	opacity: 1;
 }
 
-.dr-icon > div .dr-label {
+.dr-menu > div .dr-label {
 	padding-left: 3em;
 	position: relative;
 	display: block;
@@ -93,7 +86,7 @@ div .dr-icon:after {
 	transition: all 0.2s ease;
 }
 
-.dr-icon.dr-menu-open > div .dr-label {
+.dr-menu.dr-menu-open > div .dr-label {
 	-webkit-transform: translateY(-90%);
 	-moz-transform: translateY(-90%);
 	-ms-transform: translateY(-90%);
@@ -178,7 +171,7 @@ div .dr-icon:after {
 }
 
 .dr-menu ul li a:hover {
-	color: #000272;
+
 }
 
 .dr-icon:before, 
