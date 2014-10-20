@@ -32,7 +32,7 @@ var YTMenu = (function() {
  
 })();
 
-    document.addEventListener('polymer-ready', function() {
+document.addEventListener('polymer-ready', function() {
   // initial setup
   setup();
   document.querySelector('div.paper-shadow-top-z-1').removeAttribute('hidden');
