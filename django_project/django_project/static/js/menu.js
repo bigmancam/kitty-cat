@@ -15,9 +15,6 @@ var YTMenu = (function() {
                     icon.className += ' dr-menu-open';
                     open = true;
                 }
-            }, false );
- 
-            icon.addEventListener( 'click', function( event ) {
                 if( open ) {
                     event.stopPropagation();
                     open = false;
