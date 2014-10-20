@@ -36,7 +36,7 @@ var YTMenu = (function() {
   // initial setup
   setup();
   document.getElementById('content_pane').removeAttribute('hidden');
-  document.querySelector('div paper-shadow-top-z-1').removeAttribute('hidden');
+  document.querySelector('nav div.paper-shadow-top-z-1').removeAttribute('hidden');
 });
 
 var meta;
