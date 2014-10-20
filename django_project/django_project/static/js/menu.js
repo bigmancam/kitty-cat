@@ -59,7 +59,7 @@ function setup() {
         transition.teardown(target);
       }
 
-      var value = "core-transition-left";
+      var value = "core-transition-fade";
       transition = getMeta().byId(value);
       transition.setup(target);
     }
