@@ -38,7 +38,14 @@ li paper-item {
 	z-index: 100;
 }
 
-.dr-menu > div .dr-icon {
+.dr-trigger > div  {
+	cursor: pointer;
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+}
+
+div .dr-icon {
 	top: 0;
 	left: 0;
 	position: absolute;
@@ -50,7 +57,7 @@ li paper-item {
 	transition: all 0.2s ease;
 }
 
-.dr-menu.dr-menu-open > div .dr-icon {
+div .dr-icon.dr-menu-open {
 	color: #000000;
 	left: 100%;
 	-webkit-transform: translateX(-100%);
@@ -59,7 +66,7 @@ li paper-item {
 	transform: translateX(-100%);
 }
 
-.dr-menu > div .dr-icon:after {
+div .dr-icon:after {
 	position: absolute;
 	font-size: 50%;
 	line-height: 3.25;
@@ -67,11 +74,11 @@ li paper-item {
 	opacity: 0;
 }
 
-.dr-menu.dr-menu-open > div .dr-icon:after {
+div .dr-icon.dr-menu-open:after {
 	opacity: 1;
 }
 
-.dr-menu > div .dr-label {
+div .dr-label {
 	padding-left: 3em;
 	position: relative;
 	display: block;
@@ -86,7 +93,7 @@ li paper-item {
 	transition: all 0.2s ease;
 }
 
-.dr-menu.dr-menu-open > div .dr-label {
+div .dr-label.dr-menu-open {
 	-webkit-transform: translateY(-90%);
 	-moz-transform: translateY(-90%);
 	-ms-transform: translateY(-90%);
