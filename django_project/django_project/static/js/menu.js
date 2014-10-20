@@ -35,11 +35,11 @@ function setup() {
       transition.setup(target);
     }
 function toggle1() {
-      var target = document.getElementById('content_pane');
-      state1.opened = !state.opened;
-      transition = getMeta().byId('core-transition-center');
-      transition.go(target, state);
-
+    var target = document.getElementById('content_pane');
+    state1.opened = !state.opened;
+    transition = getMeta().byId('core-transition-center');
+    transition.go(target, state);
+}
 function toggle2() {
       var target = document.getElementById('side')
       state2.opened = !state.opened;
