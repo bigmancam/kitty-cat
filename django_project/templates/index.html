@@ -39,7 +39,7 @@
 	<div class="main">
 		<p></p>
 		<div class="side">
-            <div id="menu" hidden>
+            <div id="menu">
 		    <nav id="dr-menu" class="dr-menu">
                 <paper-shadow z="1"></paper-shadow>
    			    <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label" onclick="toggle2();">Menu</a></div>
@@ -103,7 +103,5 @@
 {% block extra_js %}
 <script src="{% static 'js/menu.js' %}"></script>
 <script>
-    document.getElementById('menu').removeAttribute('hidden');
-    document.querySelector('nav div.paper-shadow-top-z-1').removeAttribute('hidden');
 </script>
 {% endblock %}
