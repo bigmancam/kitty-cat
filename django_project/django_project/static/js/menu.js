@@ -46,7 +46,7 @@ var state = {
   opened: false
 }
 var state2 ={
-  opened: true
+  opened: false
 }
 
 function getMeta() {
