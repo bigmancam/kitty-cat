@@ -26,6 +26,11 @@ li paper-item {
     margin-left: 20px;
 }
 
+#menu {
+
+
+}
+
 .dr-menu > div  {
 	cursor: pointer;
 	position: absolute;
