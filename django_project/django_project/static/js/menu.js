@@ -35,6 +35,7 @@ var YTMenu = (function() {
 document.addEventListener('polymer-ready', function() {
   console.log("1" + document.querySelector('nav div.paper-shadow-top-z-1'));
   console.log("2" + document.querySelector('paper-shadow paper-shadow-top-z-1'));
+  console.log("3" + document.getElementsByClassName('paper-shadow-top-z-1'));
   // initial setup
   setup();
   document.querySelector('div.paper-shadow-top-z-1').removeAttribute('hidden');
