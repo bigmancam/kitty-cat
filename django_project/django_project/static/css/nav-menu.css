@@ -57,7 +57,7 @@ div .dr-icon {
 	transition: all 0.2s ease;
 }
 
-div .dr-icon.dr-menu-open {
+.dr-icon.dr-menu-open > div .dr-icon {
 	color: #000000;
 	left: 100%;
 	-webkit-transform: translateX(-100%);
@@ -74,11 +74,11 @@ div .dr-icon:after {
 	opacity: 0;
 }
 
-div .dr-icon.dr-menu-open:after {
+.dr-icon.dr-menu-open > div .dr-icon:after {
 	opacity: 1;
 }
 
-div .dr-label {
+.dr-icon > div .dr-label {
 	padding-left: 3em;
 	position: relative;
 	display: block;
@@ -93,7 +93,7 @@ div .dr-label {
 	transition: all 0.2s ease;
 }
 
-div .dr-label.dr-menu-open {
+.dr-icon.dr-menu-open > div .dr-label {
 	-webkit-transform: translateY(-90%);
 	-moz-transform: translateY(-90%);
 	-ms-transform: translateY(-90%);
