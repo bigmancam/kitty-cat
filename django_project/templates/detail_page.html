@@ -40,7 +40,7 @@
 	<div class="main">
 		<p></p>
         <div class="dr-menu">
-            <div class="dr-trigger"><span class="dr-icon dr-icon-menu" onclick="toggle2();"></span><a class="dr-label" id="menu_button">Menu</a></div>
+            <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label" id="menu_button" onclick="toggle2();">Menu</a></div>
 		</div>
         <div class="side" id="side">
             <paper-shadow z="1"></paper-shadow>
@@ -104,7 +104,7 @@
 </div><!-- /container -->
 {% endblock %}
 {% block extra_js %}
-<!--<script src="{% static 'js/menu.js' %}"></script>-->
+<script src="{% static 'js/menu.js' %}">
 <script>
   document.addEventListener('polymer-ready', function() {
   // initial setup
