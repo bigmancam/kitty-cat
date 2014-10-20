@@ -3,9 +3,8 @@ var YTMenu = (function() {
     function init() {
          
         [].slice.call( document.querySelectorAll( '.dr-menu' ) ).forEach( function( el, i ) {
- 
-            var trigger = el.querySelector( 'div.dr-trigger' ),
-                icon = trigger.querySelector( 'span.dr-icon-menu' ),
+            var trigger = document.getElementById( 'dr-trigger' ),
+                icon = document.getElementById( 'label' ),
                 open = false;
  
             trigger.addEventListener( 'click', function( event ) {
