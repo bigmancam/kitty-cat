@@ -85,7 +85,7 @@ you should ensure that the `aria-label` attribute is set.
         background: #d23f31;
         color: #fff;
         border-radius: 50%;
-        padding: 16.5px;
+        padding: 16px 0 0 17px;
       }
 
       :host([mini]) {
@@ -104,6 +104,10 @@ you should ensure that the `aria-label` attribute is set.
         pointer-events: none;
         z-index: -1;
       }
+
+      core-icon div {
+        background-repeat: no-repeat;
+     }
     </style>
 
     <template if="{{raised}}">
