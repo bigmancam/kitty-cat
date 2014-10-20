@@ -2,12 +2,19 @@
 <head>
 <link rel="import" href="{% static 'components/bower_components/paper-input/paper-input.html' %}">
 <link rel="import" href="{% static 'components/bower_components/core-input/core-input.html' %}">
+<link rel="import" href="{% static 'components/bower_components/paper-button/paper-button.html' %}">
 <script src="{% static 'components/bower_components/platform/platform.js' %}"></script>
+<style>
+    paper-button {
+        color: #26ADE4;
+    }
+</style>
 </head>
 <section>
     <paper-input label="Name:"></paper-input>
     <br>
     <paper-input class="sized" multiline label="Comment:"></paper-input>
     <br>
+    <paper-button raised>Submit</paper-button>
 </section>
 </html>
