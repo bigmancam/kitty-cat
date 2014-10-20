@@ -78,12 +78,14 @@ div#form_floater {
 #content_pane {
     width: 67%;
     margin-left: 20px;
-    position: relative;
-    left: 23px;
+    position: absolute;
+    left: 35%;
+    top: 45%;
+    float: left;
 }
 
 .content_wrapper {
-    height: 100%
+    height: 100%;
     box-shadow: 1px 0 #492833;
     width: 33%;
 }
