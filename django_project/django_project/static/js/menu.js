@@ -11,8 +11,8 @@ var YTMenu = (function() {
             trigger.addEventListener( 'click', function( event ) {
                 if( !open ) {
                     el.className += ' dr-menu-open';
-                    trigger.className += 'dr-menu-open';
-                    icon.className += 'dr-menu-open';
+                    trigger.className += ' dr-menu-open';
+                    icon.className += ' dr-menu-open';
                     open = true;
                 }
             }, false );
