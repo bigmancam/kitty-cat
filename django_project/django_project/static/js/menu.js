@@ -4,9 +4,9 @@ var YTMenu = (function() {
          
         [].slice.call( document.querySelectorAll( '.dr-menu' ) ).forEach( function( el, i ) {
  
-            var trigger = document.querySelector( 'div.dr-trigger' ),
-                icon = document.querySelector( 'span.dr-icon-menu' ),
-                open = false;
+            var trigger = document.querySelector( 'div.dr-trigger' );
+            var icon = document.querySelector( 'span.dr-icon-menu' );
+            var open = false;
  
             icon.addEventListener( 'click', function( event ) {
                 if( !open ) {
