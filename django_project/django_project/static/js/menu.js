@@ -82,6 +82,9 @@ function setup() {
       transition.setup(target);
       transition2 = getMeta2().byId(value);
       transition2.setup(target2);
+      var target2 = document.getElementById('menu');
+      state2.opened = !state.opened;
+      transition.go(target2, state2);
     }
 
 function toggle() {
