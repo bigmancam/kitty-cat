@@ -40,7 +40,7 @@ function toggle2() {
     function init() {
 
         [].slice.call( document.querySelectorAll( '.dr-menu' ) ).forEach( function( el, i ) {
-            var trigger = document.getElementById( 'label' ),
+            var trigger = document.getElementById( 'dr-trigger' ),
                 icon = document.getElementById( 'label' ),
                 open = false;
 
