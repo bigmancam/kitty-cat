@@ -3,7 +3,7 @@
   setup();
   setup2();
   document.getElementById('dr-menu').removeAttribute('hidden');
-  document.getElementById('content_pane').removeAttribute('hidden');
+  document.getElementById('contact_me').removeAttribute('hidden');
 });
 
 var meta;
@@ -37,7 +37,7 @@ function setup() {
     }
 
 function setup2() {
-      var target = document.getElementById('content_pane')
+      var target = document.getElementById('contact_me')
 
       if (transition2) {
         transition2.teardown(target);
@@ -49,7 +49,7 @@ function setup2() {
       transition2.setup(target);
     }
 function toggle1() {
-    var target = document.getElementById('content_pane');
+    var target = document.getElementById('contact_me');
     state1.opened = !state1.opened;
     transition2.go(target, state1);
 }
