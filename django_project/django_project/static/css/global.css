@@ -51,12 +51,18 @@ a:hover {
 }
 
 .side {
+    float: left;
 	margin-left: 10px;
     height: 100%;
 	width: 30%;
 	padding-right: 20px;
 	min-width: 320px;
 	box-shadow: 1px 0 #26ADE4;
+}
+
+#content_pane {
+    float: left;
+    margin-left: 20px;
 }
 
 .main p {
