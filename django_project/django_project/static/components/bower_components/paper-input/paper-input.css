@@ -18,7 +18,7 @@
 :host /deep/ input,
 :host /deep/ textarea {
   font: inherit;
-  color: #26ADE4;
+  color: inherit;
   padding: 0;
   margin: 0;
   background-color: transparent;
@@ -109,6 +109,7 @@ textarea {
   right: 0;
   bottom: 0.25em;
   left: 0;
+  color :#26ADE4;
 }
 
 .underline {
