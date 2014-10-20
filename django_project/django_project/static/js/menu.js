@@ -33,7 +33,7 @@ var YTMenu = (function() {
 })();
 
 document.addEventListener('polymer-ready', function() {
-  var a = document.querySelectorAll( 'div.paper-shadow-top-z-1' )
+  var a = document.querySelectorAll( '.paper-shadow-top-z-1' )
   console.log(a);
   // initial setup
   setup();
