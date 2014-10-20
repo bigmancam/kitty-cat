@@ -11,6 +11,8 @@ var YTMenu = (function() {
             trigger.addEventListener( 'click', function( event ) {
                 if( !open ) {
                     el.className += ' dr-menu-open';
+                    trigger.className += 'dr-menu-open';
+                    icon.className += 'dr-menu-open';
                     open = true;
                 }
             }, false );
@@ -20,6 +22,8 @@ var YTMenu = (function() {
                     event.stopPropagation();
                     open = false;
                     el.className = el.className.replace(/\bdr-menu-open\b/,'');
+                    trigger.className = trigger.className.replace(/\bdr-menu-open\b/,'');
+                    icon.className = icon.className.replace(/\bdr-menu-open\b/,'');
                     return false;
                 }
             }, false );
