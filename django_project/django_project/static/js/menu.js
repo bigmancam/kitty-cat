@@ -1,4 +1,4 @@
- document.addEventListener('polymer-ready', function() {
+ $(document).ready(function() {
   // initial setup
   setup();
   document.getElementById('content_pane').removeAttribute('hidden');
@@ -36,6 +36,7 @@ function toggle1() {
       state.opened = !state.opened;
       transition.go(target, state);
     }
+
 document.addEventListener('polymer-ready', function() {
   // initial setup
   setup();
