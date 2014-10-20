@@ -76,6 +76,7 @@ div#form_floater {
 }
 
 #content_pane {
+    width: 67%;
     margin-left: 20px;
     position: relative;
     left: 23px;
