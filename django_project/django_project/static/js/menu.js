@@ -7,7 +7,7 @@
 var meta;
 var transition;
 var state = {
-  opened: true
+  opened: false
 }
 
 function getMeta() {
