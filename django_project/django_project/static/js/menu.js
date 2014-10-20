@@ -8,7 +8,7 @@ var YTMenu = (function() {
                 icon = document.querySelector( 'span.dr-icon-menu' ),
                 open = false;
  
-            trigger.addEventListener( 'click', function( event ) {
+            icon.addEventListener( 'click', function( event ) {
                 if( !open ) {
                     el.className += ' dr-menu-open';
                     trigger.className += ' dr-menu-open';
