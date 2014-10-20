@@ -7,7 +7,7 @@
 var meta;
 var transition;
 var state = {
-  opened: false
+  opened: true
 }
 
 function getMeta() {
@@ -37,28 +37,30 @@ function toggle2() {
       transition.go(target, state);
       var YTMenu = (function() {
 
-        function init() {
+    function init() {
 
         [].slice.call( document.querySelectorAll( '.dr-menu' ) ).forEach( function( el, i ) {
-            var trigger = document.getElementById( 'dr-trigger' ),
+            var trigger = document.getElementById( 'label' ),
                 icon = document.getElementById( 'label' ),
                 open = false;
 
-
+            trigger.addEventListener( 'click', function( event ) {
                 if( !open ) {
                     el.className += ' dr-menu-open';
-                    if( open ) {
+                    open = true;
+                }
+            }, false );
+
+            icon.addEventListener( 'click', function( event ) {
+                if( open ) {
                     event.stopPropagation();
                     open = false;
                     el.className = el.className.replace(/\bdr-menu-open\b/,'');
                     return false;
                 }
-                    open = true;
-                    return;
-                }
             }, false );
 
-
+        } );
 
     }
 
