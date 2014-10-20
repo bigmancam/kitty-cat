@@ -43,6 +43,9 @@ var transition;
 var state = {
   opened: false
 }
+var state2 ={
+  opened: true
+}
 
 function getMeta() {
       if (!meta) {
@@ -54,6 +57,7 @@ function getMeta() {
 
 function setup() {
       var target = document.getElementById('content_pane');
+      var target2 = document.getElementById('dr-menu');
 
       if (transition) {
         transition.teardown(target);
@@ -62,12 +66,18 @@ function setup() {
       var value = "core-transition-center";
       transition = getMeta().byId(value);
       transition.setup(target);
+      transition.setup(target2);
     }
 
 function toggle() {
       var target = document.getElementById('content_pane');
       state.opened = !state.opened;
       transition.go(target, state);
+    }
+function toggle2() {
+      var target2 = document.getElementById('dr-menu');
+      state2.opened = !state.opened;
+      transition.go(target2, state2);
     }
 function toggleOff() {
     var target = document.getElementById('content_pane');
