@@ -7,14 +7,12 @@ var YTMenu = (function() {
                 icon = document.getElementById( 'label' ),
                 open = false;
  
-            trigger.addEventListener( 'click', function( event ) {
+            icon.addEventListener( 'click', function( event ) {
                 if( !open ) {
                     el.className += ' dr-menu-open';
                     open = true;
+                    return;
                 }
-            }, false );
-
-            icon.addEventListener( 'click', function( event ) {
                 if( open ) {
                     event.stopPropagation();
                     open = false;
@@ -22,7 +20,7 @@ var YTMenu = (function() {
                     return false;
                 }
             }, false );
- 
+
         } );
  
     }
