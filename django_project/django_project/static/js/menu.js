@@ -32,6 +32,7 @@ var YTMenu = (function() {
  
 })();
 
+
 document.addEventListener('polymer-ready', function() {
   // initial setup
   setup();
@@ -64,7 +65,7 @@ function setup() {
       transition.setup(target);
     }
 
-function stuff() {
+function toggle() {
       var target = document.getElementById('content_pane');
       state.opened = !state.opened;
       transition.go(target, state);
