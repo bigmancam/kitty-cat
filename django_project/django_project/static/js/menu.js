@@ -47,16 +47,17 @@ function toggle2() {
 
                 if( !open ) {
                     el.className += ' dr-menu-open';
-                    open = true;
-                    return;
-                }
-                if( open ) {
+                    if( open ) {
                     event.stopPropagation();
                     open = false;
                     el.className = el.className.replace(/\bdr-menu-open\b/,'');
                     return false;
                 }
+                    open = true;
+                    return;
+                }
             }, false );
+
 
 
     }
