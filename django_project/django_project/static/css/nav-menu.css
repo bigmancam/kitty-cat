@@ -26,9 +26,13 @@ li paper-item {
     margin-left: 20px;
 }
 
+#dr-menu {
+    padding-bottom: 15px;
+
+}
+
 #menu {
-
-
+    width: 33%;
 }
 
 .dr-menu > div  {

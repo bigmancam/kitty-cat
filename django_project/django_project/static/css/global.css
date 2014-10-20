@@ -77,12 +77,13 @@ div#form_floater {
 
 #content_pane {
     width: 67%;
-    margin-left: 20px;
+    margin-left: 10px;
+    float: left;
 }
 
 .content_wrapper {
     height: 100%;
-    width: 33%;
+    width: 100%;
 }
 
 .main p {
