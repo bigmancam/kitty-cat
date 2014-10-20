@@ -7,7 +7,10 @@
 
 var meta;
 var transition;
-var state = {
+var state1 = {
+  opened: false
+}
+var state2 = {
   opened: false
 }
 
@@ -33,13 +36,13 @@ function setup() {
     }
 function toggle1() {
       var target = document.getElementById('content_pane');
-      state.opened = !state.opened;
+      state1.opened = !state.opened;
       transition = getMeta().byId('core-transition-center');
       transition.go(target, state);
 
 function toggle2() {
       var target = document.getElementById('side')
-      state.opened = !state.opened;
+      state2.opened = !state.opened;
       transition.go(target, state);
       var YTMenu = (function() {
 
