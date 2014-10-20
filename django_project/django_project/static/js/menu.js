@@ -40,6 +40,7 @@ var YTMenu = (function() {
 
 var meta;
 var transition;
+var transition2;
 var state = {
   opened: false
 }
@@ -63,11 +64,15 @@ function setup() {
         transition.teardown(target);
       }
 
+      if (transition2) {
+        transition2.teardown(target);
+      }
+
       var value = "core-transition-center";
       transition = getMeta().byId(value);
       transition.setup(target);
-      transition = getMeta().byId(value);
-      transition.setup(target2);
+      transition2 = getMeta().byId(value);
+      transition2.setup(target2);
     }
 
 function toggle() {
