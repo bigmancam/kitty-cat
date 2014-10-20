@@ -31,3 +31,41 @@ var YTMenu = (function() {
     init();
  
 })();
+
+document.addEventListener('polymer-ready', function() {
+  // initial setup
+  setup();
+  document.getElementById('content_pane').removeAttribute('hidden');
+});
+
+var meta;
+var transition;
+var state = {
+  opened: false
+}
+
+function getMeta() {
+      if (!meta) {
+        meta = document.createElement('core-meta');
+        meta.type = 'transition';
+      }
+      return meta;
+    }
+
+function setup() {
+      var target = document.getElementById('content_pane');
+
+      if (transition) {
+        transition.teardown(target);
+      }
+
+      var value = core-transition-left;
+      transition = getMeta().byId(value);
+      transition.setup(target);
+    }
+
+function stuff() {
+      var target = document.getElementById('content_pane');
+      state.opened = !state.opened;
+      transition.go(target, state);
+    }

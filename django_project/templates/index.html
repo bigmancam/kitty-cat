@@ -13,6 +13,13 @@
 <link rel="import" href="{% static 'components/bower_components/paper-input/paper-input.html' %}">
 <link rel="import" href="{% static 'components/bower_components/core-input/core-input.html' %}">
 <link rel="import" href="{% static 'components/bower_components/paper-button/paper-button.html' %}">
+<style>
+    paper-button.colored {
+        background: #26ADE4;
+        margin-top: 10px;
+        float: right;
+    }
+</style>
 {% endblock %}
 {% block body %}
 <div class="container">	
@@ -42,7 +49,7 @@
                 </li>
                 <li>
                     <paper-item>
-                        <a class="dr-icon dr-icon-pencil" href="#" id="contact">Contact Me</a></li>
+                        <a class="dr-icon dr-icon-pencil" href="#" id="contact" onclick="toggle();">Contact Me</a></li>
     			    </paper-item>
                 </li>
                 <li>
@@ -54,22 +61,18 @@
     			</ul>
             </nav>
 		</div>
-        <div id="content_pane">
-
+        <div id="content_pane" hidden>
+            <section>
+                <paper-input label="Name:"></paper-input>
+                <br>
+                <paper-input label="Comment:"></paper-input>
+                <br>
+                <paper-button raised class="colored">Submit</paper-button>
+                </section>
         </div>
 	</div>
 </div><!-- /container -->
 {% endblock %}
 {% block extra_js %}
 <script src="{% static 'js/menu.js' %}"></script>
-<script>
-$(document).ready(function() {
-    $("#contact").click(function () {
-        $("#content_pane").load("{% static 'html/comment_page.html' %}");
-    })
-    $("#home").click(function () {
-        $("#content_pane").load("{% static 'html/index.html' %}");
-    })
-})
-</script>
 {% endblock %}
