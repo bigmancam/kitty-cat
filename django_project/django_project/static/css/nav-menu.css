@@ -23,6 +23,7 @@ li paper-item {
 	font-weight: 400;
 	color: #492833;
 	padding-top: 2em;
+    margin-left: 20px;
 }
 
 .dr-menu > div  {
@@ -206,4 +207,8 @@ li paper-item {
  
 .dr-icon-home:before {
     content: "\e600";
+}
+
+.dr-icon-twitter:before {
+    content: "\e605";
 }
