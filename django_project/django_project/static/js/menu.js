@@ -58,7 +58,7 @@ function getMeta() {
 
 function setup() {
       var target = document.getElementById('content_pane');
-      var target2 = document.getElementById('dr-menu');
+      var target2 = document.getElementById('menu');
 
       if (transition) {
         transition.teardown(target);
@@ -81,7 +81,7 @@ function toggle() {
       transition.go(target, state);
     }
 function toggle2() {
-      var target2 = document.getElementById('dr-menu');
+      var target2 = document.getElementById('menu');
       state2.opened = !state.opened;
       transition.go(target2, state2);
     }
