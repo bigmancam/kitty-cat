@@ -36,6 +36,7 @@ var YTMenu = (function() {
   // initial setup
   setup();
   document.getElementById('content_pane').removeAttribute('hidden');
+  document.querySelector('div paper-shadow-top-z-1').removeAttribute('hidden');
 });
 
 var meta;
@@ -67,7 +68,7 @@ function getMeta2() {
 
 function setup() {
       var target = document.getElementById('content_pane');
-      var target2 = document.get('menu');
+      var target2 = document.querySelector('div paper-shadow-top-z-1')
 
       if (transition) {
         transition.teardown(target);
@@ -82,7 +83,7 @@ function setup() {
       transition.setup(target);
       transition2 = getMeta2().byId(value);
       transition2.setup(target2);
-      var target2 = document.getElementById('menu');
+      var target2 = document.querySelector('div paper-shadow-top-z-1')
       state2.opened = !state.opened;
       transition.go(target2, state2);
     }
@@ -93,7 +94,7 @@ function toggle() {
       transition.go(target, state);
     }
 function toggle2() {
-      var target2 = document.getElementById('menu');
+      var target2 = document.querySelector('div paper-shadow-top-z-1')
       state2.opened = !state.opened;
       transition.go(target2, state2);
     }
