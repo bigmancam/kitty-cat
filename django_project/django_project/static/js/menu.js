@@ -2,7 +2,7 @@
   // initial setup
   setup();
   setup2();
-  document.getElementById('side').removeAttribute('hidden');
+  document.getElementById('dr-menu').removeAttribute('hidden');
   document.getElementById('content_pane').removeAttribute('hidden');
 });
 
@@ -24,7 +24,7 @@ function getMeta() {
     }
 
 function setup() {
-      var target = document.getElementById('side')
+      var target = document.getElementById('dr-menu')
 
       if (transition) {
         transition.teardown(target);
@@ -54,7 +54,7 @@ function toggle1() {
     transition2.go(target, state1);
 }
 function toggle2() {
-      var target = document.getElementById('side')
+      var target = document.getElementById('dr-menu')
       state2.opened = !state2.opened;
       transition.go(target, state2);
       var YTMenu = (function() {
