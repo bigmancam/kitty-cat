@@ -99,6 +99,7 @@ function setup() {
     }
 
 function toggle() {
+      console.log(meta);
       var target = document.getElementById('content_pane');
       state.opened = !state.opened;
       transition.go(target, state);
