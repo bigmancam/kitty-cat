@@ -21,7 +21,7 @@ li paper-item {
 	font-size: 1.3em;
 	line-height: 2.5;
 	font-weight: 400;
-	color: #492833;
+	color: #000000;
 	padding-top: 2em;
     margin-left: 20px;
 }
@@ -75,7 +75,7 @@ li paper-item {
 	padding-left: 3em;
 	position: relative;
 	display: block;
-	color: #492833;
+	color: #000000;
 	font-size: 0.9em;
 	font-weight: 700;
 	letter-spacing: 1px;
@@ -167,11 +167,11 @@ li paper-item {
 .dr-menu ul li a {
 	display: inline-block;
 	padding: 0 20px;
-	color: #492833;
+	color: #000000;
 }
 
 .dr-menu ul li a:hover {
-	
+	color: #000272;
 }
 
 .dr-icon:before, 
