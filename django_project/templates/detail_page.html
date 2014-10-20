@@ -43,7 +43,7 @@
             <paper-shadow z="1"></paper-shadow>
             <div id="menu">
 		    <nav id="dr-menu" class="dr-menu">
-   			    <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label" id="menu_button">Menu</a></div>
+   			    <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label" id="menu_button" style="z-index:9999;">Menu</a></div>
    			    <ul style="color:#BF9C7C; font-size: 22pt;">
  			    <li>
 			        <paper-item>
@@ -130,8 +130,14 @@ function getMeta() {
 function setup() {
       var target = document.getElementById('side')
 
+      if (transition) {
+        transition.teardown(target);
+      }
+
+
       var value = "core-transition-center";
       transition = getMeta().byId(value);
+      transition.setup(target);
     }
 
 function toggle2() {
