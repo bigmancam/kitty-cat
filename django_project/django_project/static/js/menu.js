@@ -33,11 +33,9 @@ var YTMenu = (function() {
 })();
 
 document.addEventListener('polymer-ready', function() {
-  var a = document.querySelectorAll( '.paper-shadow-top-z-1' )
-  console.log(a);
   // initial setup
   setup();
-  document.querySelector('div.paper-shadow-top-z-1').removeAttribute('hidden');
+  $('div.paper-shadow-top-z-1').removeAttribute('hidden');
 });
 
 var meta;
@@ -55,7 +53,7 @@ function getMeta() {
     }
 
 function setup() {
-      var target = document.querySelector('div.paper-shadow-top-z-1')
+      var target = $('div.paper-shadow-top-z-1')
 
       if (transition) {
         transition.teardown(target);
@@ -70,7 +68,7 @@ function setup() {
     }
 
 function toggle2() {
-      var target = document.querySelector('div.paper-shadow-top-z-1')
+      var target = $('div.paper-shadow-top-z-1')
       state.opened = !state.opened;
       transition.go(target, state);
     }
