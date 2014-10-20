@@ -44,7 +44,7 @@ function toggle2() {
                 icon = document.getElementById( 'label' ),
                 open = false;
 
-            icon.addEventListener( 'click', function( event ) {
+
                 if( !open ) {
                     el.className += ' dr-menu-open';
                     open = true;
