@@ -7,7 +7,7 @@
 var meta;
 var transition;
 var state = {
-  opened: true
+  opened: false
 }
 
 function getMeta() {
@@ -37,7 +37,7 @@ function toggle2() {
       transition.go(target, state);
       var YTMenu = (function() {
 
-    function init() {
+      function init() {
 
         [].slice.call( document.querySelectorAll( '.dr-menu' ) ).forEach( function( el, i ) {
             var trigger = document.getElementById( 'dr-trigger' ),
