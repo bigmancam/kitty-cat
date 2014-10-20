@@ -102,7 +102,7 @@
 </div><!-- /container -->
 {% endblock %}
 {% block extra_js %}
-<script src="{% static 'js/menu.js' %}"></script>
+<!--<script src="{% static 'js/menu.js' %}"></script>-->
 <script>
   $(document).ready(function() {
       document.getElementById('side').removeAttribute('hidden');
@@ -129,11 +129,6 @@ function getMeta() {
 
 function setup() {
       var target = document.getElementById('side')
-
-      if (transition) {
-        transition.teardown(target);
-      }
-
 
       var value = "core-transition-center";
       transition = getMeta().byId(value);
