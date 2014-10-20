@@ -1,12 +1,13 @@
  document.addEventListener('polymer-ready', function() {
   // initial setup
   setup();
+  setup2();
   document.getElementById('side').removeAttribute('hidden');
   document.getElementById('content_pane').removeAttribute('hidden');
 });
 
 var meta;
-var transition;
+var transition, transition2;
 var state1 = {
   opened: false
 }
@@ -34,11 +35,23 @@ function setup() {
       transition = getMeta().byId(value);
       transition.setup(target);
     }
+
+function setup2() {
+      var target = document.getElementById('content_pane')
+
+      if (transition2) {
+        transition2.teardown(target);
+      }
+
+
+      var value = "core-transition-center";
+      transition2 = getMeta().byId(value);
+      transition2.setup(target);
+    }
 function toggle1() {
     var target = document.getElementById('content_pane');
     state1.opened = !state1.opened;
-    transition = getMeta().byId('core-transition-center');
-    transition.go(target, state1);
+    transition2.go(target, state1);
 }
 function toggle2() {
       var target = document.getElementById('side')
