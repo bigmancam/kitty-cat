@@ -36,14 +36,14 @@ function setup() {
     }
 function toggle1() {
     var target = document.getElementById('content_pane');
-    state1.opened = !state.opened;
+    state1.opened = !state1.opened;
     transition = getMeta().byId('core-transition-center');
-    transition.go(target, state);
+    transition.go(target, state1);
 }
 function toggle2() {
       var target = document.getElementById('side')
-      state2.opened = !state.opened;
-      transition.go(target, state);
+      state2.opened = !state2.opened;
+      transition.go(target, state2);
       var YTMenu = (function() {
 
       function init() {
