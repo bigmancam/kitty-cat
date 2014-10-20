@@ -52,10 +52,11 @@ div#info_floater {
 }
 
 div#form_floater {
-    font-size: 10pt;
+    font-size: 12pt;
     float: left;
     margin: 10px;
     padding: 15px;
+    width: 75.7%;
 }
 
 .main {
@@ -84,7 +85,6 @@ div#form_floater {
 	padding: 0 1em;
 	margin: 0;
 	line-height: 1.5;
-	float: right;
 	width: 70%;
 }
 
