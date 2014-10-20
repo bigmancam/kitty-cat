@@ -82,19 +82,9 @@
   document.getElementById('content_pane').removeAttribute('hidden');
 });
 
-var meta;
+var meta = document.createElement('core-meta');
+meta.type = 'transition';
 var transition;
-var state = {
-  opened: false
-}
-
-function getMeta() {
-      if (!meta) {
-        meta = document.createElement('core-meta');
-        meta.type = 'transition';
-      }
-      return meta;
-    }
 
 function setup() {
       var target = document.getElementById('content_pane');
@@ -104,7 +94,7 @@ function setup() {
       }
 
       var value = "core-transition-left";
-      transition = getMeta().byId(value);
+      transition = meta.byId(value);
       transition.setup(target);
     }
 
