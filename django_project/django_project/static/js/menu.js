@@ -39,6 +39,7 @@ var YTMenu = (function() {
 });
 
 var meta;
+var meta2;
 var transition;
 var transition2;
 var state = {
@@ -56,6 +57,14 @@ function getMeta() {
       return meta;
     }
 
+function getMeta2() {
+      if (!meta2) {
+        meta2 = document.createElement('core-meta');
+        meta2.type = 'transition';
+      }
+      return meta2;
+    }
+
 function setup() {
       var target = document.getElementById('content_pane');
       var target2 = document.getElementById('menu');
@@ -71,7 +80,7 @@ function setup() {
       var value = "core-transition-center";
       transition = getMeta().byId(value);
       transition.setup(target);
-      transition2 = getMeta().byId(value);
+      transition2 = getMeta2().byId(value);
       transition2.setup(target2);
     }
 
