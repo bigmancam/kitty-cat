@@ -34,9 +34,9 @@ var YTMenu = (function() {
 
     document.addEventListener('polymer-ready', function() {
   // initial setup
+  document.getElementById('dr-menu').removeAttribute('hidden');
   setup();
   document.getElementById('content_pane').removeAttribute('hidden');
-  document.getElementById('dr-menu').removeAttribute('hidden');
 });
 
 var meta;
