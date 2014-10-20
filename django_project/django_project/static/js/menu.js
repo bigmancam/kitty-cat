@@ -34,7 +34,9 @@ var YTMenu = (function() {
 
 document.addEventListener('polymer-ready', function() {
   // initial setup
-  $('div.paper-shadow-top-z-1').attr('hidden');
+  $('div.paper-shadow-top-z-1').css('box-shadow', '');
+  $('div.paper-shadow-bottom-z-1').css('box-shadow', '');
+
   setup();
   $('div.paper-shadow-top-z-1').removeAttribute('hidden');
 });
