@@ -32,9 +32,10 @@
     <main>
         <div id="mainframe">
             <div id="console">
+                <span id="countdown" class="timer"></span>
                 <div id="timer" hidden>
                     <div id="clock">
-                        <span id="countdown" class="timer"></span>
+
                     </div>
                 </div>
             </div>
@@ -47,7 +48,6 @@
 {% endblock %}
 {% block extra_js %}
 <script src="{% static 'js/mainframe.js' %}"></script>
-<span id="countdown" class="timer"></span>
 <script>
 var seconds = 60;
 function secondPassed() {
