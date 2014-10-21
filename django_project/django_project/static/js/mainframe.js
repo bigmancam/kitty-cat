@@ -49,7 +49,7 @@ function setup2() {
 
       var value = "core-transition-center";
       transitionCalc = getMeta().byId(value);
-      transitionCalc.setup2(target);
+      transitionCalc.setup(target);
 }
 
 function toggle() {
