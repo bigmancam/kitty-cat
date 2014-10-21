@@ -75,9 +75,9 @@ function playAudio() {
     }
 }
 
-
+var seconds = 10;
 function secondPassed() {
-        var seconds = 10;
+
         var minutes = Math.round((seconds - 30) / 60);
         var remainingSeconds = seconds % 60;
         if (remainingSeconds < 10) {
