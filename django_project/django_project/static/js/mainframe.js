@@ -12,7 +12,7 @@ var state = {
 
 function submit(e){
     if(e.keyCode == 13) {
-        console.log($('#fisk-input').context.activeElement.value);
+        console.log("A" + $('#fisk-input').context.activeElement.value);
         if($('#fisk-input').context.activeElement.value =='Clock') {
             toggle();
             clearConsole();
