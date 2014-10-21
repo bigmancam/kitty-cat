@@ -4,6 +4,7 @@ document.addEventListener('polymer-ready', function() {
   document.getElementById('timer').removeAttribute('hidden');
 });
 
+var seconds;
 var meta;
 var transition;
 var state = {
@@ -50,10 +51,11 @@ function submit(e){
     if(e.keyCode == 13) {
         if(input[0] == 'timer') {
             toggle();
-            clock(arg);
+            seconds = arg * 60;
+            var countdownTimer = setInterval('secondPassed()', 1000);
             clearConsole();
         }
-        if(input[0] + arg =='exit timer') {
+        if(input[0] =='exit' && arg == 'timer') {
             toggleOff();
             clearConsole();
         }
@@ -64,11 +66,7 @@ function clearConsole() {
     $('#fisk-input').context.activeElement.value = '';
 }
 
-function clock(s) {
-    var time_in_seconds = s * 60;
-    var seconds = time_in_seconds;
-
-    function secondPassed() {
+function secondPassed() {
         var minutes = Math.round((seconds - 30) / 60);
         var remainingSeconds = seconds % 60;
         if (remainingSeconds < 10) {
@@ -82,6 +80,3 @@ function clock(s) {
             seconds--;
         }
     }
-
-    var countdownTimer = setInterval('secondPassed()', 1000);
-}
