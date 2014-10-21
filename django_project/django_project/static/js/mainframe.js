@@ -71,7 +71,11 @@ function clearConsole() {
 function playAudio() {
     var audio = new Audio("/static/beep-06.mp3");
         audio.play();
-        audio.load();
+    var i;
+    for(i = 0; i < 10; i++) {
+        audio.src="/static/beep-06.mp3";
+        audio.play();
+    }
 }
 
 var seconds = 10;
