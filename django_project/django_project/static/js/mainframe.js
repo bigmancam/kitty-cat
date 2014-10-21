@@ -13,14 +13,20 @@ var state = {
 function submit(e){
     if(e.keyCode == 13) {
         if($('#fisk-input').value=='Clock') {
+            console.log($('#fisk-input').val())
             toggle();
+            clearConsole();
         }
         if($('#fisk-input').value=='exit Clock') {
             toggleOff();
+            clearConsole();
         }
     }
 }
 
+function clearConsole() {
+    $('#fisk-input').value = '';
+}
 
 function getMeta() {
       if (!meta) {
