@@ -7,11 +7,12 @@ main {
 }
 
 #clock {
-    font-size: 20pt;
+    font-size: 55pt;
 }
 
 #countdown {
-
+    text-align: center;
+    line-height: 184px;
 }
 
 #input {
