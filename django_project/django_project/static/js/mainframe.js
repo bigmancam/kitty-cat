@@ -51,9 +51,9 @@ function submit(e){
     var arg1 = input[1];
     var arg2 = input[2];
     if(arg1.replace(/[^aA-zZ]/g, '')) {
-            console.log(arg1);
             arg1 = arg1.replace(/[^0-9]/g, '');
             arg2 = arg1.replace(/[^aA-zZ]/g, '');
+            console.log(arg2);
     }
     if(e.keyCode == 13) {
         if(input[0] == 'timer') {
