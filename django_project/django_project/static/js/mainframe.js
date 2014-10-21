@@ -51,8 +51,8 @@ function submit(e){
     var arg1 = input[1];
     var arg2 = input[2];
     if(arg1.replace(/[^aA-zZ]/g, '')) {
+            arg2 = input[1].replace(/[^aA-zZ]/g, '');
             arg1 = arg1.replace(/[^0-9]/g, '');
-            arg2 = arg1.replace(/[^aA-zZ]/g, '');
             console.log(arg2);
     }
     if(e.keyCode == 13) {
