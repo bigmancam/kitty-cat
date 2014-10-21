@@ -118,7 +118,7 @@ function submit(e){
         }
         else {
             console.log("Test");
-            $('#toast').show();
+            $('#toast').toggle();
         }
     }
 }
