@@ -24,24 +24,24 @@
 {% endblock %}
 {% block body %}
 <div class="container">
-	<header class="clearfix">
-        <paper-shadow z="1"></paper-shadow>
-		<h1>Cameron Fisk<span>Mainframe</span></h1>
-	</header>
-
-
-<main>
-    <div id="mainframe">
-        <div id="console">
-            <div id="clock" hidden>
-                Clock HTML
-            </div>
-        </div>
-        <form id="input_form">
-        <fisk-input id="input"></fisk-input>
-        </form>
+    <div id="header">
+        <header class="clearfix">
+            <paper-shadow z="1"></paper-shadow>
+            <h1>Cameron Fisk<span>Mainframe</span></h1>
+        </header>
     </div>
-</main>
+    <main>
+        <div id="mainframe">
+            <div id="console">
+                <div id="clock" hidden>
+                    Clock HTML
+                </div>
+            </div>
+            <form id="input_form">
+                <fisk-input id="input"></fisk-input>
+            </form>
+        </div>
+    </main>
 </div><!-- /container -->
 {% endblock %}
 {% block extra_js %}
