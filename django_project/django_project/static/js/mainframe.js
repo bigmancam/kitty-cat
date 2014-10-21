@@ -4,7 +4,7 @@ document.addEventListener('polymer-ready', function() {
   document.getElementById('timer').removeAttribute('hidden');
 });
 
-var seconds;
+//var seconds;
 var meta;
 var transition;
 var countdownTimer;
@@ -52,7 +52,7 @@ function submit(e){
     if(e.keyCode == 13) {
         if(input[0] == 'timer') {
             toggle();
-            seconds = arg * 60;
+            //seconds = arg * 60;
             countdownTimer = setInterval('secondPassed()', 1000);
             clearConsole();
         }
@@ -77,6 +77,7 @@ function playAudio() {
 
 
 function secondPassed() {
+        var seconds = 10;
         var minutes = Math.round((seconds - 30) / 60);
         var remainingSeconds = seconds % 60;
         if (remainingSeconds < 10) {
