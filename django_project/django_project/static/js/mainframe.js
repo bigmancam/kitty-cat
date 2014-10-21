@@ -7,7 +7,7 @@ document.addEventListener('polymer-ready', function() {
 });
 
 var seconds;
-var meta, metaCalc;
+var meta;
 var transition, transitionCalc;
 var countdownTimer;
 var state = {
@@ -39,7 +39,7 @@ function setup() {
       transition.setup(target);
 }
 
-function setupCalc() {
+function setup2() {
       var target = document.getElementById('calc')
 
       if (transitionCalc) {
@@ -48,10 +48,8 @@ function setupCalc() {
 
 
       var value = "core-transition-center";
-      metaCalc = document.createElement('core-meta');
-      metaCalc.type = 'transition';
-      transitionCalc = metaCalc.byId(value);
-      transitionCalc.setupCalc(target);
+      transitionCalc = getMeta().byId(value);
+      transitionCalc.setup(target);
 }
 
 function toggle() {
