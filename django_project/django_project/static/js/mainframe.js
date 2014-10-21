@@ -52,6 +52,7 @@ function submit(e){
     var arg2 = input[2];
     if(arg2 == '') {
         if(arg1) {
+            console.log(arg1);
             arg1 = arg1.replace(/[^0-9]/g, '');
             arg2 = arg1.replace(/[^aA-zZ]/g, '');
         }
