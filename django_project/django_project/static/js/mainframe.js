@@ -1,7 +1,6 @@
 document.addEventListener('polymer-ready', function() {
   // initial setup
   setup();
-  setup2();
   document.getElementById('clock').removeAttribute('hidden');
 });
 
