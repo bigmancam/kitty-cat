@@ -2,6 +2,11 @@
 
 }
 
+#input_form {
+    position: relative;
+    top: 500px;
+}
+
 main {
     min-height: 600px;
 }
