@@ -93,6 +93,7 @@ function submit(e){
             arg1 = arg1.replace(/[^0-9]/g, '');
             }
             toggle();
+            sleep(100);
             if(arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
                 seconds = arg1 * 60;
                 countdownTimer = setInterval('secondPassed()', 1000);
@@ -152,3 +153,12 @@ function secondPassed() {
             seconds--;
         }
     }
+
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
