@@ -48,11 +48,13 @@ function toggleOff() {
 
 function submit(e){
     var input = $('#fisk-input').context.activeElement.value.split(' ');
-    var arg = input[1];
+    var arg1 = input[1];
+    var arg2 = input[2];
     if(e.keyCode == 13) {
         if(input[0] == 'timer') {
             toggle();
-            seconds = arg * 60;
+            if(arg2 == 'm') {seconds = arg1 * 60;}
+            if(arg2 == 's') {seconds = arg1;}
             countdownTimer = setInterval('secondPassed()', 1000);
             clearConsole();
         }
