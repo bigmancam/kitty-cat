@@ -56,12 +56,12 @@ function submit(e){
         if(arg1) {
             number = arg1.replace(/[^0-9]/g, '');
             arg2 = arg1.replace(/[^aA-zZ]/g, '');
-            console.log(arg2);
         }
     }
     if(e.keyCode == 13) {
         if(input[0] == 'timer') {
             toggle();
+            console.log(arg2);
             if(arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {seconds = arg1 * 60;}
             if(arg2 == 's' || arg2 == 'second' || arg2 == 'seconds') {seconds = arg1;}
             countdownTimer = setInterval('secondPassed()', 1000);
