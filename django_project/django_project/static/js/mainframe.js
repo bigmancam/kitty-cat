@@ -80,7 +80,5 @@ function clock(s) {
     } else {
         seconds--;
     }
-}
-
     var countdownTimer = setInterval('secondPassed()', 1000);
 }
