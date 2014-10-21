@@ -117,7 +117,8 @@ function submit(e){
             }
         }
         else {
-                $('#toast').show();
+            console.log("Test");
+            $('#toast').show();
         }
     }
 }
