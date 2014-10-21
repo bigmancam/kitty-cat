@@ -57,6 +57,7 @@ function submit(e){
             arg2 = arg1.replace(/[^aA-zZ]/g, '');
         }
     }
+    seconds = number;
     if(e.keyCode == 13) {
         if(input[0] == 'timer') {
             toggle();
