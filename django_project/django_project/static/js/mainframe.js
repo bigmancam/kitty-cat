@@ -13,7 +13,12 @@ var state = {
 
 function submit(e){
     if(e.keyCode == 13) {
-        console.log("Test");
+        if($('#fisk-input').value=='Clock') {
+            toggle();
+        }
+        if($('#fisk-input').value=='exit Clock') {
+            toggleOff();
+        }
     }
 }
 
@@ -42,6 +47,12 @@ function setup() {
 function toggle() {
     var target = document.getElementById('clock');
     state.opened = !state.opened;
+    transition.go(target, state);
+}
+
+function toggleOff() {
+    var target = document.getElementById('clock');
+    state.opened = false;
     transition.go(target, state);
 }
 
