@@ -70,10 +70,8 @@ function clearConsole() {
 
 function playAudio() {
     var audio = new Audio("/static/beep-06.mp3");
-    for(i = 0; i < 10; i++) {
         audio.play();
         audio.load();
-    }
 }
 
 var seconds = 10;
