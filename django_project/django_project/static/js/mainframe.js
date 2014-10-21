@@ -11,6 +11,11 @@ var state = {
   opened: false
 }
 
+function submit(e){
+    if(e.keyCode == 13) {
+        console.log("Test");
+    }
+}
 
 
 function getMeta() {
@@ -39,3 +44,4 @@ function toggle() {
     state.opened = !state.opened;
     transition.go(target, state);
 }
+
