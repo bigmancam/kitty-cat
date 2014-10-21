@@ -50,14 +50,12 @@ function submit(e){
     var input = $('#fisk-input').context.activeElement.value.split(' ');
     var arg1 = input[1];
     var arg2 = input[2];
-    var number;
     if(!arg2) {
         if(arg1) {
-            number = arg1.replace(/[^0-9]/g, '');
+            arg1 = arg1.replace(/[^0-9]/g, '');
             arg2 = arg1.replace(/[^aA-zZ]/g, '');
         }
     }
-    seconds = number;
     if(e.keyCode == 13) {
         if(input[0] == 'timer') {
             toggle();
