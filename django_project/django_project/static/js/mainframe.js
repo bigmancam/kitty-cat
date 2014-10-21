@@ -69,16 +69,16 @@ function clearConsole() {
 }
 
 function playAudio() {
-    var audio = new Audio("/static/beep-06.mp3");
-    var count = 0;
-    while(count < 10) {
-        audio.addEventListener('ended', function () {
-            this.currentTime = 0;
-            this.play();
-        }, false);
-        count++;
+    var count = 10;
+    var play = setInterval(function repeat() {
+        count--;
+        if(count === 0) {
+            clearInterval(play);
+        }
+        var audio = new Audio("/static/beep-06.mp3");
         audio.play();
-    }
+    },500);
+    repeat();
 }
 
 
