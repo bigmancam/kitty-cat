@@ -5,10 +5,13 @@ document.addEventListener('polymer-ready', function() {
 });
 
 var seconds;
-var meta;
-var transition;
+var meta, metaCalc;
+var transition, transitionCalc;
 var countdownTimer;
 var state = {
+  opened: false
+}
+var stateCalc = {
   opened: false
 }
 
@@ -18,7 +21,8 @@ function getMeta() {
         meta.type = 'transition';
       }
       return meta;
-    }
+}
+
 
 function setup() {
       var target = document.getElementById('timer')
@@ -31,12 +35,40 @@ function setup() {
       var value = "core-transition-center";
       transition = getMeta().byId(value);
       transition.setup(target);
-    }
+}
+
+function setupCalc() {
+      var target = document.getElementById('calc')
+
+      if (transitionCalc) {
+        transitionCalc.teardown(target);
+      }
+
+
+      var value = "core-transition-center";
+      metaCalc = document.createElement('core-meta');
+      metaCalc.type = 'transition';
+      transitionCalc = metaCalc.byId(value);
+      transitionCalc.setupCalc(target);
+}
 
 function toggle() {
     var target = document.getElementById('timer');
     state.opened = !state.opened;
     transition.go(target, state);
+}
+
+function toggleCalc() {
+    var target = document.getElementById('calc');
+    stateCalcopened = !stateCalc.opened;
+    transitionCalc.go(target, stateCalc);
+}
+
+
+function toggleCalcOff() {
+    var target = document.getElementById('calc');
+    stateCalc.opened = false;
+    transitionCalc.go(target, stateCalc);
 }
 
 function toggleOff() {
@@ -50,12 +82,16 @@ function submit(e){
     var input = $('#fisk-input').context.activeElement.value.split(' ');
     var arg1 = input[1];
     var arg2 = input[2];
-    if(!arg2) {
+    if(e.keyCode == 13) {
+        if(input[0] == 'calc') {
+            toggleCalc();
+            clearConsole();
+        }
+        if(input[0] == 'timer') {
+            if(!arg2) {
             arg2 = input[1].replace(/[^aA-zZ]/g, '');
             arg1 = arg1.replace(/[^0-9]/g, '');
-    }
-    if(e.keyCode == 13) {
-        if(input[0] == 'timer') {
+            }
             toggle();
             if(arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
                 seconds = arg1 * 60;
@@ -68,10 +104,17 @@ function submit(e){
                 clearConsole();
             }
         }
-        if(input[0] =='exit' && arg2 == 'timer') {
-            toggleOff();
-            clearConsole();
-            clearInterval(countdownTimer);
+        if(input[0] =='exit') {
+            if(arg1 == 'timer') {
+                toggleOff();
+                clearConsole();
+                clearInterval(countdownTimer);
+            }
+            if(arg1 == 'calc') {
+                toggleCalcOff();
+                clearConsole();
+                clearInterval(countdownTimer);
+            }
         }
     }
 }
