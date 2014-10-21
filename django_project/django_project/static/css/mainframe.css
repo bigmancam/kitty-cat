@@ -6,6 +6,14 @@ main {
     min-height: 600px;
 }
 
+#clock {
+    font-size: 20pt;
+}
+
+#countdown {
+
+}
+
 #input {
     position: absolute;
     top: 83%;

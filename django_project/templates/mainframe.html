@@ -32,10 +32,9 @@
     <main>
         <div id="mainframe">
             <div id="console">
-                <span id="countdown" class="timer"></span>
                 <div id="timer" hidden>
-                    <div id="clock">
-
+                    <div id="countdown">
+                        <span id="clock"></span>
                     </div>
                 </div>
             </div>
@@ -48,23 +47,4 @@
 {% endblock %}
 {% block extra_js %}
 <script src="{% static 'js/mainframe.js' %}"></script>
-<script>
-var seconds = 60;
-function secondPassed() {
-    var minutes = Math.round((seconds - 30)/60);
-    var remainingSeconds = seconds % 60;
-    if (remainingSeconds < 10) {
-        remainingSeconds = "0" + remainingSeconds;
-    }
-    document.getElementById('countdown').innerHTML = minutes + ":" + remainingSeconds;
-    if (seconds == 0) {
-        clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "Buzz Buzz";
-    } else {
-        seconds--;
-    }
-}
-
-var countdownTimer = setInterval('secondPassed()', 1000);
-</script>
 {% endblock %}
