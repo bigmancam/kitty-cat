@@ -51,13 +51,13 @@ function submit(e){
     var arg1 = input[1];
     var arg2 = input[2];
     if(arg1.replace(/[^aA-zZ]/g, '')) {
+            console.log(arg2);
             arg1 = arg1.replace(/[^0-9]/g, '');
             arg2 = arg1.replace(/[^aA-zZ]/g, '');
     }
     if(e.keyCode == 13) {
         if(input[0] == 'timer') {
             toggle();
-            console.log(arg2);
             if(arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
                 seconds = arg1 * 60;
                 countdownTimer = setInterval('secondPassed()', 1000);
