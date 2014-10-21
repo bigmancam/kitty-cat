@@ -68,6 +68,14 @@ function clearConsole() {
     $('#fisk-input').context.activeElement.value = '';
 }
 
+function playAudio() {
+    var audio = new Audio("../beep-06.mp3");
+    for(i = 0; i < 10; i++) {
+        audio.play();
+    }
+}
+
+
 function secondPassed() {
         var minutes = Math.round((seconds - 30) / 60);
         var remainingSeconds = seconds % 60;
@@ -77,6 +85,7 @@ function secondPassed() {
         document.getElementById('clock').innerHTML = minutes + ":" + remainingSeconds;
         if (seconds == 0) {
             clearInterval(countdownTimer);
+            playAudio();
             document.getElementById('clock').innerHTML = "Buzz Buzz";
         } else {
             seconds--;
