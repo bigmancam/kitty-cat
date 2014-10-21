@@ -29,3 +29,7 @@ main {
     font-size: 40pt;
     width: 98%;
 }
+
+#calc {
+    width: 200px;
+}
