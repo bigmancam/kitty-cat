@@ -12,13 +12,11 @@ var state = {
 
 function submit(e){
     if(e.keyCode == 13) {
-        console.log($('#fisk-input').value_);
-        console.log($('#fisk-input').value);
-        if($('#fisk-input').value=='Clock') {
+        if($('#fisk-input').context.activeElement.value =='Clock') {
             toggle();
             clearConsole();
         }
-        if($('#fisk-input').value=='exit Clock') {
+        if($('#fisk-input').context.activeElement.value =='exit Clock') {
             toggleOff();
             clearConsole();
         }
@@ -26,7 +24,7 @@ function submit(e){
 }
 
 function clearConsole() {
-    $('#fisk-input').value = '';
+    $('#fisk-input').context.activeElement.value = '';
 }
 
 function getMeta() {
