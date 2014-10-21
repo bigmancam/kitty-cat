@@ -56,6 +56,7 @@ function submit(e){
         if(arg1) {
             number = arg1.replace(/[^0-9]/g, '');
             arg2 = arg1.replace(/[^0-9]/g, '');
+            console.log(arg2 = arg1.replace(/[^0-9]/g, ''));
         }
     }
     if(e.keyCode == 13) {
