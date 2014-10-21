@@ -10,20 +10,6 @@ var state = {
   opened: false
 }
 
-function submit(e){
-    if(e.keyCode == 13) {
-        console.log("A" + $('#fisk-input').context.activeElement.value);
-        if($('#fisk-input').context.activeElement.value =='Clock') {
-            toggle();
-            clearConsole();
-        }
-        if($('#fisk-input').context.activeElement.value =='exit Clock') {
-            toggleOff();
-            clearConsole();
-        }
-    }
-}
-
 function clearConsole() {
     $('#fisk-input').context.activeElement.value = '';
 }
@@ -61,3 +47,16 @@ function toggleOff() {
     transition.go(target, state);
 }
 
+
+function submit(e){
+    if(e.keyCode == 13) {
+        if($('#fisk-input').context.activeElement.value == 'Clock') {
+            toggle();
+            clearConsole();
+        }
+        if($('#fisk-input').context.activeElement.value =='exit Clock') {
+            toggleOff();
+            clearConsole();
+        }
+    }
+}
