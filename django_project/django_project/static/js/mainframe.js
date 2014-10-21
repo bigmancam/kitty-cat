@@ -53,7 +53,6 @@ function submit(e){
     if(!arg2) {
             arg2 = input[1].replace(/[^aA-zZ]/g, '');
             arg1 = arg1.replace(/[^0-9]/g, '');
-            console.log(arg2);
     }
     if(e.keyCode == 13) {
         if(input[0] == 'timer') {
@@ -69,7 +68,7 @@ function submit(e){
                 clearConsole();
             }
         }
-        if(input[0] =='exit' && arg1 == 'timer') {
+        if(input[0] =='exit' && arg2 == 'timer') {
             toggleOff();
             clearConsole();
             clearInterval(countdownTimer);
