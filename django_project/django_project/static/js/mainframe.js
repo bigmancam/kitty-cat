@@ -70,13 +70,13 @@ function clearConsole() {
 
 function playAudio() {
     var audio = new Audio("/static/beep-06.mp3");
-        audio.play();
-    var i;
-    for(i = 0; i < 10; i++) {
-        audio.src="/static/beep-06.mp3";
-        audio.play();
-    }
+    audio.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+    audio.play();
 }
+
 
 var seconds = 10;
 function secondPassed() {
