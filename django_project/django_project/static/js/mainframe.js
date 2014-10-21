@@ -92,8 +92,6 @@ function submit(e){
             arg2 = input[1].replace(/[^aA-zZ]/g, '');
             arg1 = arg1.replace(/[^0-9]/g, '');
             }
-            toggle();
-            sleep(100);
             if(arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
                 seconds = arg1 * 60;
                 countdownTimer = setInterval('secondPassed()', 1000);
@@ -104,6 +102,7 @@ function submit(e){
                 countdownTimer = setInterval('secondPassed()', 1000);
                 clearConsole();
             }
+            toggle();
         }
         if(input[0] =='exit') {
             if(arg1 == 'timer') {
