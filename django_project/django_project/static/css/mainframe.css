@@ -31,5 +31,13 @@ main {
 }
 
 #calc {
-    width: 200px;
+    width: 50%;
+    padding-left: 25%;
+    padding-right: 25%;
+    height: 60%;
+}
+
+#paper-calc {
+    height: 100%;
+    width: 100%;
 }
