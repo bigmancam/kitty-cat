@@ -14,8 +14,6 @@ function submit(e){
     if(e.keyCode == 13) {
         console.log($('#fisk-input').value_);
         console.log($('#fisk-input').value);
-        console.log($('#fisk-input').activeElement.value);
-        console.log($('#fisk-input').activeElement.value_);
         if($('#fisk-input').value=='Clock') {
             toggle();
             clearConsole();
