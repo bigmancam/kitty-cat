@@ -23,9 +23,7 @@ main {
 }
 
 #input {
-    position: absolute;
-    top: 83%;
-    left: 1%;
+    margin-left: 20px;
     font-size: 40pt;
     width: 98%;
 }
