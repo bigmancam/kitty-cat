@@ -104,7 +104,7 @@ function submit(e){
             }
             toggle();
         }
-        if(input[0] =='exit') {
+        else if(input[0] =='exit') {
             if(arg1 == 'timer') {
                 toggleOff();
                 clearConsole();
@@ -115,6 +115,9 @@ function submit(e){
                 clearConsole();
                 clearInterval(countdownTimer);
             }
+        }
+        else {
+                $('#toast').show();
         }
     }
 }
