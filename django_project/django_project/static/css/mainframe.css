@@ -6,9 +6,10 @@
     bottom: 0;
 }
 
-#console {
+#input {
     position: absolute;
-    top: 50%;
-    left: 20%;
+    top: 84%;
+    left: 1%;
     font-size: 40pt;
+    width: 98%;
 }
