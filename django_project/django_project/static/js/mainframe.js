@@ -1,7 +1,7 @@
 document.addEventListener('polymer-ready', function() {
   // initial setup
   setup();
-  document.getElementById('clock').removeAttribute('hidden');
+  document.getElementById('timer').removeAttribute('hidden');
 });
 
 var meta;
@@ -23,7 +23,7 @@ function getMeta() {
     }
 
 function setup() {
-      var target = document.getElementById('clock')
+      var target = document.getElementById('timer')
 
       if (transition) {
         transition.teardown(target);
@@ -36,13 +36,13 @@ function setup() {
     }
 
 function toggle() {
-    var target = document.getElementById('clock');
+    var target = document.getElementById('timer');
     state.opened = !state.opened;
     transition.go(target, state);
 }
 
 function toggleOff() {
-    var target = document.getElementById('clock');
+    var target = document.getElementById('timer');
     state.opened = false;
     transition.go(target, state);
 }
@@ -50,11 +50,11 @@ function toggleOff() {
 
 function submit(e){
     if(e.keyCode == 13) {
-        if($('#fisk-input').context.activeElement.value == 'Clock') {
+        if($('#fisk-input').context.activeElement.value == 'timer') {
             toggle();
             clearConsole();
         }
-        if($('#fisk-input').context.activeElement.value =='exit Clock') {
+        if($('#fisk-input').context.activeElement.value =='exit timer') {
             toggleOff();
             clearConsole();
         }
