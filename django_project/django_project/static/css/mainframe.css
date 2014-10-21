@@ -5,3 +5,9 @@
     right: 0;
     bottom: 0;
 }
+
+#console {
+    position: absolute;
+    top: 50%;
+    left: 205;
+}
