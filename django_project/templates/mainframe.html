@@ -31,6 +31,7 @@
 
 
 <main>
+    <form id="mainframe_form" onsubmit="console.log($('#input').value)">
     <div id="mainframe">
         <div id="console">
             <div id="clock" hidden>
@@ -39,6 +40,7 @@
         </div>
         <fisk-input id="input"></fisk-input>
     </div>
+    </form>
 </main>
 </div><!-- /container -->
 {% endblock %}
