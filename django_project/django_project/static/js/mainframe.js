@@ -70,11 +70,15 @@ function clearConsole() {
 
 function playAudio() {
     var audio = new Audio("/static/beep-06.mp3");
-    audio.addEventListener('ended', function() {
-        this.currentTime = 0;
-        this.play();
-    }, false);
-    audio.play();
+    var count = 0;
+    while(count < 10) {
+        audio.addEventListener('ended', function () {
+            this.currentTime = 0;
+            this.play();
+            count++;
+        }, false);
+        audio.play();
+    }
 }
 
 
