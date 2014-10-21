@@ -75,8 +75,8 @@ function playAudio() {
         audio.addEventListener('ended', function () {
             this.currentTime = 0;
             this.play();
-            count++;
         }, false);
+        count++;
         audio.play();
     }
 }
