@@ -55,7 +55,7 @@ function submit(e){
         console.log("Test");
         if(arg1) {
             number = arg1.replace(/[^0-9]/g, '');
-            arg2 = arg1.replace(/[^0-9]/g, '');
+            arg2 = arg1.replace(/[^a-Z]/g, '');
             console.log(arg2 = arg1.replace(/[^0-9]/g, ''));
         }
     }
