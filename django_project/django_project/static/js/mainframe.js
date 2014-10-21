@@ -1,7 +1,7 @@
 document.addEventListener('polymer-ready', function() {
   // initial setup
   setup();
-  setupCalc();
+  setup2();
   document.getElementById('timer').removeAttribute('hidden');
   document.getElementById('calc').removeAttribute('hidden');
 });
