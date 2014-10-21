@@ -58,7 +58,7 @@ function submit(e){
             countdownTimer = setInterval('secondPassed()', 1000);
             clearConsole();
         }
-        if(input[0] =='exit' && arg == 'timer') {
+        if(input[0] =='exit' && arg1 == 'timer') {
             toggleOff();
             clearConsole();
             clearInterval(countdownTimer);
