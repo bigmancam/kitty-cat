@@ -1,7 +1,9 @@
 document.addEventListener('polymer-ready', function() {
   // initial setup
   setup();
+  setupCalc();
   document.getElementById('timer').removeAttribute('hidden');
+  document.getElementById('calc').removeAttribute('hidden');
 });
 
 var seconds;
@@ -60,7 +62,7 @@ function toggle() {
 
 function toggleCalc() {
     var target = document.getElementById('calc');
-    stateCalcopened = !stateCalc.opened;
+    stateCalc.opened = !stateCalc.opened;
     transitionCalc.go(target, stateCalc);
 }
 
