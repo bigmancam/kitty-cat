@@ -103,6 +103,7 @@ function submit(e){
                 clearConsole();
             } */
             toggle();
+            clearConsole();
         }
         if(input[0] =='exit') {
             if(arg1 == 'timer') {
