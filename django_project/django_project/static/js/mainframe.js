@@ -77,7 +77,7 @@ function playAudio() {
         }
         var audio = new Audio("/static/beep-06.mp3");
         audio.play();
-    },500);
+    },550);
     repeat();
 }
 
