@@ -10,10 +10,6 @@ var state = {
   opened: false
 }
 
-function clearConsole() {
-    $('#fisk-input').context.activeElement.value = '';
-}
-
 function getMeta() {
       if (!meta) {
         meta = document.createElement('core-meta');
@@ -42,7 +38,7 @@ function toggle() {
 }
 
 function toggleOff() {
-    var target = document.getElementById('countdown');
+    var target = document.getElementById('timer');
     state.opened = false;
     transition.go(target, state);
 }
@@ -64,24 +60,27 @@ function submit(e){
     }
 }
 
+function clearConsole() {
+    $('#fisk-input').context.activeElement.value = '';
+}
+
 function clock(s) {
     var time_in_seconds = s * 60;
     var seconds = time_in_seconds;
 
-    function secondPassed() {
-        var minutes = Math.round((seconds - 30) / 60);
-        var remainingSeconds = seconds % 60;
-        if (remainingSeconds < 10) {
-            remainingSeconds = "0" + remainingSeconds;
-        }
-        document.getElementById('clock').innerHTML = minutes + ":" + remainingSeconds;
-        if (seconds == 0) {
-            clearInterval(countdownTimer);
-            document.getElementById('clock').innerHTML = "Buzz Buzz";
-        } else {
-            seconds--;
-        }
+    var minutes = Math.round((seconds - 30) / 60);
+    var remainingSeconds = seconds % 60;
+    if (remainingSeconds < 10) {
+        remainingSeconds = "0" + remainingSeconds;
     }
+    document.getElementById('clock').innerHTML = minutes + ":" + remainingSeconds;
+    if (seconds == 0) {
+        clearInterval(countdownTimer);
+        document.getElementById('clock').innerHTML = "Buzz Buzz";
+    } else {
+        seconds--;
+    }
+}
 
     var countdownTimer = setInterval('secondPassed()', 1000);
 }
