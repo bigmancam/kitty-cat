@@ -59,6 +59,7 @@ function submit(e){
     if(e.keyCode == 13) {
         if(input[0] == 'timer') {
             toggle();
+            console.log(arg2);
             if(arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
                 seconds = arg1 * 60;
                 countdownTimer = setInterval('secondPassed()', 1000);
