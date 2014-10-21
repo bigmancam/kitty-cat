@@ -38,8 +38,8 @@
 {% endblock %}
 {% block extra_js %}
 <script>
-    $(document).ready(function() {
+    document.addEventListener('polymer-ready', function() {
         $('#core-input').focus();
-    })
+    });
 </script>
 {% endblock %}
