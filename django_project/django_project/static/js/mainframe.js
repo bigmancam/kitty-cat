@@ -7,6 +7,7 @@ document.addEventListener('polymer-ready', function() {
 var seconds;
 var meta;
 var transition;
+var countdownTimer;
 var state = {
   opened: false
 }
@@ -52,7 +53,7 @@ function submit(e){
         if(input[0] == 'timer') {
             toggle();
             seconds = arg * 60;
-            var countdownTimer = setInterval('secondPassed()', 1000);
+            countdownTimer = setInterval('secondPassed()', 1000);
             clearConsole();
         }
         if(input[0] =='exit' && arg == 'timer') {
