@@ -24,6 +24,7 @@ li paper-item {
 	color: #000000;
 	padding-top: 2em;
     margin-left: 20px;
+    background-color: #fff;
 }
 
 #dr-menu {
@@ -91,10 +92,10 @@ li paper-item {
 }
 
 .dr-menu.dr-menu-open > div .dr-label {
-	-webkit-transform: translateY(-90%);
-	-moz-transform: translateY(-90%);
-	-ms-transform: translateY(-90%);
-	transform: translateY(-90%);
+	-webkit-transform: translateX(-90%);
+	-moz-transform: translateX(-90%);
+	-ms-transform: translateX(-90%);
+	transform: translateX(-90%);
 }
 
 .dr-menu ul {

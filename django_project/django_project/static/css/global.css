@@ -92,6 +92,7 @@ div#form_floater {
     height: 100%;
     width: 100%;
     padding-left: 20px;
+    background-color: deepskyblue;
 }
 
 .main p {
