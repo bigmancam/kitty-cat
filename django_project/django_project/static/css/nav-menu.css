@@ -92,10 +92,10 @@ li paper-item {
 }
 
 .dr-menu.dr-menu-open > div .dr-label {
-	-webkit-transform: translateX(70%);
-	-moz-transform: translateX(70%);
-	-ms-transform: translateX(70%);
-	transform: translateX(70%);
+	-webkit-transform: translateX(50%);
+	-moz-transform: translateX(50%);
+	-ms-transform: translateX(50%);
+	transform: translateX(50%);
 }
 
 .dr-menu ul {
