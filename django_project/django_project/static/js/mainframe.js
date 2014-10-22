@@ -117,7 +117,7 @@ function submit(e){
             }
         }
         else {
-            console.log("Test");
+            clearConsole();
             $('#toast').show();
         }
     }
