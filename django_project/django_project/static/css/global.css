@@ -27,6 +27,7 @@ body, html { font-size: 100%; padding: 0; margin: 0; font-family: 'Roboto', sans
 #header {
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 20px;
     width: 97.6%;
 }
 
