@@ -39,14 +39,14 @@ main {
 }
 
 #calc {
-    width: 800px;
+    width: 50%;
     padding-right: 25%;
-    margin-left: 25%;
+    margin: 0 auto;
     height: 60%;
 }
 
 #paper-calc {
     height: 100%;
-    width: 832px;
+    width: 100%;
     margin-bottom: 20px;
 }

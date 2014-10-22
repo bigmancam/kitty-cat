@@ -44,6 +44,7 @@ li paper-item {
 }
 
 .dr-menu > div .dr-icon {
+    color: indigo;
 	top: 0;
 	left: 0;
 	position: absolute;
