@@ -16,7 +16,7 @@ function get_app(name) {
             var div = document.getElementById('console');
             var content = document.createElement('div');
             content.id = 'content';
-            content.innerHTML = recv_data(name);
+            content.innerHTML = data(name);
             while(content.firstChild) {
                 div.appendChild(content.firstChild);
             }
@@ -24,7 +24,7 @@ function get_app(name) {
     }
 }
 
-function recv_data(name) {
+var data = function recv_data(name) {
     var app_url_name = name;
     var xmlhttp;
     if(window.XMLHttpRequest) {
@@ -39,11 +39,10 @@ function recv_data(name) {
     xmlhttp.onreadystatechange=function() {
         if (xmlhttp.readyState = 4 && xmlhttp.responseText) {
             var r = xmlhttp.responseText;
-            console.log(r);
             return r;
         }
     }
-}
+};
 
 
 function destroy_app() {
