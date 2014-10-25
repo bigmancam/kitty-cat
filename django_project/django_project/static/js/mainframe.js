@@ -16,6 +16,7 @@ function get_app(name) {
             var div = document.getElementById('console');
             var content = document.createElement('div');
             content.id = 'content';
+            console.log(data(name));
             content.innerHTML = data(name);
             while(content.firstChild) {
                 div.appendChild(content.firstChild);
