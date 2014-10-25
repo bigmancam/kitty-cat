@@ -8,7 +8,7 @@ function get_app(name) {
     else {
         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
     }
-    var url = "/static/html" + app_url_name;
+    var url = "/static/html/" + app_url_name + ".html";
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
     xmlhttp.onreadystatechange=function() {
@@ -33,7 +33,7 @@ function recv_data(name) {
     else {
         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
     }
-    var url = "/static/html" + app_url_name;
+    var url = "/static/html/" + app_url_name + ".html";
     if(xmlhttp.readyState=4 && xmlhttp.responseText) {
          return xmlhttp.responseText;
     }
