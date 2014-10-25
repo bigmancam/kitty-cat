@@ -1,63 +1,62 @@
-
 function get_app(name) {
     var app_url_name = name;
     var xmlhttp1;
-    if(window.XMLHttpRequest) {
+    if (window.XMLHttpRequest) {
         xmlhttp1 = new XMLHttpRequest()
     }
     else {
-        xmlhttp1=new ActiveXObject("Microsoft.XMLHTTP")
+        xmlhttp1 = new ActiveXObject("Microsoft.XMLHTTP")
     }
     var url = "/static/html/" + app_url_name + ".html";
     xmlhttp1.open("GET", url, true);
     xmlhttp1.send();
-    xmlhttp1.onreadystatechange=function() {
-        if(xmlhttp1.readyState=4 && xmlhttp1.responseText) {
+    xmlhttp1.onreadystatechange = function () {
+        if (xmlhttp1.readyState == 4 && xmlhttp1.responseText) {
             var div = document.getElementById('console');
             var data;
-                var app_url_name = name;
-                var xmlhttp2;
-                if(window.XMLHttpRequest) {
-                    xmlhttp2 = new XMLHttpRequest();
-                }
-                else {
-                    xmlhttp2=new ActiveXObject("Microsoft.XMLHTTP")
-                }
-                var url = "/static/html/" + app_url_name + ".html";
-                xmlhttp2.open("GET", url);
-                xmlhttp2.send();
-                xmlhttp2.onreadystatechange=function() {
-                    if (xmlhttp2.readyState = 4 && xmlhttp2.responseText) {
-                        console.log('Firing');
-                        data = xmlhttp2.responseText;
-                        while(data.firstChild) {
-                            console.log(data.firstChild);
-                            div.appendChild(data.firstChild);
-                        }
+            var app_url_name = name;
+            var xmlhttp2;
+            if (window.XMLHttpRequest) {
+                xmlhttp2 = new XMLHttpRequest();
+            }
+            else {
+                xmlhttp2 = new ActiveXObject("Microsoft.XMLHTTP")
+            }
+            var url = "/static/html/" + app_url_name + ".html";
+            xmlhttp2.open("GET", url);
+            xmlhttp2.send();
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp2.responseText) {
+                    console.log('Firing');
+                    data = xmlhttp2.responseText;
+                    for (var i = 0; i < data.items.length; i++) {
+                        var item = data.items[i];
+                        console.log(item.htmlTitle);
+                        div.appendChild(data.firstChild);
                     }
                 }
-
             }
-        }
-}
 
+        }
+    }
+}
 
 
 function destroy_app() {
     var app_url_name = name;
     var xmlhttp;
-    if(window.XMLHttpRequest) {
+    if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest()
     }
     else {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
     }
     var url = "/static/html" + app_url_name;
     xmlhttp.open("GET", url);
     xmlhttp.send();
-    xmlhttp.onreadystatechange=function() {
-        if(xmlhttp.readyState=4 && xmlhttp.responseText) {
-            document.getElementById("console").innerHTML='';
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState = 4 && xmlhttp.responseText) {
+            document.getElementById("console").innerHTML = '';
         }
     }
 }
@@ -141,28 +140,28 @@ function destroy_app() {
 //}
 
 
-function submit(e){
+function submit(e) {
     var input = $('#fisk-input').context.activeElement.value.split(' ');
     var arg1 = input[1];
     var arg2 = input[2];
-    if(e.keyCode == 13) {
-        if(input[0] == 'calc') {
+    if (e.keyCode == 13) {
+        if (input[0] == 'calc') {
             get_app('calc');
             clearInput();
         }
-        if(input[0] == 'timer') {
-            if(!arg2) {
-            arg2 = input[1].replace(/[^aA-zZ]/g, '');
-            arg1 = arg1.replace(/[^0-9]/g, '');
+        if (input[0] == 'timer') {
+            if (!arg2) {
+                arg2 = input[1].replace(/[^aA-zZ]/g, '');
+                arg1 = arg1.replace(/[^0-9]/g, '');
             }
-            if(arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
+            if (arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
                 clearInput();
                 seconds = arg1 * 60;
                 get_app('timer');
                 sleep(1000);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
-            if(arg2 == 's' || arg2 == 'second' || arg2 == 'seconds') {
+            if (arg2 == 's' || arg2 == 'second' || arg2 == 'seconds') {
                 clearInput();
                 seconds = arg1;
                 get_app('timer');
@@ -170,13 +169,13 @@ function submit(e){
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
         }
-        else if(input[0] =='exit') {
-            if(arg1 == 'timer') {
+        else if (input[0] == 'exit') {
+            if (arg1 == 'timer') {
                 destroy_app();
                 clearInput();
                 clearInterval(countdownTimer);
             }
-            if(arg1 == 'calc') {
+            if (arg1 == 'calc') {
                 destroy_app();
                 clearInput();
                 clearInterval(countdownTimer);
@@ -196,37 +195,37 @@ function playAudio() {
     var count = 10;
     var play = setInterval(function repeat() {
         count--;
-        if(count === 0) {
+        if (count === 0) {
             clearInterval(play);
         }
         var audio = new Audio("/static/beep-06.mp3");
         audio.play();
-    },550);
+    }, 550);
     repeat();
 }
 
 
 function secondPassed() {
-        var minutes = Math.round((seconds - 30) / 60);
-        var remainingSeconds = seconds % 60;
-        if (remainingSeconds < 10) {
-            remainingSeconds = "0" + remainingSeconds;
-        }
-        document.getElementById('clock').innerHTML = minutes + ":" + remainingSeconds;
-        if (seconds == 0) {
-            clearInterval(countdownTimer);
-            playAudio();
-            document.getElementById('clock').innerHTML = "Buzz Buzz";
-        } else {
-            seconds--;
-        }
+    var minutes = Math.round((seconds - 30) / 60);
+    var remainingSeconds = seconds % 60;
+    if (remainingSeconds < 10) {
+        remainingSeconds = "0" + remainingSeconds;
     }
+    document.getElementById('clock').innerHTML = minutes + ":" + remainingSeconds;
+    if (seconds == 0) {
+        clearInterval(countdownTimer);
+        playAudio();
+        document.getElementById('clock').innerHTML = "Buzz Buzz";
+    } else {
+        seconds--;
+    }
+}
 
 function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds) {
+            break;
+        }
     }
-  }
 }
