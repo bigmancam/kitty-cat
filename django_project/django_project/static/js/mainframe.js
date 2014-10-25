@@ -29,6 +29,7 @@ function get_app(name) {
                 if (xmlhttp2.readyState == 4 && xmlhttp2.responseText) {
                     console.log('Firing');
                     data = xmlhttp2.responseText;
+                    console.log(data);
                     for (var i = 0; i < data.items.length; i++) {
                         var item = data.items[i];
                         console.log(item.htmlTitle);
