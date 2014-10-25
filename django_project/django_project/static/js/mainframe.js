@@ -59,7 +59,7 @@ function get_images(name, query) {
             console.log(first);
             div.insertAdjacentHTML('afterbegin', first);
             div.insertAdjacentHTML('afterbegin', xmlhttp.responseText) ;
-            div.insertAdjacentHTML('afterbegin', "<script>\n" + "function hndlr(response) { for(var i = 0; i < response.items.length; i++) { var item = response.items[i]; document.getElementById('image').innerHTML += '<br>' + item.htmlTitle; } }\n" + "</script>");
+            div.insertAdjacentHTML('afterbegin', "<script>\n" + "function hndlr(response) { console.log(response); for(var i = 0; i < response.items.length; i++) { var item = response.items[i]; document.getElementById('image').innerHTML += '<br>' + item.htmlTitle; } }\n" + "</script>");
         }
     }
 }
