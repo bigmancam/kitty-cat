@@ -1,4 +1,7 @@
-function get_app(name) {
+function get_app(name, query) {
+    if(name == 'images') {
+        get_images(query);
+    }
     var app_url_name = name;
     var xmlhttp1;
     if (window.XMLHttpRequest) {
@@ -29,12 +32,35 @@ function get_app(name) {
                     console.log('Firing');
                     console.log(xmlhttp2.responseText);
                     div.innerHTML += xmlhttp2.responseText;
-
                     }
                 }
             }
 
         }
+}
+
+
+var query;
+function get_images(name, query) {
+    var xmlhttp;
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    }
+    else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+    }
+    var url = "/static/html" + name + ".html";
+    xmlhttp.open("GET", url);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4 && xmlhttp.responseText) {
+            var div = document.getElementById('console');
+            var api = 'apiparam'
+            div.insertAdjacentHTML('afterbegin', xmlhttp.responseText) ;
+            div.insertAdjacentHTML('afterbegin', "<script>\n" + "function hndlr(response) { for(var i = 0; i < response.items.length; i++) { var item = response.items[i]; document.getElementById('image').innerHTML += '<br>' + item.htmlTitle; } }\n" + "</script>";
+            div.insertAdjacentHTML('beforeend', "<script " + "src='https://www.googleapis.com/customsearch/v1?key=<span class='apiparam'>AIzaSyAbh1vL6DG_IzgSETK7hv0llake78b6PZU</span>&amp;cx010998309132703936271:1hshv3bj2oy&amp;q=" + query + "&amp;callback=hndlr>")
+        }
+    }
 }
 
 
@@ -56,91 +82,16 @@ function destroy_app() {
         }
     }
 }
-//document.addEventListener('polymer-ready', function() {
-//  // initial setup
-//  setup();
-//  setup2();
-//  document.getElementById('timer').removeAttribute('hidden');
-//  document.getElementById('calc').removeAttribute('hidden');
-//});
-//
-//var seconds;
-//var meta;
-//var transition, transitionCalc;
-//var countdownTimer;
-//var state = {
-//  opened: false
-//}
-//var stateCalc = {
-//  opened: false
-//}
-//
-//function getMeta() {
-//      if (!meta) {
-//        meta = document.createElement('core-meta');
-//        meta.type = 'transition';
-//      }
-//      return meta;
-//}
-//
-//
-//function setup() {
-//      var target = document.getElementById('timer')
-//
-//      if (transition) {
-//        transition.teardown(target);
-//      }
-//
-//
-//      var value = "core-transition-center";
-//      transition = getMeta().byId(value);
-//      transition.setup(target);
-//}
-//
-//function setup2() {
-//      var target = document.getElementById('calc')
-//
-//      if (transitionCalc) {
-//        transitionCalc.teardown(target);
-//      }
-//
-//
-//      var value = "core-transition-center";
-//      transitionCalc = getMeta().byId(value);
-//      transitionCalc.setup(target);
-//}
-//
-//function toggle() {
-//    var target = document.getElementById('timer');
-//    state.opened = !state.opened;
-//    transition.go(target, state);
-//}
-//
-//function toggleCalc() {
-//    var target = document.getElementById('calc');
-//    stateCalc.opened = !stateCalc.opened;
-//    transitionCalc.go(target, stateCalc);
-//}
-//
-//
-//function toggleCalcOff() {
-//    var target = document.getElementById('calc');
-//    stateCalc.opened = false;
-//    transitionCalc.go(target, stateCalc);
-//}
-//
-//function toggleOff() {
-//    var target = document.getElementById('timer');
-//    state.opened = false;
-//    transition.go(target, state);
-//}
-
 
 function submit(e) {
     var input = $('#fisk-input').context.activeElement.value.split(' ');
     var arg1 = input[1];
     var arg2 = input[2];
     if (e.keyCode == 13) {
+        if (input[0] == 'images') {
+            get_app('images', arg1);
+            clearInput();
+        }
         if (input[0] == 'calc') {
             get_app('calc');
             clearInput();
