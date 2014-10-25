@@ -1,48 +1,46 @@
 
 function get_app(name) {
     var app_url_name = name;
-    var xmlhttp;
+    var xmlhttp1;
     if(window.XMLHttpRequest) {
-        xmlhttp = new XMLHttpRequest()
+        xmlhttp1 = new XMLHttpRequest()
     }
     else {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
+        xmlhttp1=new ActiveXObject("Microsoft.XMLHTTP")
     }
     var url = "/static/html/" + app_url_name + ".html";
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-    xmlhttp.onreadystatechange=function() {
+    xmlhttp1.open("GET", url, true);
+    xmlhttp1.send();
+    xmlhttp1.onreadystatechange=function() {
         if(xmlhttp.readyState=4 && xmlhttp.responseText) {
             var div = document.getElementById('console');
             var content = document.createElement('div');
+            var data;
             content.id = 'content';
-            var data = function(name) {
                 var app_url_name = name;
-                var xmlhttp;
+                var xmlhttp2;
                 if(window.XMLHttpRequest) {
-                    xmlhttp = new XMLHttpRequest()
+                    xmlhttp2 = new XMLHttpRequest();
                 }
                 else {
-                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
+                    xmlhttp2=new ActiveXObject("Microsoft.XMLHTTP")
                 }
                 var url = "/static/html/" + app_url_name + ".html";
-                xmlhttp.open("GET", url);
-                xmlhttp.send();
-                xmlhttp.onreadystatechange=function() {
-                    if (xmlhttp.readyState = 4 && xmlhttp.responseText) {
+                xmlhttp2.open("GET", url);
+                xmlhttp2.send();
+                xmlhttp2.onreadystatechange=function() {
+                    if (xmlhttp2.readyState = 4 && xmlhttp2.responseText) {
                         console.log('Firing');
-                        var r = xmlhttp.responseText;
-                        console.log(r);
-                        return r;
+                        console.log(xmlhttp.responseText);
+                        data = xmlhttp2.responseText;
                     }
                 }
-            };
-            content.innerHTML = data(name);
+            content.innerHTML = data.innerHTML;
             while(content.firstChild) {
                 div.appendChild(content.firstChild);
             }
+            }
         }
-    }
 }
 
 
