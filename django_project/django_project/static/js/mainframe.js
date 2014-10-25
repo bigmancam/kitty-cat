@@ -49,7 +49,7 @@ function get_images(name, query) {
     else {
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
     }
-    var url = "/static/html" + name + ".html";
+    var url = "/static/html/" + name + ".html";
     xmlhttp.open("GET", url);
     xmlhttp.send();
     xmlhttp.onreadystatechange = function () {
