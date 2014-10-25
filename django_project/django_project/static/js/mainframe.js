@@ -1,6 +1,6 @@
 function get_app(name, query) {
     if(name == 'images') {
-        get_images(query);
+        get_images(name, query);
     }
     var app_url_name = name;
     var xmlhttp1;
