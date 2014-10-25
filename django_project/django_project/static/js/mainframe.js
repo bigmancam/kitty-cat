@@ -37,7 +37,7 @@ function get_app(name, query) {
         }
 }
 
-function get_images(name, query) {
+$(function get_images(name, query) {
     var img_array = [];
     var img = $.load("https://www.googleapis.com/customsearch/v1?key=AIzaSyAbh1vL6DG_IzgSETK7hv0llake78b6PZU&amp;cx=010998309132703936271:1hshv3bj2oy&amp;q=" + query + "&amp;callback=hndlr");
 
@@ -47,7 +47,7 @@ function get_images(name, query) {
         console.log(img_array);
     }
 
-}
+});
 
 
 function destroy_app(name) {
