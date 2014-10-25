@@ -16,8 +16,26 @@ function get_app(name) {
             var div = document.getElementById('console');
             var content = document.createElement('div');
             content.id = 'content';
-            console.log(data(name));
-            content.innerHTML = data(name);
+            var data = function(name) {
+                var app_url_name = name;
+                var xmlhttp;
+                if(window.XMLHttpRequest) {
+                    xmlhttp = new XMLHttpRequest()
+                }
+                else {
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
+                }
+                var url = "/static/html/" + app_url_name + ".html";
+                xmlhttp.open("GET", url);
+                xmlhttp.send();
+                xmlhttp.onreadystatechange=function() {
+                    if (xmlhttp.readyState = 4 && xmlhttp.responseText) {
+                        var r = xmlhttp.responseText;
+                        return r;
+                    }
+                }
+            };
+            content.innerHTML = data;
             while(content.firstChild) {
                 div.appendChild(content.firstChild);
             }
@@ -25,25 +43,6 @@ function get_app(name) {
     }
 }
 
-var data = function(name) {
-    var app_url_name = name;
-    var xmlhttp;
-    if(window.XMLHttpRequest) {
-        xmlhttp = new XMLHttpRequest()
-    }
-    else {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
-    }
-    var url = "/static/html/" + app_url_name + ".html";
-    xmlhttp.open("GET", url);
-    xmlhttp.send();
-    xmlhttp.onreadystatechange=function() {
-        if (xmlhttp.readyState = 4 && xmlhttp.responseText) {
-            var r = xmlhttp.responseText;
-            return r;
-        }
-    }
-};
 
 
 function destroy_app() {
