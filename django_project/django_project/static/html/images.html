@@ -1,6 +1,6 @@
 <script>
     function hndlr(response) {
-        console.log(response);
+        console.log('Firing!');
         for(var i = 0; i < response.items.length; i++) {
             var item = response.items[i];
             document.getElementById('image').innerHTML += '<br>' + item.htmlTitle;

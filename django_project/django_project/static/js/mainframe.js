@@ -29,8 +29,6 @@ function get_app(name, query) {
             xmlhttp2.send();
             xmlhttp2.onreadystatechange = function () {
                 if (xmlhttp2.readyState == 4 && xmlhttp2.responseText) {
-                    console.log('Firing');
-                    console.log(xmlhttp2.responseText);
                     div.innerHTML += xmlhttp2.responseText;
                     }
                 }
@@ -56,10 +54,8 @@ function get_images(name, query) {
     if (xmlhttp.readyState == 4 && xmlhttp.responseText) {
             var div = document.getElementById('console');
             var first = "<script " + "src='https://www.googleapis.com/customsearch/v1?key=AIzaSyAbh1vL6DG_IzgSETK7hv0llake78b6PZU&amp;cx=010998309132703936271:1hshv3bj2oy&amp;q=" + query + "&amp;callback=hndlr'>";
-            console.log(first);
             div.insertAdjacentHTML('afterbegin', first);
             div.insertAdjacentHTML('afterbegin', xmlhttp.responseText) ;
-            div.insertAdjacentHTML('afterbegin', "<script>\n" + "function hndlr(response) { console.log(response); for(var i = 0; i < response.items.length; i++) { var item = response.items[i]; document.getElementById('image').innerHTML += '<br>' + item.htmlTitle; } }\n" + "</script>");
         }
     }
 }
