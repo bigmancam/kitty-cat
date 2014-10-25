@@ -32,6 +32,7 @@ function get_app(name) {
                         console.log(xmlhttp2.responseText);
                         data = xmlhttp2.responseText;
                         while(data.firstChild) {
+                            console.log(data.firstChild)
                             div.appendChild(data.firstChild);
                         }
                     }
