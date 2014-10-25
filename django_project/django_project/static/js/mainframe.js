@@ -12,6 +12,8 @@ function get_app(name) {
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
     xmlhttp.onreadystatechange=function() {
+        console.log('Firing!');
+        console.log(xmlhttp.responseText);
         if(xmlhttp.readyState=4 && xmlhttp.responseText) {
             var div = document.getElementById('console');
             var content = document.createElement('div');
