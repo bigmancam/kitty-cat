@@ -1,81 +1,168 @@
-document.addEventListener('polymer-ready', function() {
-  // initial setup
-  setup();
-  setup2();
-  document.getElementById('timer').removeAttribute('hidden');
-  document.getElementById('calc').removeAttribute('hidden');
-});
 
-var seconds;
-var meta;
-var transition, transitionCalc;
-var countdownTimer;
-var state = {
-  opened: false
-}
-var stateCalc = {
-  opened: false
-}
-
-function getMeta() {
-      if (!meta) {
-        meta = document.createElement('core-meta');
-        meta.type = 'transition';
-      }
-      return meta;
-}
-
-
-function setup() {
-      var target = document.getElementById('timer')
-
-      if (transition) {
-        transition.teardown(target);
-      }
-
-
-      var value = "core-transition-center";
-      transition = getMeta().byId(value);
-      transition.setup(target);
+function get_app(name) {
+    var app_url_name = name;
+    var xmlhttp;
+    if(window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    }
+    else {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
+    }
+    var url = "/static/html" + app_url_name;
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange=function() {
+        if(xmlhttp.readyState=4 && xmlhttp.responseText) {
+            var div = document.getElementById('console');
+            var content = document.createElement('div');
+            content.id = 'content';
+            content.innerHTML = recv_data(name);
+            while(content.firstChild) {
+                div.appendChild(content.firstChild);
+            }
+        }
+    }
 }
 
-function setup2() {
-      var target = document.getElementById('calc')
-
-      if (transitionCalc) {
-        transitionCalc.teardown(target);
-      }
-
-
-      var value = "core-transition-center";
-      transitionCalc = getMeta().byId(value);
-      transitionCalc.setup(target);
-}
-
-function toggle() {
-    var target = document.getElementById('timer');
-    state.opened = !state.opened;
-    transition.go(target, state);
-}
-
-function toggleCalc() {
-    var target = document.getElementById('calc');
-    stateCalc.opened = !stateCalc.opened;
-    transitionCalc.go(target, stateCalc);
+function recv_data(name) {
+    var app_url_name = name;
+    var xmlhttp;
+    if(window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    }
+    else {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
+    }
+    var url = "/static/html" + app_url_name;
+    if(xmlhttp.readyState=4 && xmlhttp.responseText) {
+         return xmlhttp.responseText;
+    }
+    xmlhttp.open("GET", url);
+    xmlhttp.send();
 }
 
 
-function toggleCalcOff() {
-    var target = document.getElementById('calc');
-    stateCalc.opened = false;
-    transitionCalc.go(target, stateCalc);
+function destroy_app() {
+    var app_url_name = name;
+    var xmlhttp;
+    if(window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    }
+    else {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
+    }
+    var url = "/static/html" + app_url_name;
+    xmlhttp.open("GET", url);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange=function() {
+        if(xmlhttp.readyState=4 && xmlhttp.responseText) {
+            document.getElementById("console").innerHTML='';
+        }
+    }
 }
 
-function toggleOff() {
-    var target = document.getElementById('timer');
-    state.opened = false;
-    transition.go(target, state);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//document.addEventListener('polymer-ready', function() {
+//  // initial setup
+//  setup();
+//  setup2();
+//  document.getElementById('timer').removeAttribute('hidden');
+//  document.getElementById('calc').removeAttribute('hidden');
+//});
+//
+//var seconds;
+//var meta;
+//var transition, transitionCalc;
+//var countdownTimer;
+//var state = {
+//  opened: false
+//}
+//var stateCalc = {
+//  opened: false
+//}
+//
+//function getMeta() {
+//      if (!meta) {
+//        meta = document.createElement('core-meta');
+//        meta.type = 'transition';
+//      }
+//      return meta;
+//}
+//
+//
+//function setup() {
+//      var target = document.getElementById('timer')
+//
+//      if (transition) {
+//        transition.teardown(target);
+//      }
+//
+//
+//      var value = "core-transition-center";
+//      transition = getMeta().byId(value);
+//      transition.setup(target);
+//}
+//
+//function setup2() {
+//      var target = document.getElementById('calc')
+//
+//      if (transitionCalc) {
+//        transitionCalc.teardown(target);
+//      }
+//
+//
+//      var value = "core-transition-center";
+//      transitionCalc = getMeta().byId(value);
+//      transitionCalc.setup(target);
+//}
+//
+//function toggle() {
+//    var target = document.getElementById('timer');
+//    state.opened = !state.opened;
+//    transition.go(target, state);
+//}
+//
+//function toggleCalc() {
+//    var target = document.getElementById('calc');
+//    stateCalc.opened = !stateCalc.opened;
+//    transitionCalc.go(target, stateCalc);
+//}
+//
+//
+//function toggleCalcOff() {
+//    var target = document.getElementById('calc');
+//    stateCalc.opened = false;
+//    transitionCalc.go(target, stateCalc);
+//}
+//
+//function toggleOff() {
+//    var target = document.getElementById('timer');
+//    state.opened = false;
+//    transition.go(target, state);
+//}
 
 
 function submit(e){
@@ -84,7 +171,7 @@ function submit(e){
     var arg2 = input[2];
     if(e.keyCode == 13) {
         if(input[0] == 'calc') {
-            toggleCalc();
+            get_app('calc');
             clearConsole();
         }
         if(input[0] == 'timer') {
@@ -102,23 +189,22 @@ function submit(e){
                 countdownTimer = setInterval('secondPassed()', 1000);
                 clearConsole();
             }
-            toggle();
+            get_app('timer');
         }
         else if(input[0] =='exit') {
             if(arg1 == 'timer') {
-                toggleOff();
+                destroy_app();
                 clearConsole();
                 clearInterval(countdownTimer);
             }
             if(arg1 == 'calc') {
-                toggleCalcOff();
+                destroy_app();
                 clearConsole();
                 clearInterval(countdownTimer);
             }
         }
         else {
             clearConsole();
-            $('#toast').show();
         }
     }
 }

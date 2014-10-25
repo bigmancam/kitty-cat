@@ -47,11 +47,8 @@
                 <fisk-input id="input"></fisk-input>
             </form>
             <div id="console">
-                <div id="timer" hidden>
-                    <paper-shadow z="1"></paper-shadow>
-                    <div id="countdown">
-                        <span id="clock"></span>
-                    </div>
+                <div id="help" hidden>
+
                 </div>
                 <div id="calc" hidden>
                     <paper-shadow z="3"></paper-shadow>
@@ -62,6 +59,7 @@
     </main>
 </div><!-- /container -->
 {% endblock %}
+
 {% block extra_js %}
 <script src="{% static 'js/mainframe.js' %}"></script>
 {% endblock %}
