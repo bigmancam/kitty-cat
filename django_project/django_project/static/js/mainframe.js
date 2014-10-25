@@ -16,8 +16,7 @@ function get_app(name) {
             var div = document.getElementById('console');
             var content = document.createElement('div');
             content.id = 'content';
-            console.log(recv_data(name));
-            content.innerHTML = recv_data(name);
+            content.innerHTML = this.recv_data(name);
             while(content.firstChild) {
                 div.appendChild(content.firstChild);
             }
@@ -40,6 +39,7 @@ function recv_data(name) {
     xmlhttp.onreadystatechange=function() {
         if (xmlhttp.readyState = 4 && xmlhttp.responseText) {
             var r = xmlhttp.responseText;
+            console.log(r);
             return r;
         }
     }
