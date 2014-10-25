@@ -85,11 +85,11 @@ function destroy_app() {
 }
 
 function submit(e) {
-    clearInput();
     var input = $('#fisk-input').context.activeElement.value.split(' ');
     var arg1 = input[1];
     var arg2 = input[2];
     if (e.keyCode == 13) {
+        clearInput();
         if (input[0] == 'images') {
             get_app('images', arg1);
         }
