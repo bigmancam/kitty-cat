@@ -36,8 +36,6 @@ function recv_data(name) {
     var url = "/static/html/" + app_url_name + ".html";
     xmlhttp.open("GET", url);
     xmlhttp.send();
-    console.log('Firing!');
-    console.log(xmlhttp.responseText);
     return xmlhttp.responseText;
 }
 
@@ -182,13 +180,13 @@ function submit(e){
             if(arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
                 clearConsole();
                 seconds = arg1 * 60;
-                sleep(1000);
+                sleep(2000);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
             if(arg2 == 's' || arg2 == 'second' || arg2 == 'seconds') {
                 clearConsole();
                 seconds = arg1;
-                sleep(1000);
+                sleep(2000);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
             get_app('timer');
