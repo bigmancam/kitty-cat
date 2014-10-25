@@ -40,7 +40,7 @@ main {
 
 #calc {
     width: 50%;
-    margin: 0 auto;
+    margin: 0 auto 20px 0;
     height: 60%;
 }
 
