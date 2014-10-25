@@ -101,11 +101,11 @@ function submit(e) {
         }
         else if (input[0] == 'exit') {
             if (arg1 == 'timer') {
-                destroy_app('timer');
+                destroy_app('#timer');
                 clearInterval(countdownTimer);
             }
             if (arg1 == 'calc') {
-                destroy_app('calc');
+                destroy_app('#calc');
                 clearInterval(countdownTimer);
             }
         }
