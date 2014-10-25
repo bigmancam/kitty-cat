@@ -182,13 +182,13 @@ function submit(e){
             if(arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
                 clearConsole();
                 seconds = arg1 * 60;
-                sleep(500);
+                sleep(1000);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
             if(arg2 == 's' || arg2 == 'second' || arg2 == 'seconds') {
                 clearConsole();
                 seconds = arg1;
-                sleep(500);
+                sleep(1000);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
             get_app('timer');
