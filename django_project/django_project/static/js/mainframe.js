@@ -25,7 +25,7 @@ function get_app(name) {
     }
 }
 
-var data = function recv_data(name) {
+var data = function(name) {
     var app_url_name = name;
     var xmlhttp;
     if(window.XMLHttpRequest) {
