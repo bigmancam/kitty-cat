@@ -66,7 +66,7 @@ function get_images(name, query) {
 
 
 function destroy_app(name) {
-   document.getElementById(name).innerHTML = '';
+   $(name).remove();
 }
 
 function submit(e) {
