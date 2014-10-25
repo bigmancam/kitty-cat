@@ -161,14 +161,14 @@ function submit(e){
                 clearInput();
                 seconds = arg1 * 60;
                 get_app('timer');
-                sleep(500);
+                sleep(1000);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
             if(arg2 == 's' || arg2 == 'second' || arg2 == 'seconds') {
                 clearInput();
                 seconds = arg1;
                 get_app('timer');
-                sleep(500);
+                sleep(1000);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
         }
