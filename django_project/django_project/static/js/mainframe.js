@@ -18,7 +18,6 @@ function get_app(name) {
             content.id = 'content';
             content.innerHTML = recv_data(name);
             while(content.firstChild) {
-                console.log(content.firstChild);
                 div.appendChild(content.firstChild);
             }
         }
@@ -36,6 +35,7 @@ function recv_data(name) {
     }
     var url = "/static/html/" + app_url_name + ".html";
     if(xmlhttp.readyState=4 && xmlhttp.responseText) {
+         console.log(xmlhttp.responseText);
          return xmlhttp.responseText;
     }
     xmlhttp.open("GET", url);
