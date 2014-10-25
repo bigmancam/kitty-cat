@@ -58,31 +58,6 @@ function destroy_app() {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //document.addEventListener('polymer-ready', function() {
 //  // initial setup
 //  setup();
@@ -170,7 +145,7 @@ function submit(e){
     if(e.keyCode == 13) {
         if(input[0] == 'calc') {
             get_app('calc');
-            clearConsole();
+            clearInput();
         }
         if(input[0] == 'timer') {
             if(!arg2) {
@@ -178,38 +153,39 @@ function submit(e){
             arg1 = arg1.replace(/[^0-9]/g, '');
             }
             if(arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
-                clearConsole();
+                clearInput();
                 seconds = arg1 * 60;
+                get_app('timer');
                 sleep(500);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
             if(arg2 == 's' || arg2 == 'second' || arg2 == 'seconds') {
-                clearConsole();
+                clearInput();
                 seconds = arg1;
+                get_app('timer');
                 sleep(500);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
-            get_app('timer');
         }
         else if(input[0] =='exit') {
             if(arg1 == 'timer') {
                 destroy_app();
-                clearConsole();
+                clearInput();
                 clearInterval(countdownTimer);
             }
             if(arg1 == 'calc') {
                 destroy_app();
-                clearConsole();
+                clearInput();
                 clearInterval(countdownTimer);
             }
         }
         else {
-            clearConsole();
+            clearInput();
         }
     }
 }
 
-function clearConsole() {
+function clearInput() {
     $('#fisk-input').context.activeElement.value = '';
 }
 
