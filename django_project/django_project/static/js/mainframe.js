@@ -36,28 +36,19 @@ function get_app(name, query) {
 
         }
 }
+var req = Ajax.Updater()
 
-
-var query;
 function get_images(name, query) {
-    var xmlhttp;
-    if (window.XMLHttpRequest) {
-        xmlhttp = new XMLHttpRequest()
+    var img_array = [];
+    var img = $.load("https://www.googleapis.com/customsearch/v1?key=AIzaSyAbh1vL6DG_IzgSETK7hv0llake78b6PZU&amp;cx=010998309132703936271:1hshv3bj2oy&amp;q=" + query + "&amp;callback=hndlr");
+
+    for(var i = 0; i < img.items.length; i++){
+        var item = img.items[i];
+        img_array += item.htmlTitle;
+
     }
-    else {
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
-    }
-    var url = "/static/html/" + name + ".html";
-    xmlhttp.open("GET", url);
-    xmlhttp.send();
-    xmlhttp.onreadystatechange = function () {
-    if (xmlhttp.readyState == 4 && xmlhttp.responseText) {
-            var div = document.getElementById('console');
             var first = "<script " + "src='https://www.googleapis.com/customsearch/v1?key=AIzaSyAbh1vL6DG_IzgSETK7hv0llake78b6PZU&amp;cx=010998309132703936271:1hshv3bj2oy&amp;q=" + query + "&amp;callback=hndlr'>";
-            div.insertAdjacentHTML('afterbegin', first);
-            div.insertAdjacentHTML('afterbegin', xmlhttp.responseText) ;
-        }
-    }
+
 }
 
 
