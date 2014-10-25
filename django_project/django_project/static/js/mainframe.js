@@ -36,12 +36,9 @@ function recv_data(name) {
         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
     }
     var url = "/static/html/" + app_url_name + ".html";
-    if(xmlhttp.readyState=4 && xmlhttp.responseText) {
-         console.log(xmlhttp.responseText);
-         return xmlhttp.responseText;
-    }
     xmlhttp.open("GET", url);
     xmlhttp.send();
+    return xmlhttp.responseText;
 }
 
 
