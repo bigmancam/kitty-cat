@@ -35,7 +35,7 @@ function get_app(name) {
                     }
                 }
             };
-            content.innerHTML = data;
+            content.innerHTML = data(name);
             while(content.firstChild) {
                 div.appendChild(content.firstChild);
             }
