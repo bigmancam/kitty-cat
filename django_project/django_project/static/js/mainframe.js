@@ -66,22 +66,7 @@ function get_images(name, query) {
 
 
 function destroy_app() {
-    var app_url_name = name;
-    var xmlhttp;
-    if (window.XMLHttpRequest) {
-        xmlhttp = new XMLHttpRequest()
-    }
-    else {
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
-    }
-    var url = "/static/html" + app_url_name;
-    xmlhttp.open("GET", url);
-    xmlhttp.send();
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState = 4 && xmlhttp.responseText) {
-            document.getElementById("console").innerHTML = '';
-        }
-    }
+   document.getElementById("console").innerHTML = '';
 }
 
 function submit(e) {
