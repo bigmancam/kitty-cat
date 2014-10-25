@@ -13,7 +13,6 @@ function get_app(name) {
     xmlhttp1.onreadystatechange = function () {
         if (xmlhttp1.readyState == 4 && xmlhttp1.responseText) {
             var div = document.getElementById('console');
-            var data;
             var app_url_name = name;
             var xmlhttp2;
             if (window.XMLHttpRequest) {
@@ -29,7 +28,7 @@ function get_app(name) {
                 if (xmlhttp2.readyState == 4 && xmlhttp2.responseText) {
                     console.log('Firing');
                     console.log(xmlhttp2.responseText);
-                    data = xmlhttp2.responseText;
+                    div.innerHTML += xmlhttp2.responseText;
 
                     }
                 }
