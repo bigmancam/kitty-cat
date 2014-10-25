@@ -28,8 +28,8 @@ function get_app(name) {
             xmlhttp2.onreadystatechange = function () {
                 if (xmlhttp2.readyState == 4 && xmlhttp2.responseText) {
                     console.log('Firing');
+                    console.log(xmlhttp2.responseText);
                     data = xmlhttp2.responseText;
-                    console.log(data.innerHTML);
 
                     }
                 }
