@@ -85,17 +85,16 @@ function destroy_app() {
 }
 
 function submit(e) {
+    clearInput();
     var input = $('#fisk-input').context.activeElement.value.split(' ');
     var arg1 = input[1];
     var arg2 = input[2];
     if (e.keyCode == 13) {
         if (input[0] == 'images') {
             get_app('images', arg1);
-            clearInput();
         }
         if (input[0] == 'calc') {
             get_app('calc');
-            clearInput();
         }
         if (input[0] == 'timer') {
             if (!arg2) {
@@ -103,14 +102,12 @@ function submit(e) {
                 arg1 = arg1.replace(/[^0-9]/g, '');
             }
             if (arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
-                clearInput();
                 seconds = arg1 * 60;
                 get_app('timer');
                 sleep(1000);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
             if (arg2 == 's' || arg2 == 'second' || arg2 == 'seconds') {
-                clearInput();
                 seconds = arg1;
                 get_app('timer');
                 sleep(1000);
@@ -120,17 +117,14 @@ function submit(e) {
         else if (input[0] == 'exit') {
             if (arg1 == 'timer') {
                 destroy_app();
-                clearInput();
                 clearInterval(countdownTimer);
             }
             if (arg1 == 'calc') {
                 destroy_app();
-                clearInput();
                 clearInterval(countdownTimer);
             }
         }
         else {
-            clearInput();
         }
     }
 }
