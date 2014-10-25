@@ -18,6 +18,7 @@ function get_app(name) {
             content.id = 'content';
             content.innerHTML = recv_data(name);
             while(content.firstChild) {
+                console.log(content.firstChild);
                 div.appendChild(content.firstChild);
             }
         }
