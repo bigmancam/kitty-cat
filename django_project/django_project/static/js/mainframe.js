@@ -45,9 +45,8 @@ function get_images(name, query) {
     for(var i = 0; i < img.items.length; i++){
         var item = img.items[i];
         img_array += item.htmlTitle;
-
+        console.log(img_array);
     }
-            var first = "<script " + "src='https://www.googleapis.com/customsearch/v1?key=AIzaSyAbh1vL6DG_IzgSETK7hv0llake78b6PZU&amp;cx=010998309132703936271:1hshv3bj2oy&amp;q=" + query + "&amp;callback=hndlr'>";
 
 }
 
