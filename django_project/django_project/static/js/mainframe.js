@@ -175,6 +175,7 @@ function submit(e){
             clearConsole();
         }
         if(input[0] == 'timer') {
+            sleep(500);
             if(!arg2) {
             arg2 = input[1].replace(/[^aA-zZ]/g, '');
             arg1 = arg1.replace(/[^0-9]/g, '');
