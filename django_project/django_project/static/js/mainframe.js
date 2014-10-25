@@ -32,6 +32,7 @@ function get_app(name) {
                     if (xmlhttp.readyState = 4 && xmlhttp.responseText) {
                         console.log('Firing');
                         var r = xmlhttp.responseText;
+                        console.log(r);
                         return r;
                     }
                 }
