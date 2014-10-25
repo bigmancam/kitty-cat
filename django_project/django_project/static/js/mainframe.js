@@ -17,8 +17,6 @@ function get_app(name) {
             var content = document.createElement('div');
             content.id = 'content';
             content.innerHTML = recv_data(name);
-            console.log('Firing!');
-            console.log(content);
             while(content.firstChild) {
                 div.appendChild(content.firstChild);
             }
@@ -38,6 +36,8 @@ function recv_data(name) {
     var url = "/static/html/" + app_url_name + ".html";
     xmlhttp.open("GET", url);
     xmlhttp.send();
+    console.log('Firing!');
+    console.log(xmlhttp.responseText);
     return xmlhttp.responseText;
 }
 
