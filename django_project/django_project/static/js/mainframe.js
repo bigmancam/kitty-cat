@@ -30,6 +30,7 @@ function get_app(name) {
                 xmlhttp.send();
                 xmlhttp.onreadystatechange=function() {
                     if (xmlhttp.readyState = 4 && xmlhttp.responseText) {
+                        console.log('Firing');
                         var r = xmlhttp.responseText;
                         return r;
                     }
