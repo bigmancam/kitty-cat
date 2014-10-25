@@ -65,8 +65,8 @@ function get_images(name, query) {
 }
 
 
-function destroy_app() {
-   document.getElementById("console").innerHTML = '';
+function destroy_app(name) {
+   document.getElementById(name).innerHTML = '';
 }
 
 function submit(e) {
@@ -101,11 +101,11 @@ function submit(e) {
         }
         else if (input[0] == 'exit') {
             if (arg1 == 'timer') {
-                destroy_app();
+                destroy_app('timer');
                 clearInterval(countdownTimer);
             }
             if (arg1 == 'calc') {
-                destroy_app();
+                destroy_app('calc');
                 clearInterval(countdownTimer);
             }
         }
