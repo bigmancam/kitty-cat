@@ -175,20 +175,21 @@ function submit(e){
             clearConsole();
         }
         if(input[0] == 'timer') {
-            sleep(500);
             if(!arg2) {
             arg2 = input[1].replace(/[^aA-zZ]/g, '');
             arg1 = arg1.replace(/[^0-9]/g, '');
             }
             if(arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
-                seconds = arg1 * 60;
-                countdownTimer = setInterval('secondPassed()', 1000);
                 clearConsole();
+                seconds = arg1 * 60;
+                sleep(500);
+                countdownTimer = setInterval('secondPassed()', 1000);
             }
             if(arg2 == 's' || arg2 == 'second' || arg2 == 'seconds') {
-                seconds = arg1;
-                countdownTimer = setInterval('secondPassed()', 1000);
                 clearConsole();
+                seconds = arg1;
+                sleep(500);
+                countdownTimer = setInterval('secondPassed()', 1000);
             }
             get_app('timer');
         }
