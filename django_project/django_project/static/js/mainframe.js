@@ -57,7 +57,7 @@ function get_images(name, query) {
             var div = document.getElementById('console');
             var api = 'apiparam'
             div.insertAdjacentHTML('afterbegin', xmlhttp.responseText) ;
-            div.insertAdjacentHTML('afterbegin', "<script>\n" + "function hndlr(response) { for(var i = 0; i < response.items.length; i++) { var item = response.items[i]; document.getElementById('image').innerHTML += '<br>' + item.htmlTitle; } }\n" + "</script>";
+            div.insertAdjacentHTML('afterbegin', "<script>\n" + "function hndlr(response) { for(var i = 0; i < response.items.length; i++) { var item = response.items[i]; document.getElementById('image').innerHTML += '<br>' + item.htmlTitle; } }\n" + "</script>");
             div.insertAdjacentHTML('beforeend', "<script " + "src='https://www.googleapis.com/customsearch/v1?key=<span class='apiparam'>AIzaSyAbh1vL6DG_IzgSETK7hv0llake78b6PZU</span>&amp;cx010998309132703936271:1hshv3bj2oy&amp;q=" + query + "&amp;callback=hndlr>")
         }
     }
