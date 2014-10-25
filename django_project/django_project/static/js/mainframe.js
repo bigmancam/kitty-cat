@@ -36,9 +36,11 @@ function recv_data(name) {
     var url = "/static/html/" + app_url_name + ".html";
     xmlhttp.open("GET", url);
     xmlhttp.send();
-    console.log(xmlhttp.responseText);
-    var r = xmlhttp.responseText;
-    return r;
+    if(xmlhttp.readyState=4 && xmlhttp.responseText) {
+        console.log(xmlhttp.responseText);
+        var r = xmlhttp.responseText;
+        return r;
+    }
 }
 
 
