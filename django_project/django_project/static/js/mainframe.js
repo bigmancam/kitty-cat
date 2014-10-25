@@ -36,7 +36,6 @@ function get_app(name) {
             }
 
         }
-    }
 }
 
 
