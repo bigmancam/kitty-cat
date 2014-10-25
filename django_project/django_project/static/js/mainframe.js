@@ -14,9 +14,7 @@ function get_app(name) {
     xmlhttp1.onreadystatechange=function() {
         if(xmlhttp1.readyState=4 && xmlhttp1.responseText) {
             var div = document.getElementById('console');
-            var content = document.createElement('div');
             var data;
-            content.id = 'content';
                 var app_url_name = name;
                 var xmlhttp2;
                 if(window.XMLHttpRequest) {
@@ -33,12 +31,12 @@ function get_app(name) {
                         console.log('Firing');
                         console.log(xmlhttp2.responseText);
                         data = xmlhttp2.responseText;
+                        while(data.firstChild) {
+                            div.appendChild(data.firstChild);
+                        }
                     }
                 }
-            content.innerHTML = data.innerHTML;
-            while(content.firstChild) {
-                div.appendChild(content.firstChild);
-            }
+
             }
         }
 }
