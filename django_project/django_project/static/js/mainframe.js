@@ -36,7 +36,6 @@ function get_app(name, query) {
 
         }
 }
-var req = Ajax.Updater()
 
 function get_images(name, query) {
     var img_array = [];
