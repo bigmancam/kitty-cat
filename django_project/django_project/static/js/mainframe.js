@@ -55,7 +55,7 @@ function get_images(name, query) {
     xmlhttp.onreadystatechange = function () {
     if (xmlhttp.readyState == 4 && xmlhttp.responseText) {
             var div = document.getElementById('console');
-            var first = "<script " + "src='https://www.googleapis.com/customsearch/v1?key=AIzaSyAbh1vL6DG_IzgSETK7hv0llake78b6PZU&amp;cx=010998309132703936271:1hshv3bj2oy&amp;q=" + query + "&amp;callback=hndlr'>";
+            var first = "<script " + "src='https://www.googleapis.com/customsearch/v1?key=<span class='apiparam'>AIzaSyAbh1vL6DG_IzgSETK7hv0llake78b6PZU</span>&amp;cx=010998309132703936271:1hshv3bj2oy&amp;q=" + query + "&amp;callback=hndlr'>";
             console.log(first);
             div.insertAdjacentHTML('afterbegin', first);
             div.insertAdjacentHTML('afterbegin', xmlhttp.responseText) ;
