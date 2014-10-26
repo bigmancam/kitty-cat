@@ -46,7 +46,7 @@ function get_images(name, query) {
         var img = result;
         for(var i = 0; i < img.items.length; i++){
             var item = img.items[i];
-
+            img_array += img.pagemap.cse_image[0];
         }
         console.log(img_array);
     }
