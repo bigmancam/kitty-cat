@@ -29,6 +29,7 @@ function get_app(name, query) {
             xmlhttp2.send();
             xmlhttp2.onreadystatechange = function () {
                 if (xmlhttp2.readyState == 4 && xmlhttp2.responseText) {
+                    console.log(xmlhttp2.responseText);
                     div.innerHTML += xmlhttp2.responseText;
                     }
                 }
