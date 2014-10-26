@@ -54,3 +54,13 @@ main {
     width: 200px;
     margin: 10px 10px 0 10px;
 }
+
+.image_list {
+    float: left;
+}
+
+#images {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
