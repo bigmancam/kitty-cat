@@ -46,16 +46,15 @@ function get_images(name, query) {
         var img = result;
         for(var i = 0; i < img.items.length; i++){
             var item = img.items[i];
-            console.log(item.pagemap.cse_image[0].src);
-            img_array += item.pagemap.cse_image;
+            img_array += item.pagemap.cse_image[0].src;
+            var list = document.getElementById('images');
+            list.innerHTML += "<img src='" + item.pagemap.cse_image[0].src + "' />"
         }
-        console.log(img_array);
     }
 });
 
 
 };
-
 
 function destroy_app(name) {
    $(name).remove();
