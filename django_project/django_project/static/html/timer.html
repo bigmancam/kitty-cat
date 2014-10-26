@@ -1,8 +1,13 @@
+<style>
+    #close {
+        float:right;
+        margin-top: 1em;
+    }
+</style>
 <div id="timer">
     <paper-shadow z="1"></paper-shadow>
-    <paper-button class="custom">
-      <paper-shadow z="1"></paper-shadow>
-      <core-icon icon="clear"></core-icon>
+    <paper-button class="custom" id="close" onclick="$('timer').remove();">
+        <core-icon icon="clear"></core-icon>
     </paper-button>
     <div id="countdown">
             <span id="clock"></span>
