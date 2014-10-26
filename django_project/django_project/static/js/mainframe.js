@@ -48,7 +48,7 @@ function get_images(name, query) {
             var item = img.items[i];
             img_array += item.pagemap.cse_image[0].src;
             var list = document.getElementById('images');
-            list.innerHTML += "<a class='image_list><li><img on-tap='{{tapHandler}}' id='image" + i + "' src='" + item.pagemap.cse_image[0].src + "' class='image_search' /></li></a>";
+            list.innerHTML += "<a class='image_list'>" + "<li><img on-tap='{{tapHandler}}' id='image" + i + "' src='" + item.pagemap.cse_image[0].src + "' class='image_search' /></li></a>";
         }
     }
 });
