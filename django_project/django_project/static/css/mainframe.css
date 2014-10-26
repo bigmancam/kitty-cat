@@ -62,6 +62,66 @@ main {
 	transition: all 0.2s ease;
 }
 
+#image0 {
+	-webkit-transition-delay: 35ms;
+	-moz-transition-delay: 35ms;
+	transition-delay: 35ms;
+}
+
+#image1 {
+	-webkit-transition-delay: 70ms;
+	-moz-transition-delay: 70ms;
+	transition-delay: 70ms;
+}
+
+#image2 {
+	-webkit-transition-delay: 105ms;
+	-moz-transition-delay: 105ms;
+	transition-delay: 105ms;
+}
+
+#image3 {
+	-webkit-transition-delay: 140ms;
+	-moz-transition-delay: 140ms;
+	transition-delay: 140ms;
+}
+
+#image4 {
+	-webkit-transition-delay: 175ms;
+	-moz-transition-delay: 175ms;
+	transition-delay: 175ms;
+}
+
+#image5 {
+	-webkit-transition-delay: 205ms;
+	-moz-transition-delay: 205ms;
+	transition-delay: 205ms;
+}
+
+#image6 {
+	-webkit-transition-delay: 235ms;
+	-moz-transition-delay: 235ms;
+	transition-delay: 235ms;
+}
+
+#image7 {
+	-webkit-transition-delay: 265ms;
+	-moz-transition-delay: 265ms;
+	transition-delay: 265ms;
+}
+
+#image8 {
+	-webkit-transition-delay: 295ms;
+	-moz-transition-delay: 295ms;
+	transition-delay: 295ms;
+}
+
+#image9 {
+	-webkit-transition-delay: 330ms;
+	-moz-transition-delay: 330ms;
+	transition-delay: 330ms;
+}
+
 #images {
     height: 100%;
     width: 100%;
