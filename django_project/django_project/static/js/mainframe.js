@@ -156,7 +156,7 @@ document.addEventListener('polymer-ready', function() {
 
 var meta;
 var transition;
-var state1 = {
+var state = {
   opened: false
 }
 
@@ -182,7 +182,8 @@ function setup() {
     }
 
 function toggle() {
+    console.log('Firing!');
     var target = document.getElementById('images');
-    state1.opened = !state1.opened;
-    transition.go(target, state1);
+    state.opened = !state.opened;
+    transition.go(target, state);
 }
