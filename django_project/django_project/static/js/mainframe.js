@@ -32,7 +32,9 @@ function get_app(name, query) {
                 }
             if(name == 'images') {
                     get_images(name, query);
+                    console.log('Firing 1');
                     start();
+                    console.log('Firing 2');
                     toggle();
                 }
             }
