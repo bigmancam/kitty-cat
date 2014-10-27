@@ -50,7 +50,7 @@ function get_images(name, query) {
             var item = img.items[i];
             img_array += item.pagemap.cse_image[0].src;
             var list = document.getElementById('images');
-            list.innerHTML += "<a class='image_list'>" + "<li><img on-tap='{{tapHandler}}' id='image" + i + "' src='" + item.pagemap.cse_image[0].src + "' class='image_search' /></li></a>";
+            list.innerHTML += "<a class='image_list'>" + "<li><img id='image" + i + "' src='" + item.pagemap.cse_image[0].src + "' class='image_search' /></li></a>";
         }
     }
 });
@@ -151,6 +151,7 @@ function sleep(milliseconds) {
 
 document.addEventListener('polymer-ready', function() {
   // initial setup
+  console.log('Firing!');
   setup();
   document.getElementById('images').removeAttribute('hidden');
 });
@@ -167,7 +168,7 @@ function getMeta() {
         meta.type = 'transition';
       }
       return meta;
-    }
+}
 
 function setup() {
       var target = document.getElementById('images')
@@ -181,7 +182,6 @@ function setup() {
     }
 
 function toggle() {
-    console.log('Firing!');
     var target = document.getElementById('images');
     state.opened = !state.opened;
     transition.go(target, state);
