@@ -1,4 +1,4 @@
- document.addEventListener('polymer-ready', function() {
+document.addEventListener('polymer-ready', function() {
   // initial setup
   setup();
   setup2();
