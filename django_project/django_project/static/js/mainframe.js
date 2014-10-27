@@ -26,25 +26,18 @@ function get_app(name, query) {
             xmlhttp2.send();
             xmlhttp2.onreadystatechange = function () {
                 if (xmlhttp2.readyState == 4 && xmlhttp2.responseText) {
-                    console.log(xmlhttp2.responseText);
                     div.innerHTML += xmlhttp2.responseText;
                     }
                 }
             if(name == 'images') {
                     get_images(name, query);
                     console.log('Firing 1');
-                    start();
-                    console.log('Firing 2');
+                    setup();
                     toggle();
                 }
             }
 
         }
-}
-
-function start() {
-    setup();
-    document.getElementById('images').removeAttribute('hidden');
 }
 
 var meta;
@@ -82,7 +75,6 @@ function get_images(name, query) {
     var img_array = [];
     $.ajax({
         url: "https://www.googleapis.com/customsearch/v1?key=AIzaSyAbh1vL6DG_IzgSETK7hv0llake78b6PZU&cx=010998309132703936271:1hshv3bj2oy&q=" + query,success:function(result){
-        console.log(result);
         var img = result;
         for(var i = 0; i < img.items.length; i++){
             var item = img.items[i];
