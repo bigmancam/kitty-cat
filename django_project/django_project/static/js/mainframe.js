@@ -32,6 +32,7 @@ function get_app(name, query) {
                 }
             if(name == 'images') {
                     get_images(name, query);
+                    toggle();
                 }
             }
 
@@ -52,7 +53,6 @@ function get_images(name, query) {
         }
     }
 });
-toggle();
 };
 
 function destroy_app(name) {
