@@ -24,13 +24,7 @@
 <link rel="import" href="{% static 'components/bower_components/core-transition/core-transition-css.html' %}">
 
 <style>
-    paper-toast {
-        position:absolute;
-        top: 0;
-        bottom:0;
-        left:0;
-        right:0;
-}
+
 </style>
 
 {% endblock %}
@@ -50,72 +44,6 @@
             <div id="console"></div>
         </div>
     </main>
-    <div id="overlay">
-        <polymer-element name="x-container">
-            <template>
-                <x-dialog id="dialog" class="dialog">
-                    <!-- place all overlay styles inside the overlay target -->
-                    <style no-shim>
-                        .dialog {
-                            box-sizing: border-box;
-                            -moz-box-sizing: border-box;
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-size: 13px;
-                            -webkit-user-select: none;
-                            -moz-user-select: none;
-                            overflow: hidden;
-                            background: white;
-                            padding:30px 42px;
-                            outline: 1px solid rgba(0,0,0,0.2);
-                            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-                        }
-
-                        #dialog {
-                            width: 500px;
-                        }
-                    </style>
-                    <h2></h2>
-                    <div>
-                        <core-overlay layered id="confirmation" class="dialog" backdrop transition="core-transition-top">
-                            <!-- place all overlay styles inside the overlay target -->
-                            <style no-shim>
-                                .dialog {
-                                    box-sizing: border-box;
-                                    -moz-box-sizing: border-box;
-                                    font-family: Arial, Helvetica, sans-serif;
-                                    font-size: 13px;
-                                    -webkit-user-select: none;
-                                    -moz-user-select: none;
-                                    overflow: hidden;
-                                    background: white;
-                                    padding:30px 42px;
-                                    outline: 1px solid rgba(0,0,0,0.2);
-                                    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-                                }
-
-                                #confirmation {
-                                    box-sizing: border-box;
-                                    text-align: center;
-                                    width: 150px;
-                                }
-                            </style>
-                        </core-overlay>
-                    </div><br><br>
-                    <button core-overlay-toggle>X</button>
-                </x-dialog>
-            </template>
-            <script>
-
-            Polymer('x-container', {
-
-                tapHandler: function() {
-                    this.$.dialog.toggle();
-                }
-
-            });
-
-            </script>
-            </polymer-element>
     </div>
 </div><!-- /container -->
 {% endblock %}

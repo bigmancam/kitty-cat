@@ -1,7 +1,4 @@
 function get_app(name, query) {
-    if(name == 'images') {
-        get_images(name, query);
-    }
     var app_url_name = name;
     var xmlhttp1;
     if (window.XMLHttpRequest) {
@@ -32,6 +29,9 @@ function get_app(name, query) {
                     console.log(xmlhttp2.responseText);
                     div.innerHTML += xmlhttp2.responseText;
                     }
+                }
+            if(name == 'images') {
+                    get_images(name, query);
                 }
             }
 
