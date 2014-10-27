@@ -32,7 +32,7 @@ function get_app(name, query) {
                 }
             if(name == 'images') {
                     get_images(name, query);
-                    sleep(1000);
+                    sleep(1500);
                     toggle();
                 }
             }
