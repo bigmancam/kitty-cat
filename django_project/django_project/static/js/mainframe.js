@@ -32,6 +32,7 @@ function get_app(name, query) {
                 }
             if(name == 'images') {
                     get_images(name, query);
+                    sleep(1000);
                     toggle();
                 }
             }
@@ -174,8 +175,6 @@ function setup() {
       if (transition) {
         transition.teardown(target);
       }
-
-
       var value = "core-transition-center";
       transition = getMeta().byId(value);
       transition.setup(target);
