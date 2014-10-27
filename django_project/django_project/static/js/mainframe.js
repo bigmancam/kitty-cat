@@ -184,5 +184,5 @@ function setup() {
 function toggle() {
     var target = document.getElementById('images');
     state1.opened = !state1.opened;
-    transition2.go(target, state1);
+    transition.go(target, state1);
 }
