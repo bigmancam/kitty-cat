@@ -4,6 +4,7 @@ function get_app(name, query) {
     if(name == 'images') {
         get_images(name, query);
         setup1();
+        sleep(1000);
         toggle();
         return;
     }
