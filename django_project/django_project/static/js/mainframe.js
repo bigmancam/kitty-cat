@@ -33,7 +33,7 @@ function get_app(name, query) {
             xmlhttp2.send();
             xmlhttp2.onreadystatechange = function () {
                 if (xmlhttp2.readyState == 4 && xmlhttp2.responseText) {
-                    div.innerHTML += xmlhttp2.responseText;
+                    div.insertAdjacentHTML('afterbegin',xmlhttp2.responseText);
                     }
             };
             }
