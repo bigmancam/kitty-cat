@@ -1,37 +1,3 @@
-var meta;
-var transition;
-var state = {
-  opened: false
-}
-
-function getMeta() {
-      console.log("Firing 4");
-      if (!meta) {
-        meta = document.createElement('core-meta');
-        meta.type = 'transition';
-      }
-      return meta;
-}
-
-function setup() {
-      var target = document.getElementById('images')
-
-      if (transition) {
-        console.log("Firing 2");
-        transition.teardown(target);
-      }
-      console.log("Firing 3");
-      var value = "core-transition-center";
-      transition = getMeta().byId(value);
-      transition.setup(target);
-    }
-
-function toggle() {
-    var target = document.getElementById('images');
-    state.opened = !state.opened;
-    transition.go(target, state);
-}
-
 function get_app(name, query) {
     var app_url_name = name;
     var xmlhttp1;
@@ -74,6 +40,39 @@ function get_app(name, query) {
         }
 }
 
+var meta;
+var transition;
+var state = {
+  opened: false
+}
+
+function getMeta() {
+      console.log("Firing 4");
+      if (!meta) {
+        meta = document.createElement('core-meta');
+        meta.type = 'transition';
+      }
+      return meta;
+}
+
+function setup() {
+      var target = document.getElementById('images')
+
+      if (transition) {
+        console.log("Firing 2");
+        transition.teardown(target);
+      }
+      console.log("Firing 3");
+      var value = "core-transition-center";
+      transition = getMeta().byId(value);
+      transition.setup(target);
+    }
+
+function toggle() {
+    var target = document.getElementById('images');
+    state.opened = !state.opened;
+    transition.go(target, state);
+}
 
 function get_images(name, query) {
     var img_array = [];
