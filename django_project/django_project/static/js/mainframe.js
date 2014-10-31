@@ -58,8 +58,10 @@ function setup() {
       var target = document.getElementById('images')
 
       if (transition) {
+        console.log("Firing 2");
         transition.teardown(target);
       }
+      console.log("Firing 3");
       var value = "core-transition-center";
       transition = getMeta().byId(value);
       transition.setup(target);
