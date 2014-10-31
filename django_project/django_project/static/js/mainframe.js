@@ -75,6 +75,7 @@ function toggle() {
 }
 
 function get_images(name, query) {
+    console.log("Firing 5");
     var img_array = [];
     $.ajax({
         url: "https://www.googleapis.com/customsearch/v1?key=AIzaSyAbh1vL6DG_IzgSETK7hv0llake78b6PZU&cx=010998309132703936271:1hshv3bj2oy&q=" + query,success:function(result){
