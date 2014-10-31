@@ -47,12 +47,13 @@ var state = {
   opened: false
 };
 
-
-document.addEventListener('polymer-ready', function() {
-  // initial setup
-  setup1();
-  document.getElementById('images').removeAttribute('hidden');
-});
+if(document.documentURI == "http://cfisk.me/mainframe") {
+    document.addEventListener('polymer-ready', function () {
+        // initial setup
+        setup1();
+        document.getElementById('images').removeAttribute('hidden');
+    });
+}
 
 
 function getMeta() {
