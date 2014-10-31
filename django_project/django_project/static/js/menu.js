@@ -1,4 +1,4 @@
-if(document.documentURI == "http://cfisk.me") {
+if(document.documentURI == "http://cfisk.me/") {
     document.addEventListener('polymer-ready', function () {
         // initial setup
         setup();
