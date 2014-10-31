@@ -65,9 +65,8 @@ function getMeta() {
 
 function setup() {
       var target = document.getElementById('images');
-
+      console.log(document.getElementById('images'));
       if (transition) {
-        console.log("Kitty")
         transition.teardown(target);
       }
 
