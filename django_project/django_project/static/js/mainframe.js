@@ -1,6 +1,13 @@
 function get_app(name, query) {
     var app_url_name = name;
     var xmlhttp1;
+    if(name == 'images') {
+        get_images(name, query);
+        console.log('Firing 1');
+        setup();
+        toggle();
+        return;
+    }
     if (window.XMLHttpRequest) {
         xmlhttp1 = new XMLHttpRequest()
     }
@@ -29,12 +36,6 @@ function get_app(name, query) {
                     div.innerHTML += xmlhttp2.responseText;
                     }
             };
-            if(name == 'images') {
-                    get_images(name, query);
-                    console.log('Firing 1');
-                    setup();
-                    toggle();
-                }
             }
 
         }
@@ -45,6 +46,14 @@ var transition;
 var state = {
   opened: false
 };
+
+
+document.addEventListener('polymer-ready', function() {
+  // initial setup
+  setup();
+  document.getElementById('images').removeAttribute('hidden');
+});
+
 
 function getMeta() {
       if (!meta) {
@@ -60,6 +69,7 @@ function setup() {
       if (transition) {
         transition.teardown(target);
       }
+
       var value = "core-transition-center";
       transition = getMeta().byId(value);
       transition.setup(target);
