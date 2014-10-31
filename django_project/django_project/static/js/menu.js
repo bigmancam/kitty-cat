@@ -1,5 +1,6 @@
 document.addEventListener('polymer-ready', function() {
   // initial setup
+  console.log("kitty")
   setup();
   setup2();
   document.getElementById('dr-menu').removeAttribute('hidden');
