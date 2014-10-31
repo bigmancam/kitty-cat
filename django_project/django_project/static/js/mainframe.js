@@ -3,7 +3,6 @@ function get_app(name, query) {
     var xmlhttp1;
     if(name == 'images') {
         get_images(name, query);
-        console.log('Firing 1');
         setup1();
         toggle();
         return;
@@ -66,7 +65,6 @@ function getMeta() {
 
 function setup1() {
       var target = document.getElementById('images');
-      console.log(document.getElementById('images'));
       if (transition) {
         transition.teardown(target);
       }
@@ -78,6 +76,7 @@ function setup1() {
 
 function toggle() {
     var target = document.getElementById('images');
+    console.log("firing!")
     state.opened = !state.opened;
     transition.go(target, state);
 }
