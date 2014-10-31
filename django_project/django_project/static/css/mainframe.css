@@ -60,94 +60,94 @@ main {
 
 }
 
-#image0::after {
+#image0 {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
-	-webkit-transition-delay: 1035ms;
-	-moz-transition-delay: 1035ms;
-	transition-delay: 1035ms;
+	-webkit-transition-delay: 2035ms;
+	-moz-transition-delay: 2035ms;
+	transition-delay: 2035ms;
 }
 
-#image1::after {
+#image1 {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
-	-webkit-transition-delay: 1070ms;
-	-moz-transition-delay: 1070ms;
-	transition-delay: 1070ms;
+	-webkit-transition-delay: 2070ms;
+	-moz-transition-delay: 2070ms;
+	transition-delay: 2070ms;
 }
 
-#image2::after {
+#image2 {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
-	-webkit-transition-delay: 1105ms;
-	-moz-transition-delay: 1105ms;
-	transition-delay: 1105ms;
+	-webkit-transition-delay: 2105ms;
+	-moz-transition-delay: 2105ms;
+	transition-delay: 2105ms;
 }
 
-#image3::after {
+#image3 {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
-	-webkit-transition-delay: 1140ms;
-	-moz-transition-delay: 1140ms;
-	transition-delay: 1140ms;
+	-webkit-transition-delay: 2140ms;
+	-moz-transition-delay: 2140ms;
+	transition-delay: 2140ms;
 }
 
-#image4::after {
+#image4 {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
-	-webkit-transition-delay: 1175ms;
-	-moz-transition-delay: 1175ms;
-	transition-delay: 1175ms;
+	-webkit-transition-delay: 2175ms;
+	-moz-transition-delay: 2175ms;
+	transition-delay: 2175ms;
 }
 
-#image5::after {
+#image5 {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
-	-webkit-transition-delay: 1205ms;
-	-moz-transition-delay: 1205ms;
-	transition-delay: 1205ms;
+	-webkit-transition-delay: 2205ms;
+	-moz-transition-delay: 2205ms;
+	transition-delay: 2205ms;
 }
 
-#image6::after {
+#image6 {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
-	-webkit-transition-delay: 1235ms;
-	-moz-transition-delay: 1235ms;
-	transition-delay: 1235ms;
+	-webkit-transition-delay: 2235ms;
+	-moz-transition-delay: 2235ms;
+	transition-delay: 2235ms;
 }
 
-#image7::after {
+#image7 {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
-	-webkit-transition-delay: 1265ms;
-	-moz-transition-delay: 1265ms;
-	transition-delay: 1265ms;
+	-webkit-transition-delay: 2265ms;
+	-moz-transition-delay: 2265ms;
+	transition-delay: 2265ms;
 }
 
-#image8::after {
+#image8 {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
-	-webkit-transition-delay: 1295ms;
-	-moz-transition-delay: 1295ms;
-	transition-delay: 1295ms;
+	-webkit-transition-delay: 2295ms;
+	-moz-transition-delay: 2295ms;
+	transition-delay: 2295ms;
 }
 
-#image9::after {
+#image9 {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
-	-webkit-transition-delay: 1330ms;
-	-moz-transition-delay: 1330ms;
-	transition-delay: 1330ms;
+	-webkit-transition-delay: 2330ms;
+	-moz-transition-delay: 2330ms;
+	transition-delay: 2330ms;
 }
 
 #images {
