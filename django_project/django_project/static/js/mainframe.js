@@ -32,9 +32,8 @@ function get_app(name, query) {
             if(name == 'images') {
                     get_images(name, query);
                     console.log('Firing 1');
-                    setup();
-                    console.log('Firing!');
-                    toggle();
+                    this.setup();
+                    this.toggle();
                 }
             }
 
