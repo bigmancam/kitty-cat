@@ -47,6 +47,7 @@ var state = {
 }
 
 function getMeta() {
+      console.log("Firing 4");
       if (!meta) {
         meta = document.createElement('core-meta');
         meta.type = 'transition';
