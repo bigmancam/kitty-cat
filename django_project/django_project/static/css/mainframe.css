@@ -60,7 +60,7 @@ main {
 
 }
 
-#image0 {
+#image0::after {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
@@ -69,7 +69,7 @@ main {
 	transition-delay: 1035ms;
 }
 
-#image1 {
+#image1::after {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
@@ -78,7 +78,7 @@ main {
 	transition-delay: 1070ms;
 }
 
-#image2 {
+#image2::after {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
@@ -87,7 +87,7 @@ main {
 	transition-delay: 1105ms;
 }
 
-#image3 {
+#image3::after {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
@@ -96,7 +96,7 @@ main {
 	transition-delay: 1140ms;
 }
 
-#image4 {
+#image4::after {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
@@ -105,7 +105,7 @@ main {
 	transition-delay: 1175ms;
 }
 
-#image5 {
+#image5::after {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
@@ -114,7 +114,7 @@ main {
 	transition-delay: 1205ms;
 }
 
-#image6 {
+#image6::after {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
@@ -123,7 +123,7 @@ main {
 	transition-delay: 1235ms;
 }
 
-#image7 {
+#image7::after {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
@@ -132,7 +132,7 @@ main {
 	transition-delay: 1265ms;
 }
 
-#image8 {
+#image8::after {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
@@ -141,7 +141,7 @@ main {
 	transition-delay: 1295ms;
 }
 
-#image9 {
+#image9::after {
     -webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
 	transition: all 1.0s ease;
