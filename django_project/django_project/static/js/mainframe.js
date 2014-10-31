@@ -55,7 +55,7 @@ function getMeta() {
 }
 
 function setup() {
-      var target = document.getElementById('images')
+      var target = document.getElementById('images');
 
       if (transition) {
         transition.teardown(target);
@@ -84,12 +84,13 @@ function get_images(name, query) {
         }
     }
 });
-};
+}
 
 function destroy_app(name) {
    $(name).remove();
 }
 
+var seconds, countdownTimer;
 function submit(e) {
     var input = $('#fisk-input').context.activeElement.value.split(' ');
     var arg1 = input[1];
