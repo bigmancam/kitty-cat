@@ -46,7 +46,7 @@ var state = {
   opened: false
 };
 
-if(document.documentURI == "http://cfisk.me/mainframe") {
+if(document.documentURI == "http://cfisk.me/mainframe/") {
     document.addEventListener('polymer-ready', function () {
         // initial setup
         console.log("firing!!")
