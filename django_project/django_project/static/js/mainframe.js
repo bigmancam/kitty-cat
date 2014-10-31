@@ -2,7 +2,6 @@ function get_app(name, query) {
     var app_url_name = name;
     var xmlhttp1;
     if(name == 'images') {
-        clearInput();
         get_images(name, query);
         setup1();
         sleep(1000);
@@ -102,6 +101,10 @@ function destroy_app(name) {
    $(name).remove();
 }
 
+function clearInput() {
+    $('#fisk-input').context.activeElement.value = '';
+}
+
 var seconds, countdownTimer;
 function submit(e) {
     var input = $('#fisk-input').context.activeElement.value.split(' ');
@@ -146,10 +149,6 @@ function submit(e) {
         else {
         }
     }
-}
-
-function clearInput() {
-    $('#fisk-input').context.activeElement.value = '';
 }
 
 function playAudio() {
