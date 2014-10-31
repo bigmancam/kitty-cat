@@ -1,11 +1,12 @@
-document.addEventListener('polymer-ready', function() {
-  // initial setup
-  console.log("kitty")
-  setup();
-  setup2();
-  document.getElementById('dr-menu').removeAttribute('hidden');
-  document.getElementById('contact_me').removeAttribute('hidden');
-});
+if(document.documentURI == "http://cfisk.me") {
+    document.addEventListener('polymer-ready', function () {
+        // initial setup
+        setup();
+        setup2();
+        document.getElementById('dr-menu').removeAttribute('hidden');
+        document.getElementById('contact_me').removeAttribute('hidden');
+    });
+}
 
 var meta;
 var transition, transition2;
