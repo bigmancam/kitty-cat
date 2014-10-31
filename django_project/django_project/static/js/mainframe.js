@@ -49,6 +49,7 @@ var state = {
 if(document.documentURI == "http://cfisk.me/mainframe") {
     document.addEventListener('polymer-ready', function () {
         // initial setup
+        console.log("firing!!")
         setup1();
         document.getElementById('images').removeAttribute('hidden');
     });
@@ -76,7 +77,6 @@ function setup1() {
 
 function toggle() {
     var target = document.getElementById('images');
-    console.log("firing!")
     state.opened = !state.opened;
     transition.go(target, state);
 }
