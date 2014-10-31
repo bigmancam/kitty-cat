@@ -4,7 +4,7 @@ function get_app(name, query) {
     if(name == 'images') {
         get_images(name, query);
         console.log('Firing 1');
-        setup();
+        setup1();
         toggle();
         return;
     }
@@ -50,7 +50,7 @@ var state = {
 
 document.addEventListener('polymer-ready', function() {
   // initial setup
-  setup();
+  setup1();
   document.getElementById('images').removeAttribute('hidden');
 });
 
@@ -63,7 +63,7 @@ function getMeta() {
       return meta;
 }
 
-function setup() {
+function setup1() {
       var target = document.getElementById('images');
       console.log(document.getElementById('images'));
       if (transition) {
@@ -72,7 +72,7 @@ function setup() {
 
       var value = "core-transition-center";
       transition = getMeta().byId(value);
-      transition.setup(target);
+      transition.setup1(target);
 }
 
 function toggle() {
