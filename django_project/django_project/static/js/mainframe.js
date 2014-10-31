@@ -33,6 +33,7 @@ function get_app(name, query) {
                     get_images(name, query);
                     console.log('Firing 1');
                     setup();
+                    document.getElementById('images').removeAttribute('hidden');
                     toggle();
                 }
             }
