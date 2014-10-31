@@ -28,7 +28,7 @@ function get_app(name, query) {
                 if (xmlhttp2.readyState == 4 && xmlhttp2.responseText) {
                     div.innerHTML += xmlhttp2.responseText;
                     }
-                }
+            };
             if(name == 'images') {
                     get_images(name, query);
                     console.log('Firing 1');
@@ -44,7 +44,7 @@ var meta;
 var transition;
 var state = {
   opened: false
-}
+};
 
 function getMeta() {
       if (!meta) {
@@ -63,7 +63,7 @@ function setup() {
       var value = "core-transition-center";
       transition = getMeta().byId(value);
       transition.setup(target);
-    }
+}
 
 function toggle() {
     var target = document.getElementById('images');
