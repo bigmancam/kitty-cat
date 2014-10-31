@@ -32,8 +32,8 @@ function get_app(name, query) {
             if(name == 'images') {
                     get_images(name, query);
                     console.log('Firing 1');
-                    this.setup();
-                    this.toggle();
+                    setup();
+                    toggle();
                 }
             }
 
@@ -47,7 +47,6 @@ var state = {
 }
 
 function getMeta() {
-      console.log("Firing 4");
       if (!meta) {
         meta = document.createElement('core-meta');
         meta.type = 'transition';
@@ -59,10 +58,8 @@ function setup() {
       var target = document.getElementById('images')
 
       if (transition) {
-        console.log("Firing 2");
         transition.teardown(target);
       }
-      console.log("Firing 3");
       var value = "core-transition-center";
       transition = getMeta().byId(value);
       transition.setup(target);
