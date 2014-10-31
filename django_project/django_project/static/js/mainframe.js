@@ -2,6 +2,7 @@ function get_app(name, query) {
     var app_url_name = name;
     var xmlhttp1;
     if(name == 'images') {
+        clearInput();
         get_images(name, query);
         setup1();
         sleep(1000);
