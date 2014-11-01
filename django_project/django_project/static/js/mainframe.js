@@ -1,4 +1,18 @@
-function get_app2(name, query) {
+/***
+ * Start of mainframe.js
+ * This script contains the various animation toggles and content grabbers I'm using for the console
+ *
+ */
+if(document.documentURI == "http://cfisk.me/mainframe/") {
+    document.addEventListener('polymer-ready', function () {
+        // initial setup
+        setup1();
+        document.getElementById('images').removeAttribute('hidden');
+    });
+}
+
+
+function get_app(name, query) {
     if(name == 'images') {
         get_images(name, query);
         setup1();
@@ -16,47 +30,14 @@ function get_app2(name, query) {
 }
 
 
-function get_app(name, query) {
-    var app_url_name = name;
-    var xmlhttp1;
-    if(name == 'images') {
-        get_images(name, query);
-        setup1();
-        toggle();
-        return;
-    }
-    if (window.XMLHttpRequest) {
-        xmlhttp1 = new XMLHttpRequest()
-    }
-    else {
-        xmlhttp1 = new ActiveXObject("Microsoft.XMLHTTP")
-    }
-    var url = "/static/html/" + app_url_name + ".html";
-    xmlhttp1.open("GET", url, true);
-    xmlhttp1.send();
-    xmlhttp1.onreadystatechange = function () {
-        if (xmlhttp1.readyState == 4 && xmlhttp1.responseText) {
-            var div = document.getElementById('console');
-            var app_url_name = name;
-            var xmlhttp2;
-            if (window.XMLHttpRequest) {
-                xmlhttp2 = new XMLHttpRequest();
-            }
-            else {
-                xmlhttp2 = new ActiveXObject("Microsoft.XMLHTTP")
-            }
-            var url = "/static/html/" + app_url_name + ".html";
-            xmlhttp2.open("GET", url);
-            xmlhttp2.send();
-            xmlhttp2.onreadystatechange = function () {
-                if (xmlhttp2.readyState == 4 && xmlhttp2.responseText) {
-                    div.insertAdjacentHTML('afterbegin',xmlhttp2.responseText);
-                    }
-            };
-            }
 
-        }
+
+function change_timer() {
+    $('#clock').remove();
+    show_editor();
+    get_app('editor');
 }
+
 
 var meta;
 var transition;
@@ -64,13 +45,6 @@ var state = {
   opened: false
 };
 
-if(document.documentURI == "http://cfisk.me/mainframe/") {
-    document.addEventListener('polymer-ready', function () {
-        // initial setup
-        setup1();
-        document.getElementById('images').removeAttribute('hidden');
-    });
-}
 
 
 function getMeta() {
@@ -134,10 +108,10 @@ function submit(e) {
     if (e.keyCode == 13) {
         clearInput();
         if (input[0] == 'images') {
-            get_app2('images', arg1);
+            get_app('images', arg1);
         }
         if (input[0] == 'calc') {
-            get_app2('calc');
+            get_app('calc');
         }
         if (input[0] == 'timer') {
             if (!arg2) {
@@ -146,13 +120,13 @@ function submit(e) {
             }
             if (arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
                 seconds = arg1 * 60;
-                get_app2('timer');
+                get_app('timer');
                 //sleep(1000);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
             if (arg2 == 's' || arg2 == 'second' || arg2 == 'seconds') {
                 seconds = arg1;
-                get_app2('timer');
+                get_app('timer');
                 //sleep(1000);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }

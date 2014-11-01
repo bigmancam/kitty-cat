@@ -44,6 +44,21 @@
                 <fisk-input id="input"></fisk-input>
             </form>
             <div id="console">
+                <style>
+                    #close {
+                        float: right;
+                        margin: 1em 1em 0 0;
+                    }
+                </style>
+                <div id="timer">
+                    <paper-shadow z="2"></paper-shadow>
+                    <paper-button class="custom" id="close" onclick="destroy_app('#timer')">
+                        <core-icon icon="clear"></core-icon>
+                    </paper-button>
+                    <div id="countdown">
+                        <span id="clock" onclick=""></span>
+                    </div>
+                </div>
                 <ul id="images" hidden>
                 </ul>
             </div>
