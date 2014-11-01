@@ -5,7 +5,7 @@ function get_app2(name, query) {
         toggle();
         return;
     }
-    var app_url = "/static/html" + name + ".html";
+    var app_url = "/static/html/" + name + ".html";
     $.ajax({
         url: app_url, success: function (result) {
             var div = document.getElementById('console');
