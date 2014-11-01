@@ -148,7 +148,9 @@ function submit(e) {
             }
             if (arg1 == 'calc') {
                 destroy_app('#calc');
-                clearInterval(countdownTimer);
+            }
+            if (arg1 == 'images') {
+                destroy_app('images');
             }
         }
         else {
