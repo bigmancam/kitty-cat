@@ -1,4 +1,10 @@
 function get_app2(name, query) {
+    if(name == 'images') {
+        get_images(name, query);
+        setup1();
+        toggle();
+        return;
+    }
     var app_url = "/static/html" + name + ".html";
     $.ajax({
         url: app_url, success: function (result) {
@@ -128,10 +134,10 @@ function submit(e) {
     if (e.keyCode == 13) {
         clearInput();
         if (input[0] == 'images') {
-            get_app('images', arg1);
+            get_app2('images', arg1);
         }
         if (input[0] == 'calc') {
-            get_app('calc');
+            get_app2('calc');
         }
         if (input[0] == 'timer') {
             if (!arg2) {
@@ -140,13 +146,13 @@ function submit(e) {
             }
             if (arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
                 seconds = arg1 * 60;
-                get_app('timer');
+                get_app2('timer');
                 //sleep(1000);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
             if (arg2 == 's' || arg2 == 'second' || arg2 == 'seconds') {
                 seconds = arg1;
-                get_app('timer');
+                get_app2('timer');
                 //sleep(1000);
                 countdownTimer = setInterval('secondPassed()', 1000);
             }
