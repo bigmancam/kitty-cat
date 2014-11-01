@@ -35,7 +35,6 @@ function change_timer() {
         $('#console').insertAdjacentHTML('afterbegin', "<span id='clock' onclick='change_timer()'>00:00</span>");
     }
     $('#clock').remove();
-    show_editor();
     get_app('editor');
     change_timer();
 }
