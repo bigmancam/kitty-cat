@@ -8,8 +8,9 @@ function get_app2(name, query) {
     var app_url = "/static/html/" + name + ".html";
     $.ajax({
         url: app_url, success: function (result) {
+            console.log(result);
             var div = document.getElementById('console');
-            div.insertAdjacentHTML('afterbegin',result.innerHTML);
+            div.insertAdjacentHTML('afterbegin',result);
         }
     });
 }
@@ -66,7 +67,6 @@ var state = {
 if(document.documentURI == "http://cfisk.me/mainframe/") {
     document.addEventListener('polymer-ready', function () {
         // initial setup
-        console.log("firing!!")
         setup1();
         document.getElementById('images').removeAttribute('hidden');
     });
