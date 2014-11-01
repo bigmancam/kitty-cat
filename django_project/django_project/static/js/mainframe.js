@@ -29,13 +29,15 @@ function get_app(name, query) {
     });
 }
 
-
-
-
 function change_timer() {
+    if($('#editor').length > 0) {
+        $('#editor').remove();
+        $('#console').insertAdjacentHTML('afterbegin', "<span id='clock' onclick='change_timer()'></span>");
+    }
     $('#clock').remove();
     show_editor();
     get_app('editor');
+    change_timer();
 }
 
 
