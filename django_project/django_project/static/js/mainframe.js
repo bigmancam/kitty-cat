@@ -33,10 +33,10 @@ function change_timer() {
     if($('#editor').length > 0) {
         $('#editor').remove();
         $('#console').insertAdjacentHTML('afterbegin', "<span id='clock' onclick='change_timer()'>00:00</span>");
+        return;
     }
     $('#clock').remove();
     get_app('editor');
-    change_timer();
 }
 
 
