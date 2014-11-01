@@ -97,7 +97,12 @@ function get_images(name, query) {
 });
 }
 
+function clearImages() {
+        $('#images').empty();
+}
+
 function destroy_app(name) {
+   if(name == 'images') {clearImages();}
    $(name).remove();
 }
 
