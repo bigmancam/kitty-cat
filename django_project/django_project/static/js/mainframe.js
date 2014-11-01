@@ -1,3 +1,14 @@
+function get_app2(name, query) {
+    var app_url = "/static/html" + name + ".html";
+    $.ajax({
+        url: app_url, success: function (result) {
+            var div = document.getElementById('console');
+            div.insertAdjacentHTML('afterbegin',result.innerHTML);
+        }
+    });
+}
+
+
 function get_app(name, query) {
     var app_url_name = name;
     var xmlhttp1;
