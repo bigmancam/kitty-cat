@@ -61,6 +61,22 @@ main {
 }
 
 
+.input_opened {
+    text-align: center;
+    font-size: 59pt;
+    padding-left: 25%;
+    padding-right: 25%;
+    height: 100%;
+}
+
+.input_closed {
+    text-align: center;
+    line-height: 300px;
+    padding-left: 25%;
+    padding-right: 25%;
+    height: 100%;
+}
+
 #images {
     height: 100%;
     width: 100%;
