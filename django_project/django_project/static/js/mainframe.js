@@ -41,7 +41,7 @@ function change_timer() {
     }
     $('#clock').remove();
     document.getElementById('countdown').insertAdjacentHTML('afterbegin', "<form><fisk-input id='editor'></fisk-input></form>");
-
+    $('#editor .input-body').css('direction', 'rtl');
 }
 
 
