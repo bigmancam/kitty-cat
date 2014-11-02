@@ -29,14 +29,19 @@ function get_app(name, query) {
     });
 }
 
+function print_time() {
+
+}
+
 function change_timer() {
     if($('#editor').length > 0) {
         $('#editor').remove();
-        $('#timer').insertAdjacentHTML('beforeend', "<span id='clock' onclick='change_timer()'>00:00</span>");
+        $('#timer').insertAdjacentHTML('afterbegin', "<span id='clock' onclick='change_timer()'>00:00</span>");
         return;
     }
     $('#clock').remove();
-    get_app('editor');
+        $('#countdown').insertAdjacentHTML('afterbegin', "<form><fisk-input id='editor'></fisk-input></form>");
+
 }
 
 
@@ -101,8 +106,11 @@ function clearInput() {
     $('#fisk-input').context.activeElement.value = '';
 }
 
-var seconds, countdownTimer;
+var seconds, seconds2, countdownTimer;
 function submit(e) {
+    if($('#editor').length > 0){
+        print_time();
+    }
     var input = $('#fisk-input').context.activeElement.value.split(' ');
     var arg1 = input[1];
     var arg2 = input[2];
@@ -122,14 +130,12 @@ function submit(e) {
             if (arg2 == 'm' || arg2 == 'minute' || arg2 == 'minutes') {
                 seconds = arg1 * 60;
                 get_app('timer');
-                //sleep(1000);
-                countdownTimer = setInterval('secondPassed()', 1000);
+                countdownTimer = setInterval('timer()', 1000);
             }
             if (arg2 == 's' || arg2 == 'second' || arg2 == 'seconds') {
                 seconds = arg1;
                 get_app('timer');
-                //sleep(1000);
-                countdownTimer = setInterval('secondPassed()', 1000);
+                countdownTimer = setInterval('timer()', 1000);
             }
         }
         else if (input[0] == 'exit') {
@@ -163,7 +169,7 @@ function playAudio() {
 }
 
 
-function secondPassed() {
+function timer() {
     var minutes = Math.round((seconds - 30) / 60);
     var remainingSeconds = seconds % 60;
     if (remainingSeconds < 10) {
