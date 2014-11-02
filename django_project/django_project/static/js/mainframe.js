@@ -40,7 +40,7 @@ function change_timer() {
         return;
     }
     $('#clock').remove();
-    document.getElementById('countdown').insertAdjacentHTML('afterbegin', "<form><fisk-input id='editor'></fisk-input></form>");
+    document.getElementById('countdown').insertAdjacentHTML('afterbegin', "<form><fisk-input-rtl id='editor'></fisk-input-rtl></form>");
 }
 
 
