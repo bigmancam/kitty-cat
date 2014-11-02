@@ -36,12 +36,15 @@ function print_time() {
 function change_timer() {
     if($('#editor').length > 0) {
         $('#editor').remove();
+        $('#countdown').removeClass('input_opened');
+        $('#countdown').addClass('input_closed');
         $('#timer').insertAdjacentHTML('afterbegin', "<span id='clock' onclick='change_timer()'>00:00</span>");
         return;
     }
     $('#clock').remove();
     document.getElementById('countdown').insertAdjacentHTML('afterbegin', "<form><fisk-input-rtl label='00:00:00' id='editor'></fisk-input-rtl></form>");
-    $('#countdown').css('line-height', '0');
+    $('#countdown').removeClass('input_closed');
+    $('#countdown').addClass('input_opened');
 
 }
 
