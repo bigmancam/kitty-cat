@@ -30,7 +30,8 @@ function get_app(name, query) {
 }
 
 function print_time() {
-
+    console.log($('#fisk-input-rtl').context.activeElement.value;
+)
 }
 
 function change_timer() {
