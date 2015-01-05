@@ -85,9 +85,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         transition: transform 0.38s ease-out;
       }
 
+      #close {
+        float:right;
+        margin: 1em 1em 0 0;
+      }
+
     </style>
 
     <div id="resultInk" class="{{ {spill : result, error : error} | tokenList }}"></div>
+
+    <paper-button class="custom" id="close" onclick="destroy_app('#calc')">
+        <core-icon icon="clear"></core-icon>
+    </paper-button>
 
     <paper-calculator-output id="output" class="{{ {wide : wideMatches || wideMode} | tokenList}}" expression="{{expression}}" result="{{result}}" error="{{error}}"></paper-calculator-output>
 
