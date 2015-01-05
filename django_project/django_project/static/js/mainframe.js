@@ -46,7 +46,7 @@ function change_timer() {
     document.getElementById('countdown').insertAdjacentHTML('afterbegin', "<form><fisk-input-rtl label='00:00:00' id='editor'></fisk-input-rtl></form>");
     $('#countdown').removeClass('input_closed');
     $('#countdown').addClass('input_opened');
-    if($('#editor').context.activeElement.value.length() > 2) {
+    if($('#editor').context.activeElement.value.length > 2) {
         $('#editor').context.activeElement.value.append(':');
     }
 }
