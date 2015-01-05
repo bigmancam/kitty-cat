@@ -92,11 +92,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     </style>
 
-    <div id="resultInk" class="{{ {spill : result, error : error} | tokenList }}"></div>
-
     <paper-button class="custom" id="close" onclick="destroy_app('#calc')">
         <core-icon icon="clear"></core-icon>
     </paper-button>
+
+    <div id="resultInk" class="{{ {spill : result, error : error} | tokenList }}"></div>
 
     <paper-calculator-output id="output" class="{{ {wide : wideMatches || wideMode} | tokenList}}" expression="{{expression}}" result="{{result}}" error="{{error}}"></paper-calculator-output>
 
