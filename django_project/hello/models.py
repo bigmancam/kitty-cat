@@ -10,4 +10,4 @@ class User(models.Model):
 		return self.name
 
 class Comment(models.Model):
-    text = models.CharField()
+    text = models.CharField(max_length=128)

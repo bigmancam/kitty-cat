@@ -18,7 +18,7 @@ TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
 
 TEMPLATE_DIRS = (
-    TEMPLATE_PATH
+    TEMPLATE_PATH,
 )
 
 STATICFILES_DIRS = (
@@ -70,7 +70,7 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'sqlserver_ado',
         'NAME': 'django',
         'USER': 'django',
         'PASSWORD': '3pIooVNv0h',
